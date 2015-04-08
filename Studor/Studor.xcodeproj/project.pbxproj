@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03FE6C341AD5CE9F00C3239E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FE6C311AD5CE9F00C3239E /* FBSDKCoreKit.framework */; };
+		03FE6C351AD5CE9F00C3239E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FE6C321AD5CE9F00C3239E /* FBSDKLoginKit.framework */; };
+		03FE6C361AD5CE9F00C3239E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FE6C331AD5CE9F00C3239E /* FBSDKShareKit.framework */; };
 		2E8FEFF81AD5C0E900926A78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FEFF71AD5C0E900926A78 /* main.m */; };
 		2E8FEFFB1AD5C0E900926A78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FEFFA1AD5C0E900926A78 /* AppDelegate.m */; };
 		2E8FEFFE1AD5C0E900926A78 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FEFFD1AD5C0E900926A78 /* ViewController.m */; };
@@ -27,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03FE6C311AD5CE9F00C3239E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		03FE6C321AD5CE9F00C3239E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		03FE6C331AD5CE9F00C3239E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		2E8FEFF21AD5C0E900926A78 /* Studor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Studor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8FEFF61AD5C0E900926A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E8FEFF71AD5C0E900926A78 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03FE6C351AD5CE9F00C3239E /* FBSDKLoginKit.framework in Frameworks */,
+				03FE6C341AD5CE9F00C3239E /* FBSDKCoreKit.framework in Frameworks */,
+				03FE6C361AD5CE9F00C3239E /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +69,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03FE6C371AD5CF0900C3239E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03FE6C311AD5CE9F00C3239E /* FBSDKCoreKit.framework */,
+				03FE6C321AD5CE9F00C3239E /* FBSDKLoginKit.framework */,
+				03FE6C331AD5CE9F00C3239E /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2E8FEFE91AD5C0E900926A78 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +100,7 @@
 		2E8FEFF41AD5C0E900926A78 /* Studor */ = {
 			isa = PBXGroup;
 			children = (
+				03FE6C371AD5CF0900C3239E /* Frameworks */,
 				2E8FEFF91AD5C0E900926A78 /* AppDelegate.h */,
 				2E8FEFFA1AD5C0E900926A78 /* AppDelegate.m */,
 				2E8FEFFC1AD5C0E900926A78 /* ViewController.h */,
@@ -343,6 +363,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Studor",
+				);
 				INFOPLIST_FILE = Studor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -353,6 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Studor",
+				);
 				INFOPLIST_FILE = Studor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
