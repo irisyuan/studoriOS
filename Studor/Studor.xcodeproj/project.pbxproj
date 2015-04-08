@@ -412,6 +412,7 @@
 				2E8FF0171AD5C0EA00926A78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E8FF0181AD5C0EA00926A78 /* Build configuration list for PBXNativeTarget "StudorTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +421,7 @@
 				2E8FF01A1AD5C0EA00926A78 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
