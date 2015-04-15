@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03F6F0381ADE096C006DD5B1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F0371ADE096C006DD5B1 /* SearchViewController.m */; };
 		03FE6C341AD5CE9F00C3239E /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FE6C311AD5CE9F00C3239E /* FBSDKCoreKit.framework */; };
 		03FE6C351AD5CE9F00C3239E /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FE6C321AD5CE9F00C3239E /* FBSDKLoginKit.framework */; };
 		03FE6C361AD5CE9F00C3239E /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03FE6C331AD5CE9F00C3239E /* FBSDKShareKit.framework */; };
@@ -47,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		03F6F0371ADE096C006DD5B1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
 		03FE6C311AD5CE9F00C3239E /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		03FE6C321AD5CE9F00C3239E /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		03FE6C331AD5CE9F00C3239E /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
@@ -177,6 +181,9 @@
 				2E8FF0021AD5C0E900926A78 /* Images.xcassets */,
 				2E8FF0041AD5C0E900926A78 /* LaunchScreen.xib */,
 				2E8FEFF51AD5C0E900926A78 /* Supporting Files */,
+				03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */,
+				03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */,
+				03F6F0371ADE096C006DD5B1 /* SearchViewController.m */,
 			);
 			path = Studor;
 			sourceTree = "<group>";
@@ -309,6 +316,7 @@
 			files = (
 				2E8FEFFE1AD5C0E900926A78 /* ViewController.m in Sources */,
 				2E8FEFFB1AD5C0E900926A78 /* AppDelegate.m in Sources */,
+				03F6F0381ADE096C006DD5B1 /* SearchViewController.m in Sources */,
 				2E8FEFF81AD5C0E900926A78 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

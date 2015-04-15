@@ -11,6 +11,12 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *login;
+
+- (IBAction)pressLogin:(id)sender;
+
+
+
 
 @end
 
