@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Ww-cN-1EV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1Ww-cN-1EV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -235,7 +235,7 @@
         <scene sceneID="QKG-05-eWY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NBf-yz-7xO" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="DKK-Ch-GQI"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search-25" id="DKK-Ch-GQI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FRs-qx-3Kk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -254,7 +254,7 @@
         <scene sceneID="mX8-CV-kmM">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="25Q-Jv-cpB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Request" id="vID-9m-DO9"/>
+                    <tabBarItem key="tabBarItem" title="Request" image="date_to-26" id="vID-9m-DO9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="VNb-u2-oO2">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -273,7 +273,7 @@
         <scene sceneID="3ah-iU-Uyh">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qxU-Qb-reY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" id="rtZ-eL-tfO"/>
+                    <tabBarItem key="tabBarItem" title="Messages" image="chat_filled-25" id="rtZ-eL-tfO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lfp-VA-Abx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -292,7 +292,7 @@
         <scene sceneID="Z0Q-sk-mQG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qyj-Q5-NPK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" id="xzT-rb-qyZ"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="user_male-25" id="xzT-rb-qyZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G4L-qN-s38">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -309,6 +309,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chat_filled-25" width="25" height="25"/>
+        <image name="date_to-26" width="26" height="26"/>
         <image name="logo" width="1334" height="750"/>
+        <image name="search-25" width="25" height="25"/>
+        <image name="user_male-25" width="25" height="25"/>
     </resources>
 </document>
