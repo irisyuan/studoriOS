@@ -1,5 +1,5 @@
 //
-//  SearchViewController.m
+//  RequestViewController.m
 //  Studor
 //
 //  Created by Iris Yuan on 4/14/15.
@@ -7,4 +7,4 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SearchViewController.h"
+#import "RequestViewController.h"
