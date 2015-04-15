@@ -8,3 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "RequestViewController.h"
+
+@implementation RequestViewController
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    
+}
+
+@end

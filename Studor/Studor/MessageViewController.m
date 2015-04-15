@@ -1,5 +1,5 @@
 //
-//  SearchViewController.m
+//  MessageViewController.m
 //  Studor
 //
 //  Created by Iris Yuan on 4/14/15.
@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SearchViewController.h"
+#import "MessageViewController.h"
 
-@implementation SearchViewController
+@implementation MessageViewController
 
 - (void)viewDidLoad
 {
@@ -23,4 +23,7 @@
     [super didReceiveMemoryWarning];
     
 }
+    
+
+
 @end

@@ -1,5 +1,5 @@
 //
-//  SearchViewController.m
+//  ProfileViewController.m
 //  Studor
 //
 //  Created by Iris Yuan on 4/14/15.
@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "SearchViewController.h"
+#import "ProfileViewController.h"
 
-@implementation SearchViewController
+@implementation ProfileViewController
 
 - (void)viewDidLoad
 {
@@ -23,4 +23,5 @@
     [super didReceiveMemoryWarning];
     
 }
+
 @end
