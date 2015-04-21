@@ -112,6 +112,14 @@
     }
 }
 
+
+//making the keyboard disapear when clicking an empty space
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
+
+
 /*
 #pragma mark - Navigation
 
