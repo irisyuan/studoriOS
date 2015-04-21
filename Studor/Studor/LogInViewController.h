@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface ViewController : UIViewController
+@interface LogInViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *login;
 
 - (IBAction)pressLogin:(id)sender;
 
-
+@property (weak, nonatomic) IBOutlet UILabel *ErrorLabel;
 
 
 @end
