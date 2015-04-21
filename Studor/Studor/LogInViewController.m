@@ -6,25 +6,23 @@
 //  Copyright (c) 2015 Omid Keypour. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "LogInViewController.h"
 #import <Parse/Parse.h>
 
-@interface ViewController ()
+@interface LogInViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
-@implementation ViewController
+@implementation LogInViewController
 
 - (void)viewDidLoad {
+    _ErrorLabel.text = @"";
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    // Test Parse
-    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-    testObject[@"foo"] = @"bar";
-    [testObject saveInBackground];
+  
     
 }
 
@@ -35,18 +33,20 @@
 }
 
 - (IBAction)pressLogin:(id)sender {
-    NSLog(@"asdkfjsadf");
-}
 
-
-
-
-
-- (IBAction)logInButton:(id)sender {
-    [self.usernameTextField resignFirstResponder];
-    [self.passwordTextField resignFirstResponder];
     
+    [PFUser logInWithUsernameInBackground:_usernameTextField.text password:_passwordTextField.text
+                                    block:^(PFUser *user, NSError *error) {
+                                        if (user) { //login successful
+                                            [self performSegueWithIdentifier:@"ifLogInSuccessful" sender:nil];
+
+                                        } else { //login failed
+                                            _ErrorLabel.text = @"You entered the incorrect username or password.";
+                                        }
+                                    }];
+
 }
+
 
 //making the keyboard disapear when clicking an empty space
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
