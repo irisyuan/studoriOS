@@ -10,6 +10,8 @@
 #import <Parse/Parse.h>
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
 
 @end
 
@@ -35,6 +37,23 @@
 - (IBAction)pressLogin:(id)sender {
     NSLog(@"asdkfjsadf");
 }
+
+
+
+
+
+- (IBAction)logInButton:(id)sender {
+    [self.usernameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+    
+}
+
+//making the keyboard disapear when clicking an empty space
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
+
 
 
 @end
