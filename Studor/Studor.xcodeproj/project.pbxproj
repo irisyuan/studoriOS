@@ -38,6 +38,8 @@
 		2E8FF0031AD5C0E900926A78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FF0021AD5C0E900926A78 /* Images.xcassets */; };
 		2E8FF0061AD5C0E900926A78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FF0041AD5C0E900926A78 /* LaunchScreen.xib */; };
 		2E8FF0121AD5C0E900926A78 /* StudorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FF0111AD5C0E900926A78 /* StudorTests.m */; };
+		B24300CC1AE60235006FF3AD /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300CB1AE60235006FF3AD /* SignUpViewController.m */; };
+		B24300D11AE6044E006FF3AD /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300D01AE6044E006FF3AD /* Helpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,10 @@
 		2E8FF00B1AD5C0E900926A78 /* StudorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8FF0101AD5C0E900926A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E8FF0111AD5C0E900926A78 /* StudorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudorTests.m; sourceTree = "<group>"; };
+		B24300CA1AE60235006FF3AD /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		B24300CB1AE60235006FF3AD /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		B24300CF1AE6044E006FF3AD /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Helpers.h; sourceTree = "<group>"; };
+		B24300D01AE6044E006FF3AD /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Helpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,8 @@
 		2E8FEFE91AD5C0E900926A78 = {
 			isa = PBXGroup;
 			children = (
+				B24300CF1AE6044E006FF3AD /* Helpers.h */,
+				B24300D01AE6044E006FF3AD /* Helpers.m */,
 				2E8FEFF41AD5C0E900926A78 /* Studor */,
 				2E8FF00E1AD5C0E900926A78 /* StudorTests */,
 				2E8FEFF31AD5C0E900926A78 /* Products */,
@@ -192,6 +200,8 @@
 				03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */,
 				03F6F03C1ADE0BDA006DD5B1 /* ProfileViewController.h */,
 				03F6F03D1ADE0BF7006DD5B1 /* ProfileViewController.m */,
+				B24300CA1AE60235006FF3AD /* SignUpViewController.h */,
+				B24300CB1AE60235006FF3AD /* SignUpViewController.m */,
 				03F6F03F1ADE0C4F006DD5B1 /* MessageViewController.h */,
 				03F6F0401ADE0C6C006DD5B1 /* MessageViewController.m */,
 				03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */,
@@ -333,6 +343,8 @@
 				03F6F0381ADE096C006DD5B1 /* SearchViewController.m in Sources */,
 				03F6F03E1ADE0BF7006DD5B1 /* ProfileViewController.m in Sources */,
 				2E8FEFF81AD5C0E900926A78 /* main.m in Sources */,
+				B24300D11AE6044E006FF3AD /* Helpers.m in Sources */,
+				B24300CC1AE60235006FF3AD /* SignUpViewController.m in Sources */,
 				03F6F0411ADE0C6C006DD5B1 /* MessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
