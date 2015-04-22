@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
@@ -198,7 +198,7 @@
         <!--Request-->
         <scene sceneID="3h2-XF-MBt">
             <objects>
-                <viewController title="Request" id="Jbz-xy-ftm" sceneMemberID="viewController">
+                <viewController title="Request" id="Jbz-xy-ftm" customClass="RequestViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yWV-HK-d8o"/>
                         <viewControllerLayoutGuide type="bottom" id="Oi4-gW-sd0"/>
@@ -206,13 +206,48 @@
                     <view key="view" contentMode="scaleToFill" id="tEW-rZ-cLh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="What do you need help with?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sx7-lK-dhb">
+                                <rect key="frame" x="16" y="93" width="343" height="139"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tutoring Subject" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7d3-4i-dCm">
+                                <rect key="frame" x="16" y="249" width="223" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JPn-G1-nI1">
+                                <rect key="frame" x="16" y="287" width="110" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlb-gj-ZGL">
+                                <rect key="frame" x="76" y="335" width="223" height="30"/>
+                                <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Request a Tutor">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BVU-JS-1oh">
+                                <rect key="frame" x="21" y="373" width="343" height="89"/>
+                                <string key="text">Requesting a tutor allows you to notify tutors exactly what kind of help you are looking for. You will receive responses from up to five local qualified tutors!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.89411764705882357" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Studor" id="Rh9-c3-cij"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6S-J8-zHJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2898.5" y="-1110.5"/>
+            <point key="canvasLocation" x="2894.5" y="-1110.5"/>
         </scene>
         <!--Messages-->
         <scene sceneID="3DP-8y-zbb">
@@ -221,7 +256,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="VqB-ME-LZS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.89411764705882357" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.90196078431372551" green="0.8901960784313725" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="l7j-UB-Amo">
@@ -246,7 +281,7 @@
         <!--Profile-->
         <scene sceneID="Ivr-q6-KAp">
             <objects>
-                <viewController title="Profile" id="wRK-ok-Xl0" sceneMemberID="viewController">
+                <viewController title="Profile" id="wRK-ok-Xl0" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pxT-aW-qDq"/>
                         <viewControllerLayoutGuide type="bottom" id="o25-tq-zc2"/>
@@ -255,14 +290,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f94-Om-DPU">
+                            <imageView userInteractionEnabled="NO" alpha="0.39999999999999963" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f94-Om-DPU">
                                 <rect key="frame" x="14" y="132" width="114" height="122"/>
+                                <color key="backgroundColor" red="0.76078431372549016" green="0.76078431372549016" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Update your profile:" translatesAutoresizingMaskIntoConstraints="NO" id="vHm-nW-T7P">
-                                <rect key="frame" x="14" y="85" width="150" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NFt-6z-oEE">
                                 <rect key="frame" x="136" y="132" width="223" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -300,11 +331,19 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vgh-CR-BTY">
-                                <rect key="frame" x="14" y="426" width="34" height="30"/>
+                                <rect key="frame" x="142" y="437" width="82" height="35"/>
+                                <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.1280691964" green="0.70438058039999996" blue="0.70438058039999996" alpha="0.87" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Update your profile:" translatesAutoresizingMaskIntoConstraints="NO" id="vHm-nW-T7P">
+                                <rect key="frame" x="14" y="85" width="150" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078431372551" green="0.8901960784313725" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -322,7 +361,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="hZl-rV-Ezd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196078431372551" green="0.89411764705882357" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.90196078431372551" green="0.89411764705882357" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zo8-1t-fFn">
@@ -370,6 +409,7 @@
         <!--Search-->
         <scene sceneID="QKG-05-eWY">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KgK-1E-ShU" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NBf-yz-7xO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="search-25" id="DKK-Ch-GQI"/>
                     <toolbarItems/>
@@ -382,13 +422,13 @@
                         <segue destination="5P8-wq-dcY" kind="relationship" relationship="rootViewController" id="YBS-aW-ldH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KgK-1E-ShU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1385.5" y="-1902.5"/>
         </scene>
         <!--Request-->
         <scene sceneID="mX8-CV-kmM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ad1-gi-oqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="25Q-Jv-cpB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Request" image="date_to-26" id="vID-9m-DO9"/>
                     <toolbarItems/>
@@ -401,13 +441,13 @@
                         <segue destination="Jbz-xy-ftm" kind="relationship" relationship="rootViewController" id="pim-ah-wkZ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ad1-gi-oqv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1871.5" y="-1110.5"/>
         </scene>
         <!--Messages-->
         <scene sceneID="3ah-iU-Uyh">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IgQ-f6-ZUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qxU-Qb-reY" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Messages" image="chat_filled-25" id="rtZ-eL-tfO"/>
                     <toolbarItems/>
@@ -420,13 +460,13 @@
                         <segue destination="cdK-fO-FDG" kind="relationship" relationship="rootViewController" id="rgd-au-nD2"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IgQ-f6-ZUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2176.5" y="-322.5"/>
+            <point key="canvasLocation" x="1816.5" y="-122.5"/>
         </scene>
         <!--Profile-->
         <scene sceneID="Z0Q-sk-mQG">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YCb-y1-pDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qyj-Q5-NPK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="user_male-25" id="xzT-rb-qyZ"/>
                     <toolbarItems/>
@@ -439,9 +479,8 @@
                         <segue destination="wRK-ok-Xl0" kind="relationship" relationship="rootViewController" id="hfC-31-Zmo"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YCb-y1-pDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2133.5" y="565.5"/>
+            <point key="canvasLocation" x="1653.5" y="813.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nct-kB-mwz">
@@ -470,6 +509,6 @@
         <image name="user_male-25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="iEp-Rm-qnV"/>
+        <segue reference="xvV-7m-V8J"/>
     </inferredMetricsTieBreakers>
 </document>
