@@ -16,6 +16,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffC-26-XGC">
+                                <rect key="frame" x="76" y="330" width="223" height="30"/>
+                                <color key="backgroundColor" red="0.80485733695652173" green="0.80485733695652173" blue="0.80485733695652173" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.12941177189350128" green="0.75294125080108643" blue="0.7568628191947937" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6KO-Tz-N5j"/>
+                                    <segue destination="ZN6-dE-noa" kind="custom" customClass="RBStoryboardModalSegue" id="pgX-Og-rZ1"/>
+                                </connections>
+                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQJ-dJ-72o">
                                 <rect key="frame" x="76" y="227" width="223" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,6 +50,9 @@
                                     <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="wnn-pM-aYz" kind="custom" customClass="RBStoryboardModalSegue" id="O2n-S4-gbA"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="New to Studor?" translatesAutoresizingMaskIntoConstraints="NO" id="HNS-0e-6Rd">
                                 <rect key="frame" x="125" y="443" width="124" height="36"/>
@@ -53,18 +68,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffC-26-XGC">
-                                <rect key="frame" x="76" y="330" width="223" height="30"/>
-                                <color key="backgroundColor" red="0.80485733695652173" green="0.80485733695652173" blue="0.80485733695652173" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Log In">
-                                    <color key="titleColor" red="0.12941177189350128" green="0.75294125080108643" blue="0.7568628191947937" alpha="1" colorSpace="deviceRGB"/>
-                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="pressLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6KO-Tz-N5j"/>
-                                    <segue destination="Tie-fV-LOA" kind="custom" customClass="RBStoryboardPushSegue" id="fYx-FR-upS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333339691162109" green="0.92941182851791382" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -77,32 +80,51 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75.5" y="-1022.5"/>
+            <point key="canvasLocation" x="365.5" y="-1044.5"/>
         </scene>
         <!--Link to TabController-->
-        <scene sceneID="3JS-2O-I5a">
+        <scene sceneID="Bbe-45-ANM">
             <objects>
-                <viewController title="Link to TabController" id="Tie-fV-LOA" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController title="Link to TabController" id="ZN6-dE-noa" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jG0-jK-17x"/>
-                        <viewControllerLayoutGuide type="bottom" id="MOx-eo-4YG"/>
+                        <viewControllerLayoutGuide type="top" id="MAL-NW-A4B"/>
+                        <viewControllerLayoutGuide type="bottom" id="0DT-2E-pWK"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aMQ-sW-wBR" customClass="RB">
+                    <view key="view" contentMode="scaleToFill" id="8ak-2E-Wcv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Home"/>
-                        </userDefinedRuntimeAttributes>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Home"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="w5F-b9-fID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Urs-8h-PX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708.5" y="-1126.5"/>
+            <point key="canvasLocation" x="886.5" y="-1262.5"/>
+        </scene>
+        <!--Link to SignUp-->
+        <scene sceneID="bjR-yf-LND">
+            <objects>
+                <viewController title="Link to SignUp" id="wnn-pM-aYz" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kr3-be-JXJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="GpL-F5-hbv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WdF-vi-cOX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="SignUp"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsZ-LC-dKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="839.5" y="-387.5"/>
         </scene>
     </scenes>
     <resources>
