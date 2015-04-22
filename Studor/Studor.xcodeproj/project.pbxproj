@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03724DE51AE7CBFB00C3CCB9 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724DE41AE7CBFB00C3CCB9 /* SignUp.storyboard */; };
+		03724DE81AE7CC5200C3CCB9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724DE71AE7CC5200C3CCB9 /* Search.storyboard */; };
+		03724DEB1AE7CC7700C3CCB9 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724DEA1AE7CC7700C3CCB9 /* Profile.storyboard */; };
+		03724DF01AE7CCBC00C3CCB9 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724DEF1AE7CCBC00C3CCB9 /* Message.storyboard */; };
+		03724DF21AE7CCCE00C3CCB9 /* Request.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724DF11AE7CCCE00C3CCB9 /* Request.storyboard */; };
+		03724DF51AE7CD0600C3CCB9 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724DF41AE7CD0600C3CCB9 /* Settings.storyboard */; };
 		03F6F0381ADE096C006DD5B1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F0371ADE096C006DD5B1 /* SearchViewController.m */; };
 		03F6F03B1ADE0B32006DD5B1 /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F03A1ADE0B32006DD5B1 /* RequestViewController.m */; };
 		03F6F03E1ADE0BF7006DD5B1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F03D1ADE0BF7006DD5B1 /* ProfileViewController.m */; };
@@ -53,6 +59,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03724DE41AE7CBFB00C3CCB9 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		03724DE71AE7CC5200C3CCB9 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		03724DEA1AE7CC7700C3CCB9 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		03724DEF1AE7CCBC00C3CCB9 /* Message.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Message.storyboard; path = ../Message.storyboard; sourceTree = "<group>"; };
+		03724DF11AE7CCCE00C3CCB9 /* Request.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Request.storyboard; path = ../Request.storyboard; sourceTree = "<group>"; };
+		03724DF41AE7CD0600C3CCB9 /* Settings.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Settings.storyboard; path = ../Settings.storyboard; sourceTree = "<group>"; };
 		03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		03F6F0371ADE096C006DD5B1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
@@ -138,6 +150,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03724DE61AE7CC0A00C3CCB9 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				B24300CA1AE60235006FF3AD /* SignUpViewController.h */,
+				B24300CB1AE60235006FF3AD /* SignUpViewController.m */,
+				03724DE41AE7CBFB00C3CCB9 /* SignUp.storyboard */,
+			);
+			name = SignUp;
+			sourceTree = "<group>";
+		};
+		03724DE91AE7CC5800C3CCB9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				03F6F0371ADE096C006DD5B1 /* SearchViewController.m */,
+				03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */,
+				03724DE71AE7CC5200C3CCB9 /* Search.storyboard */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		03724DEC1AE7CC7C00C3CCB9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				03F6F03C1ADE0BDA006DD5B1 /* ProfileViewController.h */,
+				03F6F03D1ADE0BF7006DD5B1 /* ProfileViewController.m */,
+				03724DEA1AE7CC7700C3CCB9 /* Profile.storyboard */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		03724DED1AE7CC9400C3CCB9 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2E8FEFFC1AD5C0E900926A78 /* LogInViewController.h */,
+				2E8FEFFD1AD5C0E900926A78 /* LogInViewController.m */,
+				2E8FEFFF1AD5C0E900926A78 /* Main.storyboard */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		03724DEE1AE7CCA400C3CCB9 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				03724DEF1AE7CCBC00C3CCB9 /* Message.storyboard */,
+				03F6F03F1ADE0C4F006DD5B1 /* MessageViewController.h */,
+				03F6F0401ADE0C6C006DD5B1 /* MessageViewController.m */,
+			);
+			name = Message;
+			sourceTree = "<group>";
+		};
+		03724DF31AE7CCD500C3CCB9 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */,
+				03F6F03A1ADE0B32006DD5B1 /* RequestViewController.m */,
+				03724DF11AE7CCCE00C3CCB9 /* Request.storyboard */,
+			);
+			name = Request;
+			sourceTree = "<group>";
+		};
+		03724DF61AE7CD0D00C3CCB9 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				03724DF41AE7CD0600C3CCB9 /* Settings.storyboard */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		03FE6C371AD5CF0900C3239E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,25 +268,19 @@
 		2E8FEFF41AD5C0E900926A78 /* Studor */ = {
 			isa = PBXGroup;
 			children = (
+				03724DF61AE7CD0D00C3CCB9 /* Settings */,
+				03724DF31AE7CCD500C3CCB9 /* Request */,
+				03724DEE1AE7CCA400C3CCB9 /* Message */,
+				03724DED1AE7CC9400C3CCB9 /* Login */,
+				03724DEC1AE7CC7C00C3CCB9 /* Profile */,
+				03724DE91AE7CC5800C3CCB9 /* Search */,
+				03724DE61AE7CC0A00C3CCB9 /* SignUp */,
 				03FE6C371AD5CF0900C3239E /* Frameworks */,
 				2E8FEFF91AD5C0E900926A78 /* AppDelegate.h */,
 				2E8FEFFA1AD5C0E900926A78 /* AppDelegate.m */,
-				2E8FEFFC1AD5C0E900926A78 /* LogInViewController.h */,
-				2E8FEFFD1AD5C0E900926A78 /* LogInViewController.m */,
-				2E8FEFFF1AD5C0E900926A78 /* Main.storyboard */,
 				2E8FF0021AD5C0E900926A78 /* Images.xcassets */,
 				2E8FF0041AD5C0E900926A78 /* LaunchScreen.xib */,
 				2E8FEFF51AD5C0E900926A78 /* Supporting Files */,
-				03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */,
-				03F6F03C1ADE0BDA006DD5B1 /* ProfileViewController.h */,
-				03F6F03D1ADE0BF7006DD5B1 /* ProfileViewController.m */,
-				B24300CA1AE60235006FF3AD /* SignUpViewController.h */,
-				B24300CB1AE60235006FF3AD /* SignUpViewController.m */,
-				03F6F03F1ADE0C4F006DD5B1 /* MessageViewController.h */,
-				03F6F0401ADE0C6C006DD5B1 /* MessageViewController.m */,
-				03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */,
-				03F6F03A1ADE0B32006DD5B1 /* RequestViewController.m */,
-				03F6F0371ADE096C006DD5B1 /* SearchViewController.m */,
 			);
 			path = Studor;
 			sourceTree = "<group>";
@@ -317,9 +391,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03724DEB1AE7CC7700C3CCB9 /* Profile.storyboard in Resources */,
 				2E8FF0011AD5C0E900926A78 /* Main.storyboard in Resources */,
+				03724DF21AE7CCCE00C3CCB9 /* Request.storyboard in Resources */,
 				2E8FF0061AD5C0E900926A78 /* LaunchScreen.xib in Resources */,
+				03724DE51AE7CBFB00C3CCB9 /* SignUp.storyboard in Resources */,
 				2E8FF0031AD5C0E900926A78 /* Images.xcassets in Resources */,
+				03724DF51AE7CD0600C3CCB9 /* Settings.storyboard in Resources */,
+				03724DE81AE7CC5200C3CCB9 /* Search.storyboard in Resources */,
+				03724DF01AE7CCBC00C3CCB9 /* Message.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
