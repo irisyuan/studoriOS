@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface HomeViewController : UIViewController
+@interface HomeViewController : UITabBarController
 
+@property(nonatomic, retain) UIColor *barTintColor;
 
 @end
 

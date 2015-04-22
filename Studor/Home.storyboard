@@ -4,11 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Home View Controller-->
         <scene sceneID="WfJ-kD-3Ce">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hXu-O9-Hql" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tabBarController id="Jcb-fM-Qg6" sceneMemberID="viewController">
+                <tabBarController id="Jcb-fM-Qg6" customClass="HomeViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="cf1-0e-clH">
@@ -23,6 +22,7 @@
                         <segue destination="RiO-3b-Wkd" kind="relationship" relationship="viewControllers" id="XY7-2n-RFq"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hXu-O9-Hql" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-729.5" y="-1452.5"/>
         </scene>
