@@ -80,7 +80,7 @@
                     <navigationItem key="navigationItem" id="zc1-QZ-jOq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboard" value="Search"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Search"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGc-Hv-CmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -103,7 +103,7 @@
                     <navigationItem key="navigationItem" id="Hcu-kR-uLm"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboard" value="Request"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Request"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ynn-0b-wF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -126,7 +126,7 @@
                     <navigationItem key="navigationItem" id="7hq-cd-Omz"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboard" value="Message"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Message"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1nQ-yH-vD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -149,7 +149,7 @@
                     <navigationItem key="navigationItem" id="Eqa-il-w30"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="Profile"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Profile"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1bJ-RB-fc4" userLabel="First Responder" sceneMemberID="firstResponder"/>

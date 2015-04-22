@@ -20,6 +20,8 @@
 		03724E0D1AE7DA0B00C3CCB9 /* RBStoryboardPushSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 03724E051AE7DA0B00C3CCB9 /* RBStoryboardPushSegue.m */; };
 		03724E0E1AE7DA0B00C3CCB9 /* RBStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 03724E071AE7DA0B00C3CCB9 /* RBStoryboardSegue.m */; };
 		03724E0F1AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 03724E091AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m */; };
+		03724E121AE814A400C3CCB9 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03724E111AE814A400C3CCB9 /* HomeViewController.m */; };
+		03724E141AE81F9C00C3CCB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724E131AE81F9C00C3CCB9 /* Main.storyboard */; };
 		03F6F0381ADE096C006DD5B1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F0371ADE096C006DD5B1 /* SearchViewController.m */; };
 		03F6F03B1ADE0B32006DD5B1 /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F03A1ADE0B32006DD5B1 /* RequestViewController.m */; };
 		03F6F03E1ADE0BF7006DD5B1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F03D1ADE0BF7006DD5B1 /* ProfileViewController.m */; };
@@ -47,7 +49,6 @@
 		2E8FEFF81AD5C0E900926A78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FEFF71AD5C0E900926A78 /* main.m */; };
 		2E8FEFFB1AD5C0E900926A78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FEFFA1AD5C0E900926A78 /* AppDelegate.m */; };
 		2E8FEFFE1AD5C0E900926A78 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FEFFD1AD5C0E900926A78 /* LogInViewController.m */; };
-		2E8FF0011AD5C0E900926A78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FEFFF1AD5C0E900926A78 /* Main.storyboard */; };
 		2E8FF0031AD5C0E900926A78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FF0021AD5C0E900926A78 /* Images.xcassets */; };
 		2E8FF0061AD5C0E900926A78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FF0041AD5C0E900926A78 /* LaunchScreen.xib */; };
 		2E8FF0121AD5C0E900926A78 /* StudorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FF0111AD5C0E900926A78 /* StudorTests.m */; };
@@ -86,6 +87,9 @@
 		03724E071AE7DA0B00C3CCB9 /* RBStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RBStoryboardSegue.m; sourceTree = "<group>"; };
 		03724E081AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RBStoryboardLink.h"; sourceTree = "<group>"; };
 		03724E091AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RBStoryboardLink.m"; sourceTree = "<group>"; };
+		03724E101AE8145B00C3CCB9 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		03724E111AE814A400C3CCB9 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		03724E131AE81F9C00C3CCB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		03F6F0371ADE096C006DD5B1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
@@ -121,7 +125,6 @@
 		2E8FEFFA1AD5C0E900926A78 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		2E8FEFFC1AD5C0E900926A78 /* LogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		2E8FEFFD1AD5C0E900926A78 /* LogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
-		2E8FF0001AD5C0E900926A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E8FF0021AD5C0E900926A78 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		2E8FF0051AD5C0E900926A78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		2E8FF00B1AD5C0E900926A78 /* StudorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,9 +209,9 @@
 			children = (
 				B24300CF1AE6044E006FF3AD /* Helpers.h */,
 				B24300D01AE6044E006FF3AD /* Helpers.m */,
+				03724E131AE81F9C00C3CCB9 /* Main.storyboard */,
 				2E8FEFFC1AD5C0E900926A78 /* LogInViewController.h */,
 				2E8FEFFD1AD5C0E900926A78 /* LogInViewController.m */,
-				2E8FEFFF1AD5C0E900926A78 /* Main.storyboard */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -245,6 +248,8 @@
 			isa = PBXGroup;
 			children = (
 				03724DF71AE7D28100C3CCB9 /* Home.storyboard */,
+				03724E101AE8145B00C3CCB9 /* HomeViewController.h */,
+				03724E111AE814A400C3CCB9 /* HomeViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -444,8 +449,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				03724DEB1AE7CC7700C3CCB9 /* Profile.storyboard in Resources */,
+				03724E141AE81F9C00C3CCB9 /* Main.storyboard in Resources */,
 				03724DF81AE7D28100C3CCB9 /* Home.storyboard in Resources */,
-				2E8FF0011AD5C0E900926A78 /* Main.storyboard in Resources */,
 				03724DF21AE7CCCE00C3CCB9 /* Request.storyboard in Resources */,
 				2E8FF0061AD5C0E900926A78 /* LaunchScreen.xib in Resources */,
 				03724DE51AE7CBFB00C3CCB9 /* SignUp.storyboard in Resources */,
@@ -477,6 +482,7 @@
 				03724E0A1AE7DA0B00C3CCB9 /* RBStoryboardLink.m in Sources */,
 				03724E0D1AE7DA0B00C3CCB9 /* RBStoryboardPushSegue.m in Sources */,
 				2E8FEFFB1AD5C0E900926A78 /* AppDelegate.m in Sources */,
+				03724E121AE814A400C3CCB9 /* HomeViewController.m in Sources */,
 				03F6F0381ADE096C006DD5B1 /* SearchViewController.m in Sources */,
 				03F6F03E1ADE0BF7006DD5B1 /* ProfileViewController.m in Sources */,
 				2E8FEFF81AD5C0E900926A78 /* main.m in Sources */,
@@ -507,14 +513,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2E8FEFFF1AD5C0E900926A78 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2E8FF0001AD5C0E900926A78 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2E8FF0041AD5C0E900926A78 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
