@@ -38,8 +38,18 @@
     [PFUser logInWithUsernameInBackground:_usernameTextField.text password:_passwordTextField.text
                                     block:^(PFUser *user, NSError *error) {
                                         if (user) { //login successful
-                                            [self performSegueWithIdentifier:@"ifLogInSuccessful" sender:nil];
+                                            /*
+                                            UIStoryboard *HomeStoryboard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
+                                            UIViewController *HomeViewController = [HomeStoryboard instantiateInitialViewController];
+                                          
+                                            
+                                            [self.navigationController pushViewController:HomeViewController animated:YES];
+                                            
+                                            NSLog(@"yoyo");
 
+                                            
+                                           // [self performSegueWithIdentifier:@"ifLogInSuccessful" sender:nil];
+*/
                                         } else { //login failed
                                             _ErrorLabel.text = @"You entered the incorrect username or password.";
                                         }

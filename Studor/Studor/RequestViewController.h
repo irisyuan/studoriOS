@@ -11,6 +11,7 @@
 
 @interface RequestViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *requestButton;
 
 
 @end
