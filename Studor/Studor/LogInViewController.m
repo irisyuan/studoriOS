@@ -40,13 +40,11 @@
                                             UIViewController *HomeViewController = [HomeStoryboard instantiateInitialViewController];
                                           
                                             
-                                            [self.navigationController pushViewController:HomeViewController animated:YES];
+                                            [self.navigationController pushViewController:HomeViewController animated:YES];*/
                                             
-                                            NSLog(@"yoyo");
+                                            
+                                            [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
 
-                                            
-                                           // [self performSegueWithIdentifier:@"ifLogInSuccessful" sender:nil];
-*/
                                         } else { //login failed
                                             _ErrorLabel.text = @"You entered the incorrect username or password.";
                                         }

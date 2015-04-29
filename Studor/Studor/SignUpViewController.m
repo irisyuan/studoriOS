@@ -40,28 +40,42 @@
 
 - (IBAction)signUpButtonPressed:(id)sender {
     
-    
+    _FirstNameErrorLabel.text = @"";
+    _LastNameErrorLabel.text = @"";
+    _EmailErrorLabel.text = @"";
+    _PasswordErrorLabel.text = @"";
+    _ZipCodeErrorLabel.text = @"";
+
     
     NSMutableDictionary *errors = [[NSMutableDictionary alloc] init];
     NSString *firstName = _FirstNameField.text;
     if([firstName length] == 0){
         [errors setObject:@"Please provide a valid first Name" forKey:@"FirstName"];
+        NSLog(@"Error in first name");
+
     }
     NSString *lastName =  _LastNameField.text;
     if([lastName length] == 0){
         [errors setObject:@"Please provide a valid last Name" forKey: @"LastName"];
+        NSLog(@"Error in last name");
+
     }
     NSString *email = _EmailField.text;
     if(![Helpers NSStringIsValidEmail:email]){
         [errors setObject:@"Please provide a valid email" forKey:@"Email"];
+        NSLog(@"Error in email");
+
     }
     
     NSString *password = _PasswordField.text;
     if([password length] < 8){
         [errors setObject:@"Password must contain at least 8 characters." forKey: @"Password"];
+        NSLog(@"Error in zip password");
+
     }
     NSString *zipCode = _ZipCodeField.text;
     if(![Helpers NSStringIsValidZipCode:zipCode]){
+        NSLog(@"Error in zip code");
         [errors setObject:@"Please provide a valid zip code" forKey: @"ZipCode"];
     }
     
@@ -101,7 +115,7 @@
         
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {
-                [self performSegueWithIdentifier:@"ifSignUpSuccess" sender:nil];
+                [self performSegueWithIdentifier:@"signUpSuccessful" sender:nil];
 
                 
             } else {
