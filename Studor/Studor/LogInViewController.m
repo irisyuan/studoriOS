@@ -20,10 +20,7 @@
 - (void)viewDidLoad {
     _ErrorLabel.text = @"";
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-  
-    
+    [[self navigationController] setNavigationBarHidden:YES animated:NO];
 }
 
 
@@ -56,7 +53,6 @@
                                     }];
 
 }
-
 
 //making the keyboard disapear when clicking an empty space
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

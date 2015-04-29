@@ -8,14 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "ProfileViewController.h"
+#import <Parse/Parse.h>
 
 @implementation ProfileViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
+    // if logout button clicked, log the user out
+    /*
+    PFUser *user = [PFUser user];
+    if ([user isAuthenticated]){
+        NSLog(@"WE're in");
+    } else {
+        NSLog(@"nope wut");
+    }*/
 }
 
 - (void)didReceiveMemoryWarning
