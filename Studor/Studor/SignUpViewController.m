@@ -68,6 +68,7 @@
     
     PFUser *user = [PFUser user];
     user.username = email;
+    user.email = email;
     user.password = password;
     user[@"firstName"] = firstName;
     user[@"lastName"] = lastName;
