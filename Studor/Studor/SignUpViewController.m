@@ -79,13 +79,7 @@
         [errors setObject:@"Please provide a valid zip code" forKey: @"ZipCode"];
     }
     
-    
-    PFUser *user = [PFUser user];
-    user.username = email;
-    user.password = password;
-    user[@"firstName"] = firstName;
-    user[@"lastName"] = lastName;
-    user[@"zipCode"] = zipCode;
+
     
     if([errors count]!=0){
     for(NSString *key in errors){
@@ -112,6 +106,14 @@
     }
     }
     else{
+        
+        PFUser *user = [PFUser user];
+        user.username = email;
+        user.password = password;
+        user[@"firstName"] = firstName;
+        user[@"lastName"] = lastName;
+        user[@"zipCode"] = zipCode;
+        user[@"isTutor"] = false;
         
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {

@@ -54,6 +54,7 @@
 		2E8FF0031AD5C0E900926A78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FF0021AD5C0E900926A78 /* Images.xcassets */; };
 		2E8FF0061AD5C0E900926A78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E8FF0041AD5C0E900926A78 /* LaunchScreen.xib */; };
 		2E8FF0121AD5C0E900926A78 /* StudorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E8FF0111AD5C0E900926A78 /* StudorTests.m */; };
+		B223D3701AF1E0B3008E8DDE /* RequestConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B223D36F1AF1E0B3008E8DDE /* RequestConfirmViewController.m */; };
 		B24300CC1AE60235006FF3AD /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300CB1AE60235006FF3AD /* SignUpViewController.m */; };
 		B24300D11AE6044E006FF3AD /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300D01AE6044E006FF3AD /* Helpers.m */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,8 @@
 		2E8FF00B1AD5C0E900926A78 /* StudorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StudorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8FF0101AD5C0E900926A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2E8FF0111AD5C0E900926A78 /* StudorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StudorTests.m; sourceTree = "<group>"; };
+		B223D36E1AF1E0B3008E8DDE /* RequestConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestConfirmViewController.h; path = ../RequestConfirmViewController.h; sourceTree = "<group>"; };
+		B223D36F1AF1E0B3008E8DDE /* RequestConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestConfirmViewController.m; path = ../RequestConfirmViewController.m; sourceTree = "<group>"; };
 		B24300CA1AE60235006FF3AD /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		B24300CB1AE60235006FF3AD /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		B24300CF1AE6044E006FF3AD /* Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Helpers.h; path = ../Helpers.h; sourceTree = "<group>"; };
@@ -243,6 +246,8 @@
 			isa = PBXGroup;
 			children = (
 				03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */,
+				B223D36E1AF1E0B3008E8DDE /* RequestConfirmViewController.h */,
+				B223D36F1AF1E0B3008E8DDE /* RequestConfirmViewController.m */,
 				03F6F03A1ADE0B32006DD5B1 /* RequestViewController.m */,
 				03724DF11AE7CCCE00C3CCB9 /* Request.storyboard */,
 			);
@@ -497,6 +502,7 @@
 				2E8FEFFE1AD5C0E900926A78 /* LogInViewController.m in Sources */,
 				03724E0C1AE7DA0B00C3CCB9 /* RBStoryboardPopoverSegue.m in Sources */,
 				03724E0A1AE7DA0B00C3CCB9 /* RBStoryboardLink.m in Sources */,
+				B223D3701AF1E0B3008E8DDE /* RequestConfirmViewController.m in Sources */,
 				03724E0D1AE7DA0B00C3CCB9 /* RBStoryboardPushSegue.m in Sources */,
 				2E8FEFFB1AD5C0E900926A78 /* AppDelegate.m in Sources */,
 				03724E121AE814A400C3CCB9 /* HomeViewController.m in Sources */,

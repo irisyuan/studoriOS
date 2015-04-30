@@ -18,6 +18,11 @@
 @implementation LogInViewController
 
 - (void)viewDidLoad {
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) { // goes to tab bar controller automatically if there is already a user logged in
+        [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
+    }
+    
     _ErrorLabel.text = @"";
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
