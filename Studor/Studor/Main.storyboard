@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -25,7 +25,6 @@
                                 </state>
                                 <connections>
                                     <action selector="pressLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6KO-Tz-N5j"/>
-                                    <segue destination="ZN6-dE-noa" kind="custom" customClass="RBStoryboardModalSegue" id="pgX-Og-rZ1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQJ-dJ-72o">
@@ -87,11 +86,12 @@
                         <outlet property="ErrorLabel" destination="llN-5I-Lpa" id="r94-Xh-ZJa"/>
                         <outlet property="passwordTextField" destination="ZTl-zY-c7Q" id="hH3-fT-eJq"/>
                         <outlet property="usernameTextField" destination="uQJ-dJ-72o" id="DkF-Pd-5uW"/>
+                        <segue destination="ZN6-dE-noa" kind="show" identifier="loginSuccessful" id="G7g-jy-SnM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365.5" y="-1044.5"/>
+            <point key="canvasLocation" x="265.5" y="-1036.5"/>
         </scene>
         <!--Link to TabController-->
         <scene sceneID="Bbe-45-ANM">
