@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="68N-Pi-xfJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="68N-Pi-xfJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Profile-->
@@ -50,12 +50,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imW-cY-Jtu">
-                                <rect key="frame" x="14" y="375" width="101" height="30"/>
-                                <state key="normal" title="Switch to tutor">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S19-Ur-dGd">
                                 <rect key="frame" x="142" y="437" width="82" height="35"/>
                                 <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -87,6 +81,15 @@
                                     <action selector="logoutButtonPressed:" destination="68N-Pi-xfJ" eventType="touchUpInside" id="dJ5-tV-8pB"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imW-cY-Jtu">
+                                <rect key="frame" x="46" y="178" width="50" height="30"/>
+                                <state key="normal" title="Upload">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="PND-u8-SXe" kind="custom" customClass="RBStoryboardPushSegue" id="lEs-LT-gy0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.89019607840000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -99,13 +102,36 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="logoutButton" destination="SA8-OW-YKo" id="2Yi-tl-vNl"/>
+                        <outlet property="photo" destination="wPC-fo-EGG" id="4YE-Hf-t1F"/>
                         <outlet property="sidebarButton" destination="V4a-nJ-m4X" id="RJf-D1-iBg"/>
                         <segue destination="Yk1-8K-4Fu" kind="push" identifier="loggedOut" id="07n-1t-qpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kV-r1-f0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3302.5" y="796.5"/>
+            <point key="canvasLocation" x="3360.5" y="442.5"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="ro8-NV-oNG">
+            <objects>
+                <viewController id="PND-u8-SXe" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YJC-Cj-LF0"/>
+                        <viewControllerLayoutGuide type="bottom" id="tqT-x0-XRu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r5o-uQ-9fc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Camera"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KbS-Qx-NT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3809.5" y="864.5"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="FxO-GT-7bn">
@@ -128,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZp-mf-sGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3883.5" y="796.5"/>
+            <point key="canvasLocation" x="3999.5" y="59.5"/>
         </scene>
     </scenes>
 </document>
