@@ -13,7 +13,11 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
+
 - (IBAction)logoutButtonPressed:(id)sender;
+
 
 @end
 

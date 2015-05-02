@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface MessageViewController : UIViewController
+@interface MessageViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 
 @end

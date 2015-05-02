@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="265.5" y="-1036.5"/>
         </scene>
-        <!--Link to TabController-->
+        <!--Link to Tab Bar-->
         <scene sceneID="Bbe-45-ANM">
             <objects>
-                <viewController title="Link to TabController" id="ZN6-dE-noa" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController title="Link to Tab Bar" id="ZN6-dE-noa" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MAL-NW-A4B"/>
                         <viewControllerLayoutGuide type="bottom" id="0DT-2E-pWK"/>

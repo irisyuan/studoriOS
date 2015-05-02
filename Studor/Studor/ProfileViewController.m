@@ -9,20 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "ProfileViewController.h"
 #import <Parse/Parse.h>
+#import "SWRevealViewController.h"
 
 @implementation ProfileViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // if logout button clicked, log the user out
-    /*
-    PFUser *user = [PFUser user];
-    if ([user isAuthenticated]){
-        NSLog(@"WE're in");
-    } else {
-        NSLog(@"nope wut");
-    }*/
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
 }
 
 - (void)didReceiveMemoryWarning
