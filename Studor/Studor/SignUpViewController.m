@@ -110,6 +110,7 @@
         PFUser *user = [PFUser user];
         user.username = email;
         user.password = password;
+        /* We don't need name or zip code in User table - any updates to name will go in Profile */
         user[@"firstName"] = firstName;
         user[@"lastName"] = lastName;
         user[@"zipCode"] = zipCode;
@@ -120,6 +121,7 @@
         /* Populate initial profile for this user */
         PFObject *profile = [PFObject objectWithClassName:@"Profile"];
         //NSLog(@"firstname %@", firstName);
+        
         profile[@"firstName"] = firstName;
         profile[@"lastName"] = lastName;
         profile[@"zipCode"] = zipCode;
