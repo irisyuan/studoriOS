@@ -29,8 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     menuItems = @[@"title", @"search", @"profile", @"messages", @"student", @"tutor", @"logout"];
+
 }
 - (void)didReceiveMemoryWarning
 {

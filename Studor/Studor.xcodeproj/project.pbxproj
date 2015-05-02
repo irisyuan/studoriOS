@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0353F33A1AF4F8480001B6B4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353F3391AF4F8480001B6B4 /* CameraViewController.m */; };
+		0353F33D1AF4F86A0001B6B4 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0353F33C1AF4F86A0001B6B4 /* Camera.storyboard */; };
+		0353F33F1AF502D00001B6B4 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0353F33E1AF502CF0001B6B4 /* menu.png */; };
+		0353F3411AF504220001B6B4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353F3401AF504220001B6B4 /* SettingsViewController.m */; };
 		036E47741AF0A09A00070405 /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036E47731AF0A09A00070405 /* ForgotPassword.storyboard */; };
 		036E47771AF0A0C200070405 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036E47761AF0A0C200070405 /* ForgotPasswordViewController.m */; };
 		03724DE51AE7CBFB00C3CCB9 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724DE41AE7CBFB00C3CCB9 /* SignUp.storyboard */; };
@@ -71,6 +75,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0353F3391AF4F8480001B6B4 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		0353F33B1AF4F8530001B6B4 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		0353F33C1AF4F86A0001B6B4 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
+		0353F33E1AF502CF0001B6B4 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		0353F3401AF504220001B6B4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		0353F3421AF504320001B6B4 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		036E47731AF0A09A00070405 /* ForgotPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ForgotPassword.storyboard; path = ../ForgotPassword.storyboard; sourceTree = "<group>"; };
 		036E47751AF0A0AA00070405 /* ForgotPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ForgotPasswordViewController.h; path = ../ForgotPasswordViewController.h; sourceTree = "<group>"; };
 		036E47761AF0A0C200070405 /* ForgotPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ForgotPasswordViewController.m; path = ../ForgotPasswordViewController.m; sourceTree = "<group>"; };
@@ -185,6 +195,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0353F3381AF4F80E0001B6B4 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				0353F3391AF4F8480001B6B4 /* CameraViewController.m */,
+				0353F33B1AF4F8530001B6B4 /* CameraViewController.h */,
+				0353F33C1AF4F86A0001B6B4 /* Camera.storyboard */,
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
 		036E47701AF0A05D00070405 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +279,8 @@
 			isa = PBXGroup;
 			children = (
 				03724DF41AE7CD0600C3CCB9 /* Settings.storyboard */,
+				0353F3401AF504220001B6B4 /* SettingsViewController.m */,
+				0353F3421AF504320001B6B4 /* SettingsViewController.h */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -345,6 +367,7 @@
 		2E8FEFF41AD5C0E900926A78 /* Studor */ = {
 			isa = PBXGroup;
 			children = (
+				0353F3381AF4F80E0001B6B4 /* Camera */,
 				B2A649E51AF4678D00C9E674 /* SWRevealViewController */,
 				B24300CF1AE6044E006FF3AD /* Helpers.h */,
 				B24300D01AE6044E006FF3AD /* Helpers.m */,
@@ -361,6 +384,7 @@
 				2E8FEFF91AD5C0E900926A78 /* AppDelegate.h */,
 				2E8FEFFA1AD5C0E900926A78 /* AppDelegate.m */,
 				2E8FF0021AD5C0E900926A78 /* Images.xcassets */,
+				0353F33E1AF502CF0001B6B4 /* menu.png */,
 				2E8FF0041AD5C0E900926A78 /* LaunchScreen.xib */,
 				2E8FEFF51AD5C0E900926A78 /* Supporting Files */,
 			);
@@ -484,7 +508,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				03724DEB1AE7CC7700C3CCB9 /* Profile.storyboard in Resources */,
+				0353F33D1AF4F86A0001B6B4 /* Camera.storyboard in Resources */,
 				03724E141AE81F9C00C3CCB9 /* Main.storyboard in Resources */,
+				0353F33F1AF502D00001B6B4 /* menu.png in Resources */,
 				03724DF81AE7D28100C3CCB9 /* Home.storyboard in Resources */,
 				03724DF21AE7CCCE00C3CCB9 /* Request.storyboard in Resources */,
 				2E8FF0061AD5C0E900926A78 /* LaunchScreen.xib in Resources */,
@@ -516,6 +542,8 @@
 				03F6F03B1ADE0B32006DD5B1 /* RequestViewController.m in Sources */,
 				2E8FEFFE1AD5C0E900926A78 /* LogInViewController.m in Sources */,
 				03724E0C1AE7DA0B00C3CCB9 /* RBStoryboardPopoverSegue.m in Sources */,
+				0353F33A1AF4F8480001B6B4 /* CameraViewController.m in Sources */,
+				0353F3411AF504220001B6B4 /* SettingsViewController.m in Sources */,
 				03724E0A1AE7DA0B00C3CCB9 /* RBStoryboardLink.m in Sources */,
 				B223D3701AF1E0B3008E8DDE /* RequestConfirmViewController.m in Sources */,
 				03724E0D1AE7DA0B00C3CCB9 /* RBStoryboardPushSegue.m in Sources */,

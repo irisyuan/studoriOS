@@ -11,10 +11,12 @@
 
 @interface ProfileViewController : UIViewController
 
+
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
+@property (weak, nonatomic) IBOutlet UIImageView *photo;
 
 - (IBAction)logoutButtonPressed:(id)sender;
 
