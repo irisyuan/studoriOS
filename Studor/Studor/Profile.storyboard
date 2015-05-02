@@ -38,26 +38,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17h-YF-omF">
-                                <rect key="frame" x="14" y="307" width="122" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tfJ-zp-QR3">
-                                <rect key="frame" x="14" y="262" width="223" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S19-Ur-dGd">
-                                <rect key="frame" x="142" y="437" width="82" height="35"/>
+                                <rect key="frame" x="145" y="479" width="82" height="35"/>
                                 <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.1280691964" green="0.70438058039999996" blue="0.70438058039999996" alpha="0.87" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Save">
                                     <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="68N-Pi-xfJ" eventType="touchUpInside" id="LUI-b6-lat"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Update your profile:" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-qm-N5v">
                                 <rect key="frame" x="14" y="85" width="150" height="39"/>
@@ -90,6 +81,29 @@
                                     <segue destination="PND-u8-SXe" kind="custom" customClass="RBStoryboardPushSegue" id="lEs-LT-gy0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17h-YF-omF">
+                                <rect key="frame" x="14" y="262" width="122" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hourly Rate ($)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q57-Xh-r8K">
+                                <rect key="frame" x="145" y="262" width="122" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69F-ww-UtL">
+                                <rect key="frame" x="14" y="300" width="345" height="105"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Label" translatesAutoresizingMaskIntoConstraints="NO" id="74a-un-W5Q">
+                                <rect key="frame" x="145" y="516" width="150" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.89019607840000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -101,9 +115,17 @@
                     <navigationItem key="navigationItem" title="Studor" id="H2E-aL-Oyg"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="bioField" destination="69F-ww-UtL" id="oVR-Id-7oJ"/>
+                        <outlet property="emailField" destination="3tK-pw-c3X" id="w7q-ne-H9A"/>
+                        <outlet property="firstNameField" destination="2fw-R1-IP0" id="ygY-C7-EI7"/>
+                        <outlet property="hourlyRateField" destination="Q57-Xh-r8K" id="Zw8-YX-nuW"/>
+                        <outlet property="lastNameField" destination="Zfv-FX-dzK" id="SK4-Vg-px0"/>
                         <outlet property="logoutButton" destination="SA8-OW-YKo" id="2Yi-tl-vNl"/>
                         <outlet property="photo" destination="wPC-fo-EGG" id="4YE-Hf-t1F"/>
+                        <outlet property="saveButton" destination="S19-Ur-dGd" id="1De-Bg-2ZJ"/>
                         <outlet property="sidebarButton" destination="V4a-nJ-m4X" id="RJf-D1-iBg"/>
+                        <outlet property="successLabel" destination="74a-un-W5Q" id="GcR-qr-0Ue"/>
+                        <outlet property="zipCodeField" destination="17h-YF-omF" id="vYB-Zy-0wb"/>
                         <segue destination="Yk1-8K-4Fu" kind="push" identifier="loggedOut" id="07n-1t-qpf"/>
                     </connections>
                 </viewController>
@@ -131,7 +153,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbS-Qx-NT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3809.5" y="864.5"/>
+            <point key="canvasLocation" x="4118.5" y="808.5"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="FxO-GT-7bn">

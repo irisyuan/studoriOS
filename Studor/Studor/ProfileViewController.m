@@ -17,6 +17,47 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _successLabel.text = @"";
+    
+    // Get current user information
+    PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
+    NSString *currentUser = PFUser.currentUser.username;
+    
+    NSLog(@"%@", currentUser);
+    [query whereKey:@"username" equalTo:currentUser];
+    
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if (!object) {
+            NSLog(@"The getFirstObject request failed.");
+        } else {
+            NSLog(@"Successfully retrieved the object.");
+            
+            // If user is a tutor, then show additional fields
+            PFQuery *ifTutor = [[PFQuery queryWithClassName:@"_User"] whereKey:@"username" equalTo:currentUser];
+            [ifTutor getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+                NSString *isTutor = [object objectForKey:@"isTutor"];
+                // NSLog(@"%@", isTutor);
+                if (!isTutor) {
+                    [_bioField setHidden:TRUE];
+                    [_hourlyRateField setHidden:TRUE];
+                } else {
+                    _bioField.text = [object objectForKey:@"bio"];
+                    _hourlyRateField.text = [object objectForKey:@"bio"];
+                }
+            }];
+            
+            // Populate fields on default non-editing mode
+            NSString *firstName = [object objectForKey:@"firstName"];
+            NSString *lastName = [object objectForKey:@"lastName"];
+            NSString *zipCode = [object objectForKey:@"zipCode"];
+            NSString *email = [object objectForKey:@"email"];
+            
+            _firstNameField.text = firstName;
+            _lastNameField.text = lastName;
+            _emailField.text = email;
+            _zipCodeField.text = zipCode;
+        }
+    }];
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -25,31 +66,35 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
-    NSString *currentUser = PFUser.currentUser.username;
-    // NSLog(@"%@", currentUser);
-    
-    [query whereKey:@"username" equalTo:currentUser];
 
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+}
+
+// To do: need to add same validation as sign up page here
+- (IBAction)saveButtonPressed:(id)sender {
+    PFQuery *updateProfile = [PFQuery queryWithClassName:@"Profile"];
+    [updateProfile whereKey:@"username" equalTo:PFUser.currentUser.username];
+    
+    [updateProfile getFirstObjectInBackgroundWithBlock:^(PFObject *currentProfile, NSError *error) {
         if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
+            currentProfile[@"firstName"] = _firstNameField.text;
+            currentProfile[@"lastName"] = _lastNameField.text;
+            currentProfile[@"email"] = _emailField.text;
+            currentProfile[@"zipCode"] = _zipCodeField.text;
+    
+            // If not tutor, this is blank anyways
+            currentProfile[@"bio"] = _bioField.text;
+            NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+            f.numberStyle = NSNumberFormatterDecimalStyle;
+            NSNumber *hourlyRate = [f numberFromString:_hourlyRateField.text];
             
-            // Do something with the found objects
-            for (PFObject *object in objects) {
-                NSLog(@"%@", object.objectId);
-            }
+            currentProfile[@"hourlyRate"] = hourlyRate;
+            
+            [currentProfile saveInBackground];
+            _successLabel.text = @"Profile saved!";
         } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
+            _successLabel.text = @"Oops, try again later.";
         }
     }];
-
-    
-    
-    
 }
 
 - (void)didReceiveMemoryWarning
@@ -58,30 +103,12 @@
     
 }
 
-/* If tutor, display the following information */
+- (IBAction)editButtonPressed:(id)sender {
+    
+}
 
 
-/* Move this to profile to save with bio information at the same time?
-- (IBAction)save:(id)sender {
-    if (self.chosenImageView.image) {
-        
-        NSData *imageData = UIImagePNGRepresentation(self.chosenImageView.image);
-        PFFile *photoFile = [PFFile fileWithData:imageData];
-        PFObject *photo = [PFObject objectWithClassName:@"Profile"];
-        photo[@"image"] = photoFile;
-        photo[@"username"] = [PFUser currentUser].username;
-        
-        [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (!succeeded) {
-                [self showError];
-            }
-        }];
-    }
-    else {
-        [self showError];
-    }
-    [self clear];
-}*/
+
 
 - (IBAction)logoutButtonPressed:(id)sender {
     
