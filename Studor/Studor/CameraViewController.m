@@ -38,32 +38,36 @@
     
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 /* Move this to profile to save with bio information at the same time? */
-- (IBAction)save:(id)sender {
+- (void)save {
     if (self.chosenImageView.image) {
+        
+        NSLog(@"yaya");
         
         NSData *imageData = UIImagePNGRepresentation(self.chosenImageView.image);
         PFFile *photoFile = [PFFile fileWithData:imageData];
+        
+        /* need to change so this updates existing row instead of making a new one
         PFObject *photo = [PFObject objectWithClassName:@"Profile"];
         photo[@"image"] = photoFile;
         photo[@"username"] = [PFUser currentUser].username;
+        */
         
-        [photo saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (!succeeded) {
-                [self showError];
+        PFQuery *photo = [PFQuery queryWithClassName:@"Profile"];
+        [photo whereKey:@"username" equalTo:PFUser.currentUser.username];
+        
+        [photo getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+            if (!object) {
+                NSLog(@"The getFirstObject request failed.");
+            } else {
+                object[@"image"] = photoFile;
+                [object save];
             }
         }];
+    } else {
+       [self showError];
     }
-    else {
-        [self showError];
-    }
-    [self clear];
+    //[self clear];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -86,7 +90,11 @@
         self.imagePickerIsDisplayed = YES;
     }
     
+
+
     [self performSegueWithIdentifier:@"backToProfile" sender:nil];
+
+
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -97,7 +105,12 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.chosenImageView.image = chosenImage;
+    
+    NSLog(@"this is the chosen image: %@", chosenImage);
+    
     [self dismissViewControllerAnimated:YES completion:^{self.imagePickerIsDisplayed = NO;}];
+    [self save];
+
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -107,10 +120,13 @@
 
 - (void)clear {
     self.chosenImageView.image = nil;
-    self.titleTextField.text = nil;
 }
 
-
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 
 - (void)showError {

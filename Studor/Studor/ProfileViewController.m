@@ -32,20 +32,15 @@
         } else {
             NSLog(@"Successfully retrieved the object.");
             
-            // If user is a tutor, then show additional fields
-            PFQuery *ifTutor = [[PFQuery queryWithClassName:@"_User"] whereKey:@"username" equalTo:currentUser];
-            [ifTutor getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-                NSString *isTutor = [object objectForKey:@"isTutor"];
-                // NSLog(@"%@", isTutor);
-                if (!isTutor) {
-                    [_bioField setHidden:TRUE];
-                    [_hourlyRateField setHidden:TRUE];
-                } else {
-                    _bioField.text = [object objectForKey:@"bio"];
-                    _hourlyRateField.text = [object objectForKey:@"bio"];
-                }
-            }];
-            
+            NSString *isTutor = [object objectForKey:@"isTutor"];
+            if (!isTutor) {
+                [_bioField setHidden:TRUE];
+                [_hourlyRateField setHidden:TRUE];
+            } else {
+                _bioField.text = [object objectForKey:@"bio"];
+                _hourlyRateField.text = [object objectForKey:@"bio"];
+            }
+
             // Populate fields on default non-editing mode
             NSString *firstName = [object objectForKey:@"firstName"];
             NSString *lastName = [object objectForKey:@"lastName"];

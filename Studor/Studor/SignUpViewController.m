@@ -116,12 +116,11 @@
         user[@"zipCode"] = zipCode;
         /* Need email field for forgot password */
         user[@"email"] = email;
-        user[@"isTutor"] = @NO; // Parse parses 'false' as nil
     
         /* Populate initial profile for this user */
         PFObject *profile = [PFObject objectWithClassName:@"Profile"];
         //NSLog(@"firstname %@", firstName);
-        
+        profile[@"isTutor"] = @NO; // Parse parses 'false' as nil
         profile[@"firstName"] = firstName;
         profile[@"lastName"] = lastName;
         profile[@"zipCode"] = zipCode;
