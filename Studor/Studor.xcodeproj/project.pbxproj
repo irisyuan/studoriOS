@@ -64,6 +64,7 @@
 		B2A649F21AF4765900C9E674 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A649F11AF4765900C9E674 /* SidebarViewController.m */; };
 		B2A649FA1AF545E600C9E674 /* BecomeTutor.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A649F91AF545E600C9E674 /* BecomeTutor.Storyboard */; };
 		B2A649FC1AF54E5D00C9E674 /* TutorCenter.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */; };
+		B2A649FF1AF5593700C9E674 /* SelectSubjectsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A649FE1AF5593700C9E674 /* SelectSubjectsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,8 @@
 		B2A649F11AF4765900C9E674 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarViewController.m; path = ../SidebarViewController.m; sourceTree = "<group>"; };
 		B2A649F91AF545E600C9E674 /* BecomeTutor.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BecomeTutor.Storyboard; sourceTree = "<group>"; };
 		B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorCenter.Storyboard; sourceTree = "<group>"; };
+		B2A649FD1AF5593700C9E674 /* SelectSubjectsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSubjectsController.h; sourceTree = "<group>"; };
+		B2A649FE1AF5593700C9E674 /* SelectSubjectsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSubjectsController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -445,6 +448,8 @@
 			isa = PBXGroup;
 			children = (
 				B2A649F91AF545E600C9E674 /* BecomeTutor.Storyboard */,
+				B2A649FD1AF5593700C9E674 /* SelectSubjectsController.h */,
+				B2A649FE1AF5593700C9E674 /* SelectSubjectsController.m */,
 			);
 			name = BecomeTutor;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A649FF1AF5593700C9E674 /* SelectSubjectsController.m in Sources */,
 				03724E0F1AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m in Sources */,
 				B2A649E81AF4687300C9E674 /* SWRevealViewController.m in Sources */,
 				03F6F03B1ADE0B32006DD5B1 /* RequestViewController.m in Sources */,
