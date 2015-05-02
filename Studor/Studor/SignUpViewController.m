@@ -113,7 +113,27 @@
         user[@"firstName"] = firstName;
         user[@"lastName"] = lastName;
         user[@"zipCode"] = zipCode;
-        user[@"isTutor"] = false;
+        /* Need email field for forgot password */
+        user[@"email"] = email;
+        user[@"isTutor"] = @NO; // Parse parses 'false' as nil
+    
+        /* Populate initial profile for this user */
+        PFObject *profile = [PFObject objectWithClassName:@"Profile"];
+        //NSLog(@"firstname %@", firstName);
+        profile[@"firstName"] = firstName;
+        profile[@"lastName"] = lastName;
+        profile[@"zipCode"] = zipCode;
+        profile[@"email"] = email;
+        profile[@"username"] = email;
+
+        [profile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (succeeded) {
+                // The object has been saved.
+            } else {
+                // There was a problem, check error.description
+                NSLog(@"nooo");
+            }
+        }];
         
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if (!error) {

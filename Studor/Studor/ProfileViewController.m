@@ -25,6 +25,31 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
+    NSString *currentUser = PFUser.currentUser.username;
+    // NSLog(@"%@", currentUser);
+    
+    [query whereKey:@"username" equalTo:currentUser];
+
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %lu scores.", (unsigned long)objects.count);
+            
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                NSLog(@"%@", object.objectId);
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
