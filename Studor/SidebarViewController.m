@@ -8,6 +8,9 @@
 
 #import "SidebarViewController.h"
 #import "SWRevealViewController.h"
+#import <Parse/Parse.h>
+
+
 
 @interface SidebarViewController ()
 
@@ -29,7 +32,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    menuItems = @[@"title", @"search", @"profile", @"messages", @"student", @"tutor", @"logout"];
+    
+    
+    PFUser *currentUser = [PFUser currentUser];
+    
+    if([currentUser[@"isTutor"]  isEqual: @YES]){
+        NSLog(@"User is tutor");
+        menuItems = @[@"title", @"search", @"profile", @"messages", @"student", @"tutor", @"logout"];}
+    else{
+        NSLog(@"User is not tutor");
+
+       menuItems = @[@"title", @"search", @"profile", @"messages", @"student", @"becometutor", @"logout"];
+    }
 
 }
 - (void)didReceiveMemoryWarning

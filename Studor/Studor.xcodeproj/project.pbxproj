@@ -62,6 +62,8 @@
 		B24300D11AE6044E006FF3AD /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300D01AE6044E006FF3AD /* Helpers.m */; };
 		B2A649E81AF4687300C9E674 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A649E71AF4687300C9E674 /* SWRevealViewController.m */; };
 		B2A649F21AF4765900C9E674 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A649F11AF4765900C9E674 /* SidebarViewController.m */; };
+		B2A649FA1AF545E600C9E674 /* BecomeTutor.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A649F91AF545E600C9E674 /* BecomeTutor.Storyboard */; };
+		B2A649FC1AF54E5D00C9E674 /* TutorCenter.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,8 @@
 		B2A649E71AF4687300C9E674 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		B2A649F01AF4765900C9E674 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarViewController.h; path = ../SidebarViewController.h; sourceTree = "<group>"; };
 		B2A649F11AF4765900C9E674 /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarViewController.m; path = ../SidebarViewController.m; sourceTree = "<group>"; };
+		B2A649F91AF545E600C9E674 /* BecomeTutor.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BecomeTutor.Storyboard; sourceTree = "<group>"; };
+		B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorCenter.Storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -367,6 +371,8 @@
 		2E8FEFF41AD5C0E900926A78 /* Studor */ = {
 			isa = PBXGroup;
 			children = (
+				B2A649F61AF5454B00C9E674 /* BecomeTutor */,
+				B2A649F31AF53F8A00C9E674 /* TutorCenter */,
 				0353F3381AF4F80E0001B6B4 /* Camera */,
 				B2A649E51AF4678D00C9E674 /* SWRevealViewController */,
 				B24300CF1AE6044E006FF3AD /* Helpers.h */,
@@ -425,6 +431,22 @@
 			);
 			name = SWRevealViewController;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		B2A649F31AF53F8A00C9E674 /* TutorCenter */ = {
+			isa = PBXGroup;
+			children = (
+				B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */,
+			);
+			name = TutorCenter;
+			sourceTree = "<group>";
+		};
+		B2A649F61AF5454B00C9E674 /* BecomeTutor */ = {
+			isa = PBXGroup;
+			children = (
+				B2A649F91AF545E600C9E674 /* BecomeTutor.Storyboard */,
+			);
+			name = BecomeTutor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -513,6 +535,8 @@
 				0353F33F1AF502D00001B6B4 /* menu.png in Resources */,
 				03724DF81AE7D28100C3CCB9 /* Home.storyboard in Resources */,
 				03724DF21AE7CCCE00C3CCB9 /* Request.storyboard in Resources */,
+				B2A649FC1AF54E5D00C9E674 /* TutorCenter.Storyboard in Resources */,
+				B2A649FA1AF545E600C9E674 /* BecomeTutor.Storyboard in Resources */,
 				2E8FF0061AD5C0E900926A78 /* LaunchScreen.xib in Resources */,
 				03724DE51AE7CBFB00C3CCB9 /* SignUp.storyboard in Resources */,
 				2E8FF0031AD5C0E900926A78 /* Images.xcassets in Resources */,
