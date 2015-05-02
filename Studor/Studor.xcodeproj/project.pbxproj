@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0353F33A1AF4F8480001B6B4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353F3391AF4F8480001B6B4 /* CameraViewController.m */; };
 		0353F33D1AF4F86A0001B6B4 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0353F33C1AF4F86A0001B6B4 /* Camera.storyboard */; };
-		0353F33F1AF502D00001B6B4 /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0353F33E1AF502CF0001B6B4 /* menu.png */; };
 		0353F3411AF504220001B6B4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353F3401AF504220001B6B4 /* SettingsViewController.m */; };
 		036E47741AF0A09A00070405 /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036E47731AF0A09A00070405 /* ForgotPassword.storyboard */; };
 		036E47771AF0A0C200070405 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036E47761AF0A0C200070405 /* ForgotPasswordViewController.m */; };
@@ -27,6 +26,7 @@
 		03724E0E1AE7DA0B00C3CCB9 /* RBStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 03724E071AE7DA0B00C3CCB9 /* RBStoryboardSegue.m */; };
 		03724E0F1AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 03724E091AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m */; };
 		03724E141AE81F9C00C3CCB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724E131AE81F9C00C3CCB9 /* Main.storyboard */; };
+		03A9FFAB1AF56C8D003AC11F /* StudentCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A9FFAA1AF56C8D003AC11F /* StudentCenter.storyboard */; };
 		03F6F0381ADE096C006DD5B1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F0371ADE096C006DD5B1 /* SearchViewController.m */; };
 		03F6F03B1ADE0B32006DD5B1 /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F03A1ADE0B32006DD5B1 /* RequestViewController.m */; };
 		03F6F03E1ADE0BF7006DD5B1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F03D1ADE0BF7006DD5B1 /* ProfileViewController.m */; };
@@ -81,7 +81,6 @@
 		0353F3391AF4F8480001B6B4 /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
 		0353F33B1AF4F8530001B6B4 /* CameraViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
 		0353F33C1AF4F86A0001B6B4 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
-		0353F33E1AF502CF0001B6B4 /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		0353F3401AF504220001B6B4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		0353F3421AF504320001B6B4 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
 		036E47731AF0A09A00070405 /* ForgotPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ForgotPassword.storyboard; path = ../ForgotPassword.storyboard; sourceTree = "<group>"; };
@@ -108,6 +107,7 @@
 		03724E081AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RBStoryboardLink.h"; sourceTree = "<group>"; };
 		03724E091AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RBStoryboardLink.m"; sourceTree = "<group>"; };
 		03724E131AE81F9C00C3CCB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		03A9FFAA1AF56C8D003AC11F /* StudentCenter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StudentCenter.storyboard; sourceTree = "<group>"; };
 		03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		03F6F0371ADE096C006DD5B1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
@@ -324,6 +324,14 @@
 			name = RBStoryboardLink;
 			sourceTree = "<group>";
 		};
+		03A9FFA91AF56C80003AC11F /* StudentCenter */ = {
+			isa = PBXGroup;
+			children = (
+				03A9FFAA1AF56C8D003AC11F /* StudentCenter.storyboard */,
+			);
+			name = StudentCenter;
+			sourceTree = "<group>";
+		};
 		03FE6C371AD5CF0900C3239E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -374,12 +382,13 @@
 		2E8FEFF41AD5C0E900926A78 /* Studor */ = {
 			isa = PBXGroup;
 			children = (
+				B24300CF1AE6044E006FF3AD /* Helpers.h */,
+				B24300D01AE6044E006FF3AD /* Helpers.m */,
+				03A9FFA91AF56C80003AC11F /* StudentCenter */,
 				B2A649F61AF5454B00C9E674 /* BecomeTutor */,
 				B2A649F31AF53F8A00C9E674 /* TutorCenter */,
 				0353F3381AF4F80E0001B6B4 /* Camera */,
 				B2A649E51AF4678D00C9E674 /* SWRevealViewController */,
-				B24300CF1AE6044E006FF3AD /* Helpers.h */,
-				B24300D01AE6044E006FF3AD /* Helpers.m */,
 				036E47701AF0A05D00070405 /* ForgotPassword */,
 				03724DFC1AE7D9E900C3CCB9 /* RBStoryboardLink */,
 				03724DF91AE7D28F00C3CCB9 /* Home */,
@@ -393,7 +402,6 @@
 				2E8FEFF91AD5C0E900926A78 /* AppDelegate.h */,
 				2E8FEFFA1AD5C0E900926A78 /* AppDelegate.m */,
 				2E8FF0021AD5C0E900926A78 /* Images.xcassets */,
-				0353F33E1AF502CF0001B6B4 /* menu.png */,
 				2E8FF0041AD5C0E900926A78 /* LaunchScreen.xib */,
 				2E8FEFF51AD5C0E900926A78 /* Supporting Files */,
 			);
@@ -537,7 +545,6 @@
 				03724DEB1AE7CC7700C3CCB9 /* Profile.storyboard in Resources */,
 				0353F33D1AF4F86A0001B6B4 /* Camera.storyboard in Resources */,
 				03724E141AE81F9C00C3CCB9 /* Main.storyboard in Resources */,
-				0353F33F1AF502D00001B6B4 /* menu.png in Resources */,
 				03724DF81AE7D28100C3CCB9 /* Home.storyboard in Resources */,
 				03724DF21AE7CCCE00C3CCB9 /* Request.storyboard in Resources */,
 				B2A649FC1AF54E5D00C9E674 /* TutorCenter.Storyboard in Resources */,
@@ -545,6 +552,7 @@
 				2E8FF0061AD5C0E900926A78 /* LaunchScreen.xib in Resources */,
 				03724DE51AE7CBFB00C3CCB9 /* SignUp.storyboard in Resources */,
 				2E8FF0031AD5C0E900926A78 /* Images.xcassets in Resources */,
+				03A9FFAB1AF56C8D003AC11F /* StudentCenter.storyboard in Resources */,
 				03724DF51AE7CD0600C3CCB9 /* Settings.storyboard in Resources */,
 				03724DE81AE7CC5200C3CCB9 /* Search.storyboard in Resources */,
 				03724DF01AE7CCBC00C3CCB9 /* Message.storyboard in Resources */,

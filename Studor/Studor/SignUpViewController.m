@@ -116,7 +116,6 @@
         user[@"zipCode"] = zipCode;
         /* Need email field for forgot password */
         user[@"email"] = email;
-        user[@"isTutor"] = @NO; // Parse parses 'false' as nil
     
         
         [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
