@@ -11,7 +11,7 @@
 
 @interface SelectSubjectsController ()
 
-@property (retain, nonatomic) NSMutableArray *subjects;
+@property (retain, nonatomic) NSArray *subjects;
 
 
 @end
@@ -28,19 +28,21 @@
     
     self.subjects = [[NSMutableArray alloc] init];
 
-    PFUser *currentUser = [PFUser currentUser];
-
+    PFQuery *profileQuery = [PFQuery queryWithClassName:@"Profile"];
+    NSString *currentUser = PFUser.currentUser.username;
+    [profileQuery whereKey:@"username" equalTo:currentUser];
+    PFObject *profile = [profileQuery getFirstObject];
+    NSLog([profile objectId]);
     
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Subject"];
-    self.subjects = [query findObjects];
+    PFQuery *subjectQuery = [PFQuery queryWithClassName:@"Subject"];
+    self.subjects = [subjectQuery findObjects];
     
-    NSLog([NSString stringWithFormat:@"%lu ",[self.subjects count]]);
-
-
-    [currentUser addUniqueObject:[self.subjects[0] objectId] forKey: @"subject"];
-    [currentUser save];
     
+    [profile addUniqueObject:[self.subjects[0] objectId] forKey: @"subjects"];
+    [profile save];
+    
+    NSLog(profile[@"subjects"][0]);
     
 
     UITableView *tableView = (id)[self.view viewWithTag:1];
@@ -49,59 +51,21 @@
     [tableView setContentInset:contentInset];
 }
 
-/*- (void)viewDidLoad {
-    
-    [super viewDidLoad];
 
-    
-    PFUser *currentUser = [PFUser currentUser];
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Subject"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            
-            _subjects = [objects copy];
-            NSLog([NSString stringWithFormat:@"objects %lu", [objects count]]);
-
-            NSLog([NSString stringWithFormat:@"subjects %lu", [_subjects count]]);
-
-            
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
-
-    
-    UITableView *tableView = (id)[self.view viewWithTag:1];
-    UIEdgeInsets contentInset = tableView.contentInset;
-    contentInset.top = 20;
-    [tableView setContentInset:contentInset];
-
-    
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}*/
 - (BOOL) userTeachesSubject: (NSInteger)row{
     
     
-    PFUser *currentUser = [PFUser currentUser];
-    NSMutableArray *userSubjects = currentUser[@"subjects"];
+    PFQuery *profileQuery = [PFQuery queryWithClassName:@"Profile"];
+    NSString *currentUser = PFUser.currentUser.username;
+    [profileQuery whereKey:@"username" equalTo:currentUser];
+    PFObject *profile = [profileQuery getFirstObject];
     
-    NSLog([NSString stringWithFormat:@"%lu count",[userSubjects count]]);
-    
-    NSLog([self.subjects[row] objectId]);
+    NSArray *userSubjects = profile[@"subjects"];
     
     NSLog(userSubjects[0]);
-
+    NSLog([self.subjects[row] objectId]);
     
     if([userSubjects containsObject:[self.subjects[row] objectId]]){
-        NSLog([self.subjects[row] objectId]);
-        NSLog(userSubjects[0]);
         return true;
     }
     
@@ -135,20 +99,43 @@
     }
     
     cell.textLabel.text = self.subjects[indexPath.row][@"subject"];
-    if([self userTeachesSubject : indexPath.row]){
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;}
+    
+   if([self userTeachesSubject:indexPath.row]){
+       NSLog(@"we in heree");
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }
+
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    PFQuery *profileQuery = [PFQuery queryWithClassName:@"Profile"];
+    NSString *currentUser = PFUser.currentUser.username;
+    [profileQuery whereKey:@"username" equalTo:currentUser];
+    PFObject *profile = [profileQuery getFirstObject];
     
     
+    if([self userTeachesSubject:indexPath.row]){
+        [profile removeObject:[self.subjects[indexPath.row] objectId] forKey:@"subjects"];
+        [profile save];
+        
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.accessoryType = UITableViewCellAccessoryNone;
+
+        
+    }
     
-    
-    
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    else{
+        NSLog([self.subjects[indexPath.row] objectId]);
+        [profile addUniqueObject:[self.subjects[indexPath.row] objectId] forKey: @"subjects"];
+        [profile save];
+        
+        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+        
+        
+    }
     
     
 

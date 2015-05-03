@@ -7,7 +7,7 @@
 //
 
 #import "Helpers.h"
-
+#import <Parse/Parse.h>
 @implementation Helpers
 
 
@@ -32,6 +32,16 @@
     }
     NSLog(error);
     return [zipTest evaluateWithObject:checkString];
+}
+
++ (PFObject*) getProfile {
+    
+    PFQuery *profileQuery = [PFQuery queryWithClassName:@"Profile"];
+    NSString *currentUser = PFUser.currentUser.username;
+    [profileQuery whereKey:@"username" equalTo:currentUser];
+    return [profileQuery getFirstObject];
+  
+    
 }
 
 @end

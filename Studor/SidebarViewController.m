@@ -9,6 +9,7 @@
 #import "SidebarViewController.h"
 #import "SWRevealViewController.h"
 #import <Parse/Parse.h>
+#import "Helpers.h"
 
 
 
@@ -34,9 +35,7 @@
     [super viewDidLoad];
     
     
-    PFUser *currentUser = [PFUser currentUser];
-    
-    if([currentUser[@"isTutor"]  isEqual: @YES]){
+    if([[Helpers getProfile][@"isTutor"] isEqual: @YES]){
         NSLog(@"User is tutor");
         menuItems = @[@"title", @"search", @"profile", @"messages", @"student", @"tutor", @"logout"];}
     else{
