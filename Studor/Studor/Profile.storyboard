@@ -123,7 +123,7 @@
                         <outlet property="hourlyRateField" destination="Q57-Xh-r8K" id="Zw8-YX-nuW"/>
                         <outlet property="lastNameField" destination="Zfv-FX-dzK" id="SK4-Vg-px0"/>
                         <outlet property="logoutButton" destination="SA8-OW-YKo" id="2Yi-tl-vNl"/>
-                        <outlet property="photo" destination="wPC-fo-EGG" id="4YE-Hf-t1F"/>
+                        <outlet property="photo" destination="wPC-fo-EGG" id="2gl-QS-3Uz"/>
                         <outlet property="saveButton" destination="S19-Ur-dGd" id="1De-Bg-2ZJ"/>
                         <outlet property="sidebarButton" destination="V4a-nJ-m4X" id="RJf-D1-iBg"/>
                         <outlet property="successLabel" destination="74a-un-W5Q" id="GcR-qr-0Ue"/>

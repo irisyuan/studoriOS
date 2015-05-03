@@ -40,8 +40,6 @@
     NSString *currentUser = PFUser.currentUser.username;
     [profileQuery whereKey:@"username" equalTo:currentUser];
     return [profileQuery getFirstObject];
-  
-    
 }
 
 @end

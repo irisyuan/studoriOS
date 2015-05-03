@@ -12,6 +12,7 @@
 #import <Parse/Parse.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "SWRevealViewController.h"
+#import "Helpers.h"
 
 
 @interface CameraViewController ()
@@ -41,23 +42,14 @@
 /* Move this to profile to save with bio information at the same time? */
 - (void)save {
     if (self.chosenImageView.image) {
-        
-        NSLog(@"yaya");
-        
         NSData *imageData = UIImagePNGRepresentation(self.chosenImageView.image);
         PFFile *photoFile = [PFFile fileWithData:imageData];
         
-        PFQuery *photo = [PFQuery queryWithClassName:@"Profile"];
-        [photo whereKey:@"username" equalTo:PFUser.currentUser.username];
-        
-        [photo getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-            if (!object) {
-                NSLog(@"The getFirstObject request failed.");
-            } else {
-                object[@"image"] = photoFile;
-                [object save];
-            }
-        }];
+        PFObject *profile = [Helpers getProfile];
+        profile[@"image"] = photoFile;
+        if (![profile save]) {
+            NSLog(@"Image could not be saved");
+        }
     } else {
        [self showError];
     }
@@ -98,10 +90,26 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    
+    
+    
     self.chosenImageView.image = chosenImage;
     
     NSLog(@"this is the chosen image! %@", self.chosenImageView.image);
-    [self save];
+    //[self save];
+    
+    NSData *imageData = UIImagePNGRepresentation(chosenImage);
+    PFFile *photoFile = [PFFile fileWithData:imageData];
+    
+    PFObject *profile = [Helpers getProfile];
+    profile[@"image"] = photoFile;
+    if (![profile save]) {
+        NSLog(@"Image could not be saved");
+    } else {
+        NSLog(@"fuck yeah");
+    }
+
+    
 
     [self dismissViewControllerAnimated:YES completion:^{self.imagePickerIsDisplayed = NO;}];
 
