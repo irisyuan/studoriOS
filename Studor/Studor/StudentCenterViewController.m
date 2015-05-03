@@ -20,35 +20,14 @@
     
     [super viewDidLoad];
     
-    self.requests = [[NSMutableArray alloc] init];
-    
-    
-    PFQuery *query = [PFQuery queryWithClassName:@"Request"];
-    NSArray *objects = [query whereKey:@"studentId" equalTo:PFUser.currentUser.username];
-    
-    for (int x = 0; x < [objects count]; x++) {
-        //NSLog(objects[x][@"requests"]);
-        
-        [self.requests addObject:[NSString stringWithString:objects[x][@"subject"] ]];
-    }
-    
-    for (int x = 0; x < [self.requests count]; x++) {
-        NSLog(self.requests[x]);
-    }
-    
-    
-    UITableView *tableView = (id)[self.view viewWithTag:1];
-    UIEdgeInsets contentInset = tableView.contentInset;
-    contentInset.top = 20;
-    [tableView setContentInset:contentInset];
-}
+    self.requests = [[NSMutableArray alloc] init];}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
+/*
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
@@ -69,7 +48,7 @@
     }
     cell.textLabel.text = self.requests[indexPath.row];
     return cell;
-}
+}*/
 
 
 @end

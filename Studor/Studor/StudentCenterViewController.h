@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StudentCenterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface StudentCenterViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *PendingRequestsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *CurrentSessionsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *PastSessionsLabel;
+
 
 @end
