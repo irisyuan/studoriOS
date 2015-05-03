@@ -34,7 +34,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="KGM-Ib-uqf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.37219854797979779" green="0.37219854797979779" blue="0.37219854797979779" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.56672190656565635" green="0.56672190656565635" blue="0.56672190656565635" alpha="1" colorSpace="calibratedRGB"/>
                         <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoVerySmall" id="uN2-Ux-XG6">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -53,7 +53,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.097489493500757404" green="0.47830916251743588" blue="0.48812342171717182" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14545013188452663" green="0.71361670136483002" blue="0.72825915404040409" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search" id="MZG-6I-3Uj">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -71,7 +71,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.097489493500757404" green="0.47830916251743588" blue="0.48812342171717182" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14545013188452663" green="0.71361670136483002" blue="0.72825915404040409" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="LzP-Ko-sQx" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="3Yh-X3-yMa"/>
                                 </connections>
@@ -92,7 +92,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.097489493500757404" green="0.47830916251743588" blue="0.48812342171717182" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14545013188452663" green="0.71361670136483002" blue="0.72825915404040409" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="sZK-k7-acO" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="7IO-bT-2nw"/>
                                 </connections>
@@ -113,7 +113,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.097489493500757404" green="0.47830916251743588" blue="0.48812342171717182" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14545013188452663" green="0.71361670136483002" blue="0.72825915404040409" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="APY-MT-4Af" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="bzX-HE-gNb"/>
                                 </connections>
@@ -134,7 +134,7 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.097489493500757404" green="0.47830916251743588" blue="0.48812342171717182" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14545013188452663" green="0.71361670136483002" blue="0.72825915404040409" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="3dZ-PX-ybH" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="RQy-hZ-cVz"/>
                                 </connections>
@@ -155,7 +155,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.097489493500757404" green="0.47830916251743588" blue="0.48812342171717182" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14545013188452663" green="0.71361670136483002" blue="0.72825915404040409" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="8Fe-7x-pbX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Q0Q-5l-VBK"/>
                                 </connections>
@@ -201,7 +201,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.097489493500757404" green="0.47830916251743588" blue="0.48812342171717182" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14545013188452663" green="0.71361670136483002" blue="0.72825915404040409" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="hvq-F5-z7w" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="A0Z-IJ-Onc"/>
                                 </connections>
@@ -240,7 +240,7 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.097489493500757404" green="0.47830916251743588" blue="0.48812342171717182" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.14545013188452663" green="0.71361670136483002" blue="0.72825915404040409" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="9Tn-kL-qSH" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="UYq-uy-PuK"/>
                                 </connections>
