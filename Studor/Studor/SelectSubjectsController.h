@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface SelectSubjectsController : UIViewController
 <UITableViewDataSource, UITableViewDelegate>
+
+- (BOOL) userTeachesSubject: (NSInteger)row;
 
 
 @end

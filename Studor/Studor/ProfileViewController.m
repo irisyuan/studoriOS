@@ -18,42 +18,6 @@
 {
     [super viewDidLoad];
     _successLabel.text = @"";
-    
-    // Get current user information
-    PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
-    NSString *currentUser = PFUser.currentUser.username;
-    
-    NSLog(@"%@", currentUser);
-    [query whereKey:@"username" equalTo:currentUser];
-    
-    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
-        if (!object) {
-            NSLog(@"The getFirstObject request failed.");
-        } else {
-            NSLog(@"Successfully retrieved the object.");
-            
-            NSString *isTutor = [object objectForKey:@"isTutor"];
-            if (!isTutor) {
-                [_bioField setHidden:TRUE];
-                [_hourlyRateField setHidden:TRUE];
-            } else {
-                _bioField.text = [object objectForKey:@"bio"];
-                _hourlyRateField.text = [object objectForKey:@"bio"];
-            }
-
-            // Populate fields on default non-editing mode
-            NSString *firstName = [object objectForKey:@"firstName"];
-            NSString *lastName = [object objectForKey:@"lastName"];
-            NSString *zipCode = [object objectForKey:@"zipCode"];
-            NSString *email = [object objectForKey:@"email"];
-            
-            _firstNameField.text = firstName;
-            _lastNameField.text = lastName;
-            _emailField.text = email;
-            _zipCodeField.text = zipCode;
-        }
-    }];
-    
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -61,8 +25,8 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-
 }
+
 
 // To do: need to add same validation as sign up page here
 - (IBAction)saveButtonPressed:(id)sender {
@@ -102,7 +66,46 @@
     
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    
+    
+    // Get current user information
+    PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
+    NSString *currentUser = PFUser.currentUser.username;
+    
+    NSLog(@"%@", currentUser);
+    [query whereKey:@"username" equalTo:currentUser];
+    
+    [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+        if (!object) {
+            NSLog(@"The getFirstObject request failed.");
+        } else {
+            NSLog(@"Successfully retrieved the object.");
+            
+            NSString *isTutor = [object objectForKey:@"isTutor"];
+            if (!isTutor) {
+                [_bioField setHidden:TRUE];
+                [_hourlyRateField setHidden:TRUE];
+            } else {
+                _bioField.text = [object objectForKey:@"bio"];
+                // add later
+                // _hourlyRateField.text = [object objectForKey:@"hourlyRate"];
+            }
+            
+            // Populate fields on default non-editing mode
+            NSString *firstName = [object objectForKey:@"firstName"];
+            NSString *lastName = [object objectForKey:@"lastName"];
+            NSString *zipCode = [object objectForKey:@"zipCode"];
+            NSString *email = [object objectForKey:@"email"];
+            
+            _firstNameField.text = firstName;
+            _lastNameField.text = lastName;
+            _emailField.text = email;
+            _zipCodeField.text = zipCode;
+        }
+    }];
 
+}
 
 
 - (IBAction)logoutButtonPressed:(id)sender {

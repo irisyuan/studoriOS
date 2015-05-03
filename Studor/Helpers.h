@@ -7,11 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface Helpers : NSObject
 
 + (BOOL) NSStringIsValidEmail:(NSString *)checkString;
 + (BOOL) NSStringIsValidZipCode:(NSString *)checkString;
++ (PFObject*) getProfile;
 
 
 
