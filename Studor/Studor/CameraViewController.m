@@ -47,12 +47,6 @@
         NSData *imageData = UIImagePNGRepresentation(self.chosenImageView.image);
         PFFile *photoFile = [PFFile fileWithData:imageData];
         
-        /* need to change so this updates existing row instead of making a new one
-        PFObject *photo = [PFObject objectWithClassName:@"Profile"];
-        photo[@"image"] = photoFile;
-        photo[@"username"] = [PFUser currentUser].username;
-        */
-        
         PFQuery *photo = [PFQuery queryWithClassName:@"Profile"];
         [photo whereKey:@"username" equalTo:PFUser.currentUser.username];
         
@@ -67,7 +61,7 @@
     } else {
        [self showError];
     }
-    //[self clear];
+    [self clear];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -106,10 +100,11 @@
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.chosenImageView.image = chosenImage;
     
-    NSLog(@"this is the chosen image: %@", chosenImage);
-    
-    [self dismissViewControllerAnimated:YES completion:^{self.imagePickerIsDisplayed = NO;}];
+    NSLog(@"this is the chosen image! %@", self.chosenImageView.image);
     [self save];
+
+    [self dismissViewControllerAnimated:YES completion:^{self.imagePickerIsDisplayed = NO;}];
+
 
 }
 

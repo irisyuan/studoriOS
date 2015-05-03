@@ -13,5 +13,6 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
+@property (weak, nonatomic) IBOutlet UISwitch *toggleAvailability;
 
 @end
