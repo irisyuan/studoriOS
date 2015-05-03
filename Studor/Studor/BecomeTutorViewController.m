@@ -45,6 +45,13 @@
 }
 */
 
+
+//making the keyboard disapear when clicking an empty space
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
+
 - (IBAction)buttonPressed:(id)sender {
     PFObject *profile = [Helpers getProfile];
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
