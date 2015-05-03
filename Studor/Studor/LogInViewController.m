@@ -20,11 +20,17 @@
 - (void)viewDidLoad {
     PFUser *currentUser = [PFUser currentUser];
     if (currentUser) { // goes to tab bar controller automatically if there is already a user logged in
-        [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
+        //[self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
+        // no user should be logged in on this page
+        [PFUser logOut];
+     NSLog(@"Logged out");
     }
+    
+    
     
     _ErrorLabel.text = @"";
     [super viewDidLoad];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
 }
 
@@ -61,6 +67,8 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
+
+
 
 
 @end

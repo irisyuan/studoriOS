@@ -19,6 +19,7 @@
 @end
 
 @implementation SidebarViewController {
+
     NSArray *menuItems;
 }
 - (id)initWithStyle:(UITableViewStyle)style
@@ -33,7 +34,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [[self navigationController] setNavigationBarHidden:YES animated:YES];
+
     
     if([[Helpers getProfile][@"isTutor"] isEqual: @YES]){
         NSLog(@"User is tutor");
