@@ -57,7 +57,7 @@
                                             [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
 
                                         } else { //login failed
-                                            _ErrorLabel.text = @"You entered the incorrect username or password.";
+                                            _ErrorLabel.text = @"Invalid Username or Password";
                                         }
                                     }];
 
