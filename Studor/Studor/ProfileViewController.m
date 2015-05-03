@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
     _successLabel.text = @"";
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )

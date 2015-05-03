@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Student Center View Controller-->
+        <!--Student Center-->
         <scene sceneID="x97-ij-PWH">
             <objects>
                 <viewController id="fxj-Wk-pDj" customClass="StudentCenterViewController" sceneMemberID="viewController">
@@ -55,12 +55,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="1rR-JS-7Mr"/>
+                    <navigationItem key="navigationItem" title="Student Center" id="1rR-JS-7Mr">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="21Q-Hn-zZA">
+                            <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="CurrentSessionsLabel" destination="hdl-nQ-yv9" id="oz1-z6-wMq"/>
                         <outlet property="PastSessionsLabel" destination="dUN-Ke-vZg" id="cQ3-GD-e5Q"/>
                         <outlet property="PendingRequestsLabel" destination="eJo-42-oBg" id="Zmp-5O-fb7"/>
+                        <outlet property="sidebarButton" destination="21Q-Hn-zZA" id="DhC-XQ-rgD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efM-cv-8hn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -365,6 +370,7 @@
     </scenes>
     <resources>
         <image name="default_pic" width="185" height="185"/>
+        <image name="menu" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="P39-Bn-5DS"/>

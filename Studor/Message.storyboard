@@ -19,7 +19,7 @@
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R8A-lO-lh3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="ABh-jk-867">
+                                    <navigationItem title="Messages" id="ABh-jk-867">
                                         <barButtonItem key="leftBarButtonItem" image="menu" id="258-cD-67F">
                                             <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
                                         </barButtonItem>
