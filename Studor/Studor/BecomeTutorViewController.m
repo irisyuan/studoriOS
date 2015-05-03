@@ -8,6 +8,7 @@
 
 #import "BecomeTutorViewController.h"
 #import "Helpers.h"
+#import "SWRevealViewController.h"
 
 @interface BecomeTutorViewController ()
 
@@ -17,7 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationController.navigationBar.hidden = YES;
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,9 +50,10 @@
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber *myNumber = [f numberFromString:self.rateField.text];
-
-    profile[@"hourlyRate"] = myNumber;
     
+    
+    
+    profile[@"hourlyRate"] = myNumber;
     profile[@"isTutor"] = @YES;
     profile[@"bio"] = self.bioField.text;
     [profile save];
