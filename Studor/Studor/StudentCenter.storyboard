@@ -16,51 +16,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Sessions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdl-nQ-yv9">
-                                <rect key="frame" x="11" y="298" width="132" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Past Sessions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUN-Ke-vZg">
-                                <rect key="frame" x="11" y="490" width="109" height="21"/>
+                                <rect key="frame" x="11" y="482" width="109" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzw-aJ-VVe">
-                                <rect key="frame" x="0.0" y="513" width="375" height="154"/>
+                                <rect key="frame" x="0.0" y="505" width="375" height="154"/>
                                 <connections>
                                     <segue destination="xyj-sK-ut6" kind="embed" id="ndC-F7-C2K"/>
                                 </connections>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Sessions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdl-nQ-yv9">
+                                <rect key="frame" x="11" y="282" width="132" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axP-oL-kxm">
-                                <rect key="frame" x="-3" y="327" width="380" height="155"/>
+                                <rect key="frame" x="-3" y="311" width="380" height="155"/>
                                 <connections>
                                     <segue destination="sa5-Dm-rnB" kind="embed" id="KiV-DI-648"/>
                                 </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pending Requests" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-42-oBg">
-                                <rect key="frame" x="11" y="92" width="141" height="32"/>
+                                <rect key="frame" x="11" y="80" width="141" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7kA-CM-uiy">
-                                <rect key="frame" x="0.0" y="132" width="375" height="158"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="147"/>
                                 <connections>
                                     <segue destination="KyD-LA-mII" kind="embed" id="acE-5U-rfd"/>
                                 </connections>
                             </containerView>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xjt-ja-qUZ">
-                                <rect key="frame" x="244" y="81" width="51" height="31"/>
-                            </switch>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Become Available" translatesAutoresizingMaskIntoConstraints="NO" id="hRW-wy-DjE">
-                                <rect key="frame" x="301" y="72" width="74" height="46"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -362,7 +353,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" red="0.8980392814" green="0.88627457620000005" blue="0.92549026010000002" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="backgroundColor" red="0.92614808075197863" green="0.90933405801087708" blue="0.96331146408839774" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="71b-q2-BJ2"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -376,6 +367,6 @@
         <image name="default_pic" width="185" height="185"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LBI-wL-ylQ"/>
+        <segue reference="P39-Bn-5DS"/>
     </inferredMetricsTieBreakers>
 </document>
