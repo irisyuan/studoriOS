@@ -108,10 +108,4 @@
 
 }
 
-
-- (IBAction)logoutButtonPressed:(id)sender {
-    
-    [PFUser logOut];
-    [self performSegueWithIdentifier:@"loggedOut" sender:nil];
-}
 @end

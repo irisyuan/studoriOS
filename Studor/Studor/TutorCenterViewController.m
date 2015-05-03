@@ -8,6 +8,8 @@
 
 #import "TutorCenterViewController.h"
 #import <Parse/Parse.h>
+#import "SWRevealViewController.h"
+
 
 
 @interface TutorCenterViewController()
@@ -20,6 +22,17 @@
     
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = YES;
+    
+    
+    self.navigationController.navigationBar.hidden = YES;
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+
 
     self.requests = [[NSMutableArray alloc] init];
     /*

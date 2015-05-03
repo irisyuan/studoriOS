@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *PendingRequestsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *CurrentSessionsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PastSessionsLabel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 
 @end

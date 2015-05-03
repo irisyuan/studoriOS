@@ -11,4 +11,7 @@
 
 @interface TutorCenterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
+
 @end
