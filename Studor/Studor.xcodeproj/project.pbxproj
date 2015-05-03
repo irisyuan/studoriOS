@@ -27,6 +27,7 @@
 		03724E0F1AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 03724E091AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m */; };
 		03724E141AE81F9C00C3CCB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03724E131AE81F9C00C3CCB9 /* Main.storyboard */; };
 		03A9FFAB1AF56C8D003AC11F /* StudentCenter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A9FFAA1AF56C8D003AC11F /* StudentCenter.storyboard */; };
+		03A9FFAE1AF5A0C6003AC11F /* StudentCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A9FFAD1AF5A0C6003AC11F /* StudentCenterViewController.m */; };
 		03F6F0381ADE096C006DD5B1 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F0371ADE096C006DD5B1 /* SearchViewController.m */; };
 		03F6F03B1ADE0B32006DD5B1 /* RequestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F03A1ADE0B32006DD5B1 /* RequestViewController.m */; };
 		03F6F03E1ADE0BF7006DD5B1 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F6F03D1ADE0BF7006DD5B1 /* ProfileViewController.m */; };
@@ -108,6 +109,8 @@
 		03724E091AE7DA0B00C3CCB9 /* UIViewController+RBStoryboardLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RBStoryboardLink.m"; sourceTree = "<group>"; };
 		03724E131AE81F9C00C3CCB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		03A9FFAA1AF56C8D003AC11F /* StudentCenter.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StudentCenter.storyboard; sourceTree = "<group>"; };
+		03A9FFAC1AF5A097003AC11F /* StudentCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentCenterViewController.h; sourceTree = "<group>"; };
+		03A9FFAD1AF5A0C6003AC11F /* StudentCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentCenterViewController.m; sourceTree = "<group>"; };
 		03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		03F6F0371ADE096C006DD5B1 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		03F6F0391ADE09B1006DD5B1 /* RequestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RequestViewController.h; sourceTree = "<group>"; };
@@ -328,6 +331,8 @@
 			isa = PBXGroup;
 			children = (
 				03A9FFAA1AF56C8D003AC11F /* StudentCenter.storyboard */,
+				03A9FFAC1AF5A097003AC11F /* StudentCenterViewController.h */,
+				03A9FFAD1AF5A0C6003AC11F /* StudentCenterViewController.m */,
 			);
 			name = StudentCenter;
 			sourceTree = "<group>";
@@ -593,6 +598,7 @@
 				B24300CC1AE60235006FF3AD /* SignUpViewController.m in Sources */,
 				B2A649F21AF4765900C9E674 /* SidebarViewController.m in Sources */,
 				03724E0B1AE7DA0B00C3CCB9 /* RBStoryboardModalSegue.m in Sources */,
+				03A9FFAE1AF5A0C6003AC11F /* StudentCenterViewController.m in Sources */,
 				036E47771AF0A0C200070405 /* ForgotPasswordViewController.m in Sources */,
 				03724E0E1AE7DA0B00C3CCB9 /* RBStoryboardSegue.m in Sources */,
 				03F6F0411ADE0C6C006DD5B1 /* MessageViewController.m in Sources */,

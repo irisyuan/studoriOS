@@ -106,6 +106,16 @@
                                     <action selector="logoutButtonPressed:" destination="68N-Pi-xfJ" eventType="touchUpInside" id="dJ5-tV-8pB"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2s5-6J-BRX">
+                                <rect key="frame" x="16" y="14" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="ukR-wX-pgl">
+                                        <barButtonItem key="leftBarButtonItem" image="menu" id="PgU-yp-vjl">
+                                            <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.89019607840000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
