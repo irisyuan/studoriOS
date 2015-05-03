@@ -46,16 +46,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBF-Xw-2hE">
-                                <rect key="frame" x="16" y="42" width="107" height="30"/>
-                                <state key="normal" title="Select Subjects">
-                                    <color key="titleColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="j5X-MX-sLb" kind="show" id="f8w-0Y-1Ed"/>
-                                </connections>
-                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udk-5O-BcQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="vaS-3s-ge5">
+                                        <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="dlm-y3-kZa">
+                                            <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLm-3e-saT">
                                 <rect key="frame" x="61" y="489" width="252" height="30"/>
                                 <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -67,16 +67,16 @@
                                     <action selector="buttonPressed:" destination="axX-jD-LHq" eventType="touchUpInside" id="By9-Md-Gc3"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udk-5O-BcQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="vaS-3s-ge5">
-                                        <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="dlm-y3-kZa">
-                                            <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBF-Xw-2hE">
+                                <rect key="frame" x="16" y="59" width="107" height="30"/>
+                                <state key="normal" title="Select Subjects">
+                                    <color key="titleColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="j5X-MX-sLb" kind="show" id="f8w-0Y-1Ed"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91764712329999998" green="0.90980398650000005" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
