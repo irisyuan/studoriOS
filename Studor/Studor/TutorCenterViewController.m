@@ -9,6 +9,7 @@
 #import "TutorCenterViewController.h"
 #import <Parse/Parse.h>
 #import "SWRevealViewController.h"
+#import "Helpers.h"
 
 
 
@@ -23,8 +24,6 @@
     [super viewDidLoad];
     self.navigationController.navigationBar.hidden = YES;
     
-    
-    self.navigationController.navigationBar.hidden = YES;
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
     {
@@ -33,8 +32,12 @@
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
 
-
     self.requests = [[NSMutableArray alloc] init];
+    PFObject *profile = [Helpers getProfile];
+    if (![profile[@"isAvailable"] boolValue]) {
+        NSLog(@"nope not available");
+        [_toggleAvailability setOn:NO animated:YES];
+    }
     /*
      PFQuery *query = [PFQuery queryWithClassName:@"Request"];
      NSArray *objects = [query whereKey:@"studentId" equalTo:PFUser.currentUser.username];
@@ -92,5 +95,16 @@
     return cell;
 }
 
+- (IBAction)toggleAvailable:(id)sender {
+    PFObject *profile = [Helpers getProfile];
+    if([sender isOn]){
+        NSLog(@"available");
+        profile[@"isAvailable"] = @YES;
+    } else {
+        NSLog(@"not available");
+        profile[@"isAvailable"] = @NO;
+    }
+    [profile saveInBackground];
+}
 
 @end

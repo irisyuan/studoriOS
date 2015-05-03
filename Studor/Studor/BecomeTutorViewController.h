@@ -13,4 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *bioField;
 - (IBAction)buttonPressed:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
+
 @end

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eai-aD-jGa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eai-aD-jGa">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Student Center View Controller-->
@@ -34,6 +34,9 @@
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D43-tM-cbW">
                                 <rect key="frame" x="0.0" y="92" width="375" height="158"/>
+                                <connections>
+                                    <segue destination="KyD-LA-mII" kind="embed" id="uVq-5u-nfC"/>
+                                </connections>
                             </containerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Sessions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VW7-Jn-2Up">
                                 <rect key="frame" x="16" y="258" width="132" height="21"/>
@@ -49,9 +52,15 @@
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZXJ-zW-rdA">
                                 <rect key="frame" x="0.0" y="494" width="375" height="179"/>
+                                <connections>
+                                    <segue destination="xyj-sK-ut6" kind="embed" id="0WF-Ve-t7u"/>
+                                </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KiK-cQ-vV4">
                                 <rect key="frame" x="0.0" y="287" width="375" height="170"/>
+                                <connections>
+                                    <segue destination="sa5-Dm-rnB" kind="embed" id="rd1-2Y-c0C"/>
+                                </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

@@ -26,6 +26,8 @@
     
     [super viewDidLoad];
     
+    
+    
     self.subjects = [[NSMutableArray alloc] init];
 
     PFQuery *profileQuery = [PFQuery queryWithClassName:@"Profile"];
