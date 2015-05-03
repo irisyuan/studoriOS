@@ -8,10 +8,13 @@
 
 #import "StudentCenterViewController.h"
 #import <Parse/Parse.h>
+#import "SWRevealViewController.h"
 
 
 @interface StudentCenterViewController()
     @property (retain, nonatomic) NSMutableArray *requests;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+
 @end
 
 @implementation StudentCenterViewController
@@ -19,8 +22,20 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+    //self.navigationController.navigationBar.hidden = YES;
+
+    self.requests = [[NSMutableArray alloc] init];
     
-    self.requests = [[NSMutableArray alloc] init];}
+    SWRevealViewController *revealViewController = self.revealViewController;
+    if ( revealViewController )
+    {
+        [self.sidebarButton setTarget: self.revealViewController];
+        [self.sidebarButton setAction: @selector( revealToggle: )];
+        [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    }
+    
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

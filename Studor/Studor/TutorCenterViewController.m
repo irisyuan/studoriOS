@@ -19,7 +19,8 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
+    self.navigationController.navigationBar.hidden = YES;
+
     self.requests = [[NSMutableArray alloc] init];
     /*
      PFQuery *query = [PFQuery queryWithClassName:@"Request"];
