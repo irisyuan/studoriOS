@@ -9,14 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ForgotPasswordViewController.h"
-            timestampString = "451979049.468758"
+            filePath = "Studor/CameraViewController.m"
+            timestampString = "452286757.167847"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "@interface ForgotPasswordViewController"
-            landmarkType = "2">
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "-save"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

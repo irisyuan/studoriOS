@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -25,7 +25,6 @@
                                 </state>
                                 <connections>
                                     <action selector="pressLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6KO-Tz-N5j"/>
-                                    <segue destination="ZN6-dE-noa" kind="custom" customClass="RBStoryboardModalSegue" id="pgX-Og-rZ1"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQJ-dJ-72o">
@@ -68,14 +67,17 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Forgot Password?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fkg-BO-1D5">
-                                <rect key="frame" x="125" y="368" width="130" height="32"/>
-                                <color key="backgroundColor" red="0.91764712329999998" green="0.90980398650000005" blue="0.94117653369999998" alpha="0.0" colorSpace="deviceRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="textColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIz-0G-O3w">
+                                <rect key="frame" x="76" y="368" width="223" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MIa-FX-G5k" kind="custom" customClass="RBStoryboardModalSegue" id="bvl-kN-ybd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93333339691162109" green="0.92941182851791382" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
                     </view>
@@ -84,16 +86,17 @@
                         <outlet property="ErrorLabel" destination="llN-5I-Lpa" id="r94-Xh-ZJa"/>
                         <outlet property="passwordTextField" destination="ZTl-zY-c7Q" id="hH3-fT-eJq"/>
                         <outlet property="usernameTextField" destination="uQJ-dJ-72o" id="DkF-Pd-5uW"/>
+                        <segue destination="ZN6-dE-noa" kind="show" identifier="loginSuccessful" id="G7g-jy-SnM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365.5" y="-1044.5"/>
+            <point key="canvasLocation" x="265.5" y="-1036.5"/>
         </scene>
-        <!--Link to TabController-->
+        <!--Link to Tab Bar-->
         <scene sceneID="Bbe-45-ANM">
             <objects>
-                <viewController title="Link to TabController" id="ZN6-dE-noa" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController title="Link to Tab Bar" id="ZN6-dE-noa" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MAL-NW-A4B"/>
                         <viewControllerLayoutGuide type="bottom" id="0DT-2E-pWK"/>
@@ -112,15 +115,15 @@
             </objects>
             <point key="canvasLocation" x="946.5" y="-1616.5"/>
         </scene>
-        <!--Link to ForgotPassword-->
-        <scene sceneID="woi-og-yRd">
+        <!--Storyboard Link-->
+        <scene sceneID="Ui9-v1-GrH">
             <objects>
-                <viewController title="Link to ForgotPassword" id="FoU-q2-Ny6" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController id="MIa-FX-G5k" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0lg-Fk-HzJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="LpC-03-hUC"/>
+                        <viewControllerLayoutGuide type="top" id="nlr-LW-KKi"/>
+                        <viewControllerLayoutGuide type="bottom" id="YnC-wR-1kZ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="e9s-6r-pha">
+                    <view key="view" contentMode="scaleToFill" id="naw-NG-IbZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -130,9 +133,9 @@
                         <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="ForgotPassword"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vcf-dz-7Li" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXi-Dz-srD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="932.5" y="-633.5"/>
+            <point key="canvasLocation" x="1122.5" y="-715.5"/>
         </scene>
         <!--Link to SignUp-->
         <scene sceneID="bjR-yf-LND">
@@ -154,7 +157,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsZ-LC-dKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1401.5" y="-1195.5"/>
+            <point key="canvasLocation" x="1399.5" y="-1449.5"/>
         </scene>
     </scenes>
     <resources>

@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-
 @interface ForgotPasswordViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *emailField;
-@property (weak, nonatomic) IBOutlet UIButton *SendResetEmail;
-- (IBAction)sendReset:(id)sender;
+@property (weak, nonatomic) IBOutlet UITextField *EmailField;
 
+@property (weak, nonatomic) IBOutlet UILabel *EmailErrorLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *SendEmailButton;
+
+-(IBAction)sendReset:(id)sender;
 @end

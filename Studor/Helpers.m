@@ -24,7 +24,13 @@
 {
     NSString *zipRegex = @"^[0-9]{5}(-/d{4})?$";
     NSPredicate *zipTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", zipRegex];
-    
+    NSString *error;
+    if([zipTest evaluateWithObject:checkString]){
+        
+     error = @"true"; }
+    else { error = @"false";
+    }
+    NSLog(error);
     return [zipTest evaluateWithObject:checkString];
 }
 

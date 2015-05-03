@@ -13,5 +13,15 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *requestButton;
 
+@property (weak, nonatomic) IBOutlet UITextField *requestBox;
+@property (weak, nonatomic) IBOutlet UITextField *subjectBox;
+@property (weak, nonatomic) IBOutlet UITextField *zipCodeBox;
+- (IBAction)requestButtonPressed:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *requestErrorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *subjectErrorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *zipCodeErrorLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *generalErrorLabel;
+
 
 @end

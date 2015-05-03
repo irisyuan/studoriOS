@@ -18,6 +18,11 @@
 @implementation LogInViewController
 
 - (void)viewDidLoad {
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) { // goes to tab bar controller automatically if there is already a user logged in
+        [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
+    }
+    
     _ErrorLabel.text = @"";
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:YES animated:NO];
@@ -40,13 +45,11 @@
                                             UIViewController *HomeViewController = [HomeStoryboard instantiateInitialViewController];
                                           
                                             
-                                            [self.navigationController pushViewController:HomeViewController animated:YES];
+                                            [self.navigationController pushViewController:HomeViewController animated:YES];*/
                                             
-                                            NSLog(@"yoyo");
+                                            
+                                            [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
 
-                                            
-                                           // [self performSegueWithIdentifier:@"ifLogInSuccessful" sender:nil];
-*/
                                         } else { //login failed
                                             _ErrorLabel.text = @"You entered the incorrect username or password.";
                                         }
@@ -58,8 +61,6 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
-
-
 
 
 @end

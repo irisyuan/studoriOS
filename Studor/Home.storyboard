@@ -1,204 +1,489 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Jcb-fM-Qg6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yxn-UT-UpB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
-        <scene sceneID="WfJ-kD-3Ce">
+        <!--Reveal View Controller-->
+        <scene sceneID="eiv-GF-UHC">
             <objects>
-                <tabBarController id="Jcb-fM-Qg6" customClass="HomeViewController" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
+                <viewController id="yxn-UT-UpB" customClass="SWRevealViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gJb-kh-Scy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qig-J5-AKo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wA2-9s-eCL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="cf1-0e-clH">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
                     <connections>
-                        <segue destination="ceY-Dm-fNw" kind="relationship" relationship="viewControllers" id="Ca1-oe-X4v"/>
-                        <segue destination="0Na-hu-N0R" kind="relationship" relationship="viewControllers" id="eCB-Xg-vD4"/>
-                        <segue destination="SyP-p1-Q6u" kind="relationship" relationship="viewControllers" id="w1C-g8-X5U"/>
-                        <segue destination="RiO-3b-Wkd" kind="relationship" relationship="viewControllers" id="XY7-2n-RFq"/>
+                        <segue destination="DcC-da-j5b" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="OUn-Ds-cAc"/>
+                        <segue destination="LzP-Ko-sQx" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="X7h-Fm-lPV"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="hXu-O9-Hql" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9FN-3D-t62" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-729.5" y="-1452.5"/>
+            <point key="canvasLocation" x="-2955.5" y="-1962.5"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="SAl-dm-B4l">
+        <!--Sidebar View Controller-->
+        <scene sceneID="Tie-Dh-sE3">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ceY-Dm-fNw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" image="search-25" id="2X9-Ld-w7Z"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1qO-cN-JeY">
+                <tableViewController id="DcC-da-j5b" customClass="SidebarViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KGM-Ib-uqf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="title" id="ETG-ax-aXQ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ETG-ax-aXQ" id="3Pw-h1-OIO">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Studor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efB-3S-okJ">
+                                            <rect key="frame" x="45" y="11" width="52" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="search" id="MZG-6I-3Uj">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MZG-6I-3Uj" id="ovO-hl-eUy">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zt-vG-szb">
+                                            <rect key="frame" x="44" y="11" width="54" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="LzP-Ko-sQx" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="3Yh-X3-yMa"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profile" id="cqP-u1-ka1">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cqP-u1-ka1" id="Wy2-pg-Vlx">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Profile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Il-yy-tB9">
+                                            <rect key="frame" x="46" y="11" width="49" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="sZK-k7-acO" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="7IO-bT-2nw"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="messages" id="W89-Q9-3PZ">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W89-Q9-3PZ" id="ctq-4u-mXh">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Messages" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-lx-B87">
+                                            <rect key="frame" x="44" y="11" width="78" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="APY-MT-4Af" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="bzX-HE-gNb"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tutor" id="c11-rY-0M0">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c11-rY-0M0" id="AYs-ob-Gg0">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tutor Center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWg-ym-sAX">
+                                            <rect key="frame" x="44" y="11" width="95" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="3dZ-PX-ybH" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="RQy-hZ-cVz"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="becometutor" id="o0D-bp-dk4">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o0D-bp-dk4" id="LTo-e9-PvA">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Become a Tutor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bks-pK-sEL">
+                                            <rect key="frame" x="43" y="11" width="122" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="8Fe-7x-pbX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Q0Q-5l-VBK"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="student" id="htP-8w-miN">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="htP-8w-miN" id="xeP-rR-qnV">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTM-p7-Car">
+                                            <rect key="frame" x="50" y="11" width="54" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5P-lc-Ct2">
+                                            <rect key="frame" x="55" y="7" width="49" height="30"/>
+                                            <state key="normal" title="Logout">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vh3-2k-bFa">
+                                            <rect key="frame" x="46" y="11" width="54" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DyF-9H-ynJ">
+                                            <rect key="frame" x="45" y="11" width="117" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="eTM-p7-Car"/>
+                                            <exclude reference="Q5P-lc-Ct2"/>
+                                            <exclude reference="vh3-2k-bFa"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hvq-F5-z7w" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="A0Z-IJ-Onc"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="logout" id="QLx-aT-dzo">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QLx-aT-dzo" id="VkW-id-8fe">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kbw-hN-UXI">
+                                            <rect key="frame" x="50" y="11" width="54" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RUf-i2-AeP">
+                                            <rect key="frame" x="55" y="7" width="49" height="30"/>
+                                            <state key="normal" title="Logout">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Logout" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTz-nn-Iv6">
+                                            <rect key="frame" x="46" y="11" width="54" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="Kbw-hN-UXI"/>
+                                            <exclude reference="RUf-i2-AeP"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DcC-da-j5b" id="cu0-hC-mhD"/>
+                            <outlet property="delegate" destination="DcC-da-j5b" id="QKQ-za-Vmq"/>
+                        </connections>
+                    </tableView>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wih-f4-lM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2194.5" y="-2005.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jIu-zK-ZZl">
+            <objects>
+                <navigationController id="8Fe-7x-pbX" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PyI-KJ-LWq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="I6w-lE-s0u" kind="relationship" relationship="rootViewController" id="9d9-Fj-jvA"/>
+                        <segue destination="C2D-gp-b3E" kind="relationship" relationship="rootViewController" id="GNJ-cm-zaf"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EnH-xy-td2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93i-C1-3mP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-62.5" y="-2190.5"/>
+            <point key="canvasLocation" x="-3197.5" y="-2675.5"/>
         </scene>
-        <!--Request-->
-        <scene sceneID="NcY-xg-M4m">
+        <!--Link to Become a Tutor-->
+        <scene sceneID="xul-Mm-j3O">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Na-hu-N0R" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Request" image="date_to-26" id="ZJY-yF-v2I"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="moU-Na-PYo">
+                <viewController title="Link to Become a Tutor" id="C2D-gp-b3E" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wmg-mF-Efp"/>
+                        <viewControllerLayoutGuide type="bottom" id="9ux-b6-qE0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Pp-cK-cKW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ME-Ud-Rj4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="BecomeTutor"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ctn-UQ-0wS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3711.5" y="-2539.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Sqr-Yy-cjf">
+            <objects>
+                <navigationController id="3dZ-PX-ybH" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uqn-JA-7fv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="92t-3S-cRk" kind="relationship" relationship="rootViewController" id="ove-k1-H9p"/>
+                        <segue destination="npH-0l-3PJ" kind="relationship" relationship="rootViewController" id="lsk-BT-UhH"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KSP-Zk-qW9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="owH-Si-N9U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="561.5" y="-1604.5"/>
+            <point key="canvasLocation" x="-2483.5" y="-2858.5"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="z4f-DK-FzG">
+        <!--Link to Tutor Center-->
+        <scene sceneID="wSG-jA-4wk">
             <objects>
-                <viewController title="Search" id="I6w-lE-s0u" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController title="Link to Tutor Center" id="npH-0l-3PJ" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oCR-9F-2pD"/>
-                        <viewControllerLayoutGuide type="bottom" id="Vo9-eq-1JI"/>
+                        <viewControllerLayoutGuide type="top" id="G2p-tl-2bz"/>
+                        <viewControllerLayoutGuide type="bottom" id="7DI-ed-VGv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rbC-9I-Og4">
+                    <view key="view" contentMode="scaleToFill" id="Stf-nT-sOT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-nj-OUW">
+                                <rect key="frame" x="14" y="-49" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="zc1-QZ-jOq"/>
+                    <navigationItem key="navigationItem" id="gEy-bL-Qid"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Search"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="TutorCenter"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pGc-Hv-CmB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZbP-8w-pMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980.5" y="-2281.5"/>
+            <point key="canvasLocation" x="-1995.5" y="-2865.5"/>
         </scene>
-        <!--Request-->
-        <scene sceneID="hhX-OG-M6r">
+        <!--Navigation Controller-->
+        <scene sceneID="Smw-MH-is2">
             <objects>
-                <viewController title="Request" id="92t-3S-cRk" customClass="RBStoryboardLink" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="SX8-Qj-S4d"/>
-                        <viewControllerLayoutGuide type="bottom" id="U8i-jo-ChV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="R5E-XI-JTl">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Hcu-kR-uLm"/>
+                <navigationController id="APY-MT-4Af" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Request"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ynn-0b-wF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Af-n6-UVd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XoE-pf-X2M" kind="relationship" relationship="rootViewController" id="96d-fS-HO2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g7H-z5-gOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1456.5" y="-1729.5"/>
+            <point key="canvasLocation" x="-1444.5" y="-2635.5"/>
         </scene>
-        <!--Message-->
-        <scene sceneID="UHI-3s-2zS">
+        <!--Link to Messages-->
+        <scene sceneID="3aw-bG-k85">
             <objects>
-                <viewController title="Message" id="Mvt-vD-WIC" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController title="Link to Messages" id="XoE-pf-X2M" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="7EI-g1-cHZ"/>
-                        <viewControllerLayoutGuide type="bottom" id="DkY-TW-fvv"/>
+                        <viewControllerLayoutGuide type="top" id="8sK-wb-eWI"/>
+                        <viewControllerLayoutGuide type="bottom" id="eJn-Rv-mVL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YrH-o0-lvC">
+                    <view key="view" contentMode="scaleToFill" id="xwD-TD-xAh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7hq-cd-Omz"/>
+                    <navigationItem key="navigationItem" id="AlH-wk-We4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Message"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1nQ-yH-vD3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IF9-mg-1D7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1200.5" y="-869.5"/>
+            <point key="canvasLocation" x="-925.5" y="-2635.5"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="unb-bo-8fS">
+        <!--Navigation Controller-->
+        <scene sceneID="cfY-aI-7Qb">
             <objects>
-                <viewController title="Profile" id="wtU-RC-8m3" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <navigationController id="sZK-k7-acO" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sdP-Ic-cbj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Bqz-jZ-hYj" kind="relationship" relationship="rootViewController" id="VHc-fA-NSG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zY1-Sz-vVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1517.5" y="-1728.5"/>
+        </scene>
+        <!--Link to Profile-->
+        <scene sceneID="Ixk-N2-bJa">
+            <objects>
+                <viewController title="Link to Profile" id="Bqz-jZ-hYj" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0hb-E1-wT0"/>
-                        <viewControllerLayoutGuide type="bottom" id="QcB-Cn-qgK"/>
+                        <viewControllerLayoutGuide type="top" id="IxH-Ja-Ox7"/>
+                        <viewControllerLayoutGuide type="bottom" id="8AF-xf-FDE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0k3-5h-es3">
+                    <view key="view" contentMode="scaleToFill" id="5s7-xV-K2j">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Eqa-il-w30"/>
+                    <navigationItem key="navigationItem" id="RJY-sp-G7t"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Profile"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1bJ-RB-fc4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9NY-zY-GR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1324.5" y="22.5"/>
+            <point key="canvasLocation" x="-900.5" y="-1728.5"/>
         </scene>
-        <!--Messages-->
-        <scene sceneID="tku-N4-lsk">
+        <!--Navigation Controller-->
+        <scene sceneID="Yoe-TA-5DP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SyP-p1-Q6u" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" image="chat_filled-25" id="MML-sy-S7T"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="226-vh-AT0">
+                <navigationController id="hvq-F5-z7w" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z0o-mc-I9c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Mvt-vD-WIC" kind="relationship" relationship="rootViewController" id="3eQ-dy-d5G"/>
+                        <segue destination="SLW-9y-ihW" kind="relationship" relationship="rootViewController" id="3an-6T-jX0"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yd1-lH-HPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Uz-yu-sE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="392.5" y="-586.5"/>
+            <point key="canvasLocation" x="-2997.5" y="-1130.5"/>
         </scene>
-        <!--Profile-->
-        <scene sceneID="5gF-Tl-49Y">
+        <!--Link to Student Center-->
+        <scene sceneID="Lhv-zy-cuG">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RiO-3b-Wkd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="user_male-25" id="EzI-87-0gI"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8JP-jT-PqE">
+                <viewController title="Link to Student Center" id="SLW-9y-ihW" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VKe-cp-19V"/>
+                        <viewControllerLayoutGuide type="bottom" id="YLA-0s-3in"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nxJ-6K-cEV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uYd-AD-alR"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="StudentCenter"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vO-lp-KPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2521.5" y="-961.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nRz-pV-pKq">
+            <objects>
+                <navigationController id="LzP-Ko-sQx" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RPS-x3-4JG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="wtU-RC-8m3" kind="relationship" relationship="rootViewController" id="PAd-Dn-Gib"/>
+                        <segue destination="mfc-bq-r6d" kind="relationship" relationship="rootViewController" id="h65-Z7-tmr"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nRc-1H-qQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lef-pP-TS5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-338.5" y="-50.5"/>
+            <point key="canvasLocation" x="-2025.5" y="-858.5"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="Vfs-Gr-wBd">
+            <objects>
+                <viewController id="mfc-bq-r6d" customClass="SearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xdf-wd-xHF"/>
+                        <viewControllerLayoutGuide type="bottom" id="dwg-pR-Fs7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cje-eH-Bm6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yoyo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4IW-GM-6CE">
+                                <rect key="frame" x="166" y="122" width="38" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="y9N-4d-0Qk">
+                        <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="bxH-2f-AEG">
+                            <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="sidebarButton" destination="bxH-2f-AEG" id="wiu-qR-j4P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mka-7X-Ff9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1343.5" y="-868.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="chat_filled-25" width="25" height="25"/>
-        <image name="date_to-26" width="26" height="26"/>
-        <image name="search-25" width="25" height="25"/>
-        <image name="user_male-25" width="25" height="25"/>
+        <image name="menu" width="20" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Yh-X3-yMa"/>
+    </inferredMetricsTieBreakers>
 </document>
