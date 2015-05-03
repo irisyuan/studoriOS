@@ -11,5 +11,7 @@
 @interface SelectSubjectsController : UIViewController
 <UITableViewDataSource, UITableViewDelegate>
 
+- (BOOL) userTeachesSubject: (NSInteger)row;
+
 
 @end

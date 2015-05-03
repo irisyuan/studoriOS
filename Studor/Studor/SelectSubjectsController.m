@@ -28,18 +28,19 @@
     
     self.subjects = [[NSMutableArray alloc] init];
 
+    PFUser *currentUser = [PFUser currentUser];
+
+    
     
     PFQuery *query = [PFQuery queryWithClassName:@"Subject"];
-    NSArray *objects = [query findObjects];
+    self.subjects = [query findObjects];
     
-    for (int x = 0; x < [objects count]; x++) {
-        NSLog(objects[x][@"subject"]);
-        [self.subjects addObject:[NSString stringWithString:objects[x][@"subject"] ]];
-    }
+    NSLog([NSString stringWithFormat:@"%lu ",[self.subjects count]]);
+
+
+    [currentUser addUniqueObject:[self.subjects[0] objectId] forKey: @"subject"];
+    [currentUser save];
     
-    for (int x = 0; x < [self.subjects count]; x++) {
-        NSLog(self.subjects[x]);
-    }
     
 
     UITableView *tableView = (id)[self.view viewWithTag:1];
@@ -85,7 +86,30 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }*/
+- (BOOL) userTeachesSubject: (NSInteger)row{
+    
+    
+    PFUser *currentUser = [PFUser currentUser];
+    NSMutableArray *userSubjects = currentUser[@"subjects"];
+    
+    NSLog([NSString stringWithFormat:@"%lu count",[userSubjects count]]);
+    
+    NSLog([self.subjects[row] objectId]);
+    
+    NSLog(userSubjects[0]);
 
+    
+    if([userSubjects containsObject:[self.subjects[row] objectId]]){
+        NSLog([self.subjects[row] objectId]);
+        NSLog(userSubjects[0]);
+        return true;
+    }
+    
+    return false;
+
+    
+    
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -94,7 +118,6 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    NSLog([NSString stringWithFormat:@"subjects %lu", [_subjects count]]);
 
     return [self.subjects count];
 }
@@ -110,8 +133,26 @@
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:SimpleTableIdentifier];
     }
-    cell.textLabel.text = self.subjects[indexPath.row];
+    
+    cell.textLabel.text = self.subjects[indexPath.row][@"subject"];
+    if([self userTeachesSubject : indexPath.row]){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;}
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    
+    
+    
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    
+    
+
+    
 }
 
 @end
