@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
 @interface ProfileViewController : UIViewController
 
@@ -17,7 +18,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 //@property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
-@property (weak, nonatomic) IBOutlet UIImageView *photo;
+
+@property (weak, nonatomic) IBOutlet PFImageView *photo;
 
 @property (weak, nonatomic) IBOutlet UITextField *firstNameField;
 @property (weak, nonatomic) IBOutlet UITextField *lastNameField;
