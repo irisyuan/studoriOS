@@ -39,23 +39,6 @@
     
 }
 
-/* Move this to profile to save with bio information at the same time? */
-- (void)save {
-    if (self.chosenImageView.image) {
-        NSData *imageData = UIImagePNGRepresentation(self.chosenImageView.image);
-        PFFile *photoFile = [PFFile fileWithData:imageData];
-        
-        PFObject *profile = [Helpers getProfile];
-        profile[@"image"] = photoFile;
-        if (![profile save]) {
-            NSLog(@"Image could not be saved");
-        }
-    } else {
-       [self showError];
-    }
-    [self clear];
-}
-
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     _imagePicker = [[UIImagePickerController alloc]init];
@@ -90,13 +73,10 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    
-    
-    
+
     self.chosenImageView.image = chosenImage;
     
     NSLog(@"this is the chosen image! %@", self.chosenImageView.image);
-    //[self save];
     
     NSData *imageData = UIImagePNGRepresentation(chosenImage);
     PFFile *photoFile = [PFFile fileWithData:imageData];
@@ -106,14 +86,10 @@
     if (![profile save]) {
         NSLog(@"Image could not be saved");
     } else {
-        NSLog(@"fuck yeah");
+        NSLog(@"Success!");
     }
 
-    
-
     [self dismissViewControllerAnimated:YES completion:^{self.imagePickerIsDisplayed = NO;}];
-
-
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
