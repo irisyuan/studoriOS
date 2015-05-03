@@ -27,7 +27,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *bioField;
 @property (weak, nonatomic) IBOutlet UITextView *successLabel;
 
-- (IBAction)logoutButtonPressed:(id)sender;
 - (IBAction) saveButtonPressed:(id)sender;
 - (IBAction) editButtonPressed:(id)sender;
 
