@@ -39,11 +39,11 @@
     
     if([[Helpers getProfile][@"isTutor"] isEqual: @YES]){
         NSLog(@"User is tutor");
-        menuItems = @[@"title", @"search", @"profile", @"messages", @"student", @"tutor", @"logout"];}
+        menuItems = @[@"search", @"profile", @"messages", @"student", @"tutor", @"logout"];}
     else{
         NSLog(@"User is not tutor");
 
-       menuItems = @[@"title", @"search", @"profile", @"messages", @"student", @"becometutor", @"logout"];
+       menuItems = @[@"search", @"profile", @"messages", @"student", @"becometutor", @"logout"];
     }
 
 }
