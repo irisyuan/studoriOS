@@ -132,6 +132,7 @@
                 profile[@"zipCode"] = zipCode;
                 profile[@"email"] = email;
                 profile[@"username"] = email;
+                profile[@"isAvailable"] = @YES;
                 
                 [profile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
                     if (succeeded) {
