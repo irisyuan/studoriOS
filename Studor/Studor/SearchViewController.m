@@ -9,10 +9,12 @@
 #import <Foundation/Foundation.h>
 #import "SearchViewController.h"
 #import "SWRevealViewController.h"
+#import "SearchResultsViewController.h"
 
 @interface SearchViewController ()
 
 @property (retain, nonatomic) NSArray *subjects;
+@property NSString *selectedSubject;
 
 @end
 
@@ -68,38 +70,24 @@
     return cell;
 }
 
-/*- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    PFQuery *profileQuery = [PFQuery queryWithClassName:@"Profile"];
-    NSString *currentUser = PFUser.currentUser.username;
-    [profileQuery whereKey:@"username" equalTo:currentUser];
-    PFObject *profile = [profileQuery getFirstObject];
-    
-    
-    if([self userTeachesSubject:indexPath.row]){
-        [profile removeObject:[self.subjects[indexPath.row] objectId] forKey:@"subjects"];
-        [profile save];
-        
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        cell.accessoryType = UITableViewCellAccessoryNone;
-        
-        
+    if ([[segue identifier] isEqualToString:@"searchResultsSegue"])
+    {
+        SearchResultsViewController *destViewController = segue.destinationViewController;
+        destViewController.subject = self.selectedSubject;
+
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
     
-    else{
-        NSLog([self.subjects[indexPath.row] objectId]);
-        [profile addUniqueObject:[self.subjects[indexPath.row] objectId] forKey: @"subjects"];
-        [profile save];
-        
-        UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-        
-        
-    }
+    self.selectedSubject = self.subjects[indexPath.row];
+    [self performSegueWithIdentifier:@"searchResultsSegue" sender:self];
+
     
     
-    
-    
-}*/
+}
 
 @end
