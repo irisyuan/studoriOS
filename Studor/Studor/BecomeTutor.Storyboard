@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="axX-jD-LHq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="axX-jD-LHq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Become Tutor View Controller-->
@@ -56,16 +56,6 @@
                                     <segue destination="j5X-MX-sLb" kind="show" id="f8w-0Y-1Ed"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udk-5O-BcQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="vaS-3s-ge5">
-                                        <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="dlm-y3-kZa">
-                                            <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLm-3e-saT">
                                 <rect key="frame" x="61" y="489" width="252" height="30"/>
                                 <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
@@ -77,6 +67,16 @@
                                     <action selector="buttonPressed:" destination="axX-jD-LHq" eventType="touchUpInside" id="By9-Md-Gc3"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udk-5O-BcQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="vaS-3s-ge5">
+                                        <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="dlm-y3-kZa">
+                                            <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.91764712329999998" green="0.90980398650000005" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
