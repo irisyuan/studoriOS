@@ -173,6 +173,9 @@
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="hvq-F5-z7w" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="A0Z-IJ-Onc"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="logout" id="QLx-aT-dzo">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -216,7 +219,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wih-f4-lM8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2238.5" y="-1955.5"/>
+            <point key="canvasLocation" x="-2194.5" y="-2005.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jIu-zK-ZZl">
@@ -286,6 +289,12 @@
                     <view key="view" contentMode="scaleToFill" id="Stf-nT-sOT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SLB-nj-OUW">
+                                <rect key="frame" x="14" y="-49" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="gEy-bL-Qid"/>
@@ -377,6 +386,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NY-zY-GR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-900.5" y="-1728.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Yoe-TA-5DP">
+            <objects>
+                <navigationController id="hvq-F5-z7w" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z0o-mc-I9c">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="SLW-9y-ihW" kind="relationship" relationship="rootViewController" id="3an-6T-jX0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Uz-yu-sE8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2997.5" y="-1130.5"/>
+        </scene>
+        <!--Link to Student Center-->
+        <scene sceneID="Lhv-zy-cuG">
+            <objects>
+                <viewController title="Link to Student Center" id="SLW-9y-ihW" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VKe-cp-19V"/>
+                        <viewControllerLayoutGuide type="bottom" id="YLA-0s-3in"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nxJ-6K-cEV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uYd-AD-alR"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="StudentCenter"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7vO-lp-KPh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2521.5" y="-961.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nRz-pV-pKq">
