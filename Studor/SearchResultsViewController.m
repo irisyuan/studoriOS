@@ -9,6 +9,7 @@
 #import "SearchResultsViewController.h"
 #import "Helpers.h"
 #import "BookTutorViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 
 @interface SearchResultsViewController ()
@@ -93,6 +94,7 @@ BOOL found;
 
     CLLocation *crnLoc = [locations lastObject];
     currentLocation = crnLoc;
+    found = true;
     [locationManager stopUpdatingLocation];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
@@ -159,6 +161,12 @@ BOOL found;
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
+    PFGeoPoint *tutorpoint = object[@"location"];
+    CLLocation *tutorLocation = [[CLLocation alloc ] initWithLatitude:tutorpoint.latitude longitude:tutorpoint.longitude];
+    CLLocationDistance distance = [currentLocation distanceFromLocation:tutorLocation];
+    
+ 
+    
     // Configure the cell
     PFFile *thumbnail = [object objectForKey:@"image"];
     PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
@@ -166,10 +174,13 @@ BOOL found;
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
     
-   UILabel *emailLabel = (UILabel*) [cell viewWithTag:108];
+    UILabel *emailLabel = (UILabel*) [cell viewWithTag:108];
     UILabel *name = (UILabel*) [cell viewWithTag:106];
     UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:110];
     UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:112];
+    UILabel *distanceLabel = (UILabel*) [cell viewWithTag:155];
+    
+    distanceLabel.text = [NSString stringWithFormat:@"%d km.", (int)(distance/1000)];
     
     name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
     
