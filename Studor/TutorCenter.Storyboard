@@ -358,11 +358,6 @@
                         <color key="backgroundColor" red="0.91796292180000005" green="0.90129749889999999" blue="0.95479786069999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="sessionEndedButton" destination="OHG-Wh-Zt2" id="0hJ-iR-tj0"/>
-                        <outlet property="sessionStartedButton" destination="Py0-TF-dFw" id="nR1-Nw-bOJ"/>
-                        <outlet property="timeLabel" destination="4nq-YR-ITz" id="ZpK-2j-env"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sS5-xa-KXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
