@@ -47,6 +47,8 @@
     if (![profile[@"isTutor"] boolValue]) {
         [_bioField setHidden:TRUE];
         [_hourlyRateField setHidden:TRUE];
+        [_subjectsButton setHidden:TRUE];
+         
     } else {
         _bioField.text = profile[@"bio"];
         _hourlyRateField.text = [profile[@"hourlyRate"] stringValue];
