@@ -34,7 +34,6 @@
     PFObject *profile = [Helpers getProfile];
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
     _emailLabel.text = profile[@"email"];
-    _zipCodeField.text = profile[@"zipCode"];
     
     PFFile *imageFile = profile[@"image"];
     if (imageFile) {
@@ -57,7 +56,6 @@
 // To do: need to add same validation as sign up page here
 - (IBAction)saveButtonPressed:(id)sender {
     PFObject *currentProfile = [Helpers getProfile];
-    currentProfile[@"zipCode"] = _zipCodeField.text;
     
     // If not tutor, this is blank anyways
     currentProfile[@"bio"] = _bioField.text;

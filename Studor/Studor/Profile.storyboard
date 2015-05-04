@@ -60,12 +60,6 @@
                                     <segue destination="PND-u8-SXe" kind="custom" customClass="RBStoryboardPushSegue" id="lEs-LT-gy0"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17h-YF-omF">
-                                <rect key="frame" x="136" y="182" width="122" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hourly Rate ($)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q57-Xh-r8K">
                                 <rect key="frame" x="136" y="224" width="122" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -95,7 +89,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69F-ww-UtL">
-                                <rect key="frame" x="25" y="270" width="334" height="105"/>
+                                <rect key="frame" x="16" y="270" width="343" height="105"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -120,7 +114,6 @@
                         <outlet property="saveButton" destination="S19-Ur-dGd" id="1De-Bg-2ZJ"/>
                         <outlet property="sidebarButton" destination="V4a-nJ-m4X" id="RJf-D1-iBg"/>
                         <outlet property="successLabel" destination="74a-un-W5Q" id="GcR-qr-0Ue"/>
-                        <outlet property="zipCodeField" destination="17h-YF-omF" id="vYB-Zy-0wb"/>
                         <segue destination="Yk1-8K-4Fu" kind="push" identifier="loggedOut" id="07n-1t-qpf"/>
                     </connections>
                 </viewController>

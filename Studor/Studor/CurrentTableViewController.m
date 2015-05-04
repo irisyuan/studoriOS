@@ -73,10 +73,11 @@
     
     return query;
 }
-
+ /*
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
+   
     static NSString *simpleTableIdentifier = @"TutorCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -103,7 +104,7 @@
     
     
     return cell;
-}
+}*/
 
 - (void) objectsDidLoad:(NSError *)error
 {
