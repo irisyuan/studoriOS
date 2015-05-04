@@ -10,16 +10,97 @@
 #import "Parse/Parse.h"
 #import "Helpers.h"
 
-@interface SessionViewController () {
 
-bool running;
-NSTimeInterval startTime;
+
+@implementation SessionViewController {
+
+// Keeps track of if the timer is started.
+bool start;
+
+// Gets the exact time when the button is pressed.
+NSTimeInterval time;
+
+}
+
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    // Sets the text of our Label to a default time of 0.
+    self.display.text = @"0:00";
+    
+    // We set start to false because we don't want the time to be on until we press the button.
+    start = false;
     
 }
+
+-(void)update {
+    
+    
+    // If start is false then we shouldn't be updateing the time se we return out of the method.
+    if (start == false) {
+        
+        return;
+        
+    }
+    
+    // We get the current time and then use that to calculate the elapsed time.
+    NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
+    NSTimeInterval elapsedTime = currentTime - time;
+    
+    // We calculate the minutes.
+    int minutes = (int)(elapsedTime / 60.0);
+    
+    // We calculate the seconds.
+    int seconds = (int)(elapsedTime = elapsedTime - (minutes * 60));
+    
+    // We update our Label with the current time.
+    self.display.text = [NSString stringWithFormat:@"%u:%02u", minutes, seconds];
+    
+    // We recursively call update to get the new time.
+    [self performSelector:@selector(update) withObject:self afterDelay:0.1];
+    
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    
+    // If start is false then we need to start update the Label with the new time.
+    if (start == false) {
+        
+        // Since it is false we need to reset it back to true.
+        start = true;
+        
+        // Gets the current time.
+        time = [NSDate timeIntervalSinceReferenceDate];
+        
+        // Changes the title of the button to Stop!
+        [sender setTitle:@"Stop!" forState:UIControlStateNormal];
+        
+        // Calls the update method.
+        [self update];
+        
+    }else {
+        
+        // Since it is false we need to reset it back to false.
+        start = false;
+        
+        // Changes the title of the button back to Start.
+        [sender setTitle:@"Start" forState:UIControlStateNormal];
+        
+    }
+    
+}
+
+
 @end
-
-@implementation SessionViewController
-
+/*
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -82,5 +163,4 @@ NSTimeInterval startTime;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-@end
+*/

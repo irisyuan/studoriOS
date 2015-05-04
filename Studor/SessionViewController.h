@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SessionViewController : UIViewController 
-@property (weak, nonatomic) IBOutlet UIButton *sessionEndedButton;
-@property (weak, nonatomic) IBOutlet UIButton *sessionStartedButton;
-@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@interface SessionViewController : UIViewController
 
--(IBAction)confirmSessionEnded:(id)sender;
--(IBAction)startSession:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *display;
+
+- (IBAction)buttonPressed:(id)sender;
 
 @end
