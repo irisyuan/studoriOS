@@ -55,6 +55,7 @@
         [_bioLabel setHidden:TRUE];
         [_dollarSign setHidden:TRUE];
         [_perHourLabel setHidden:TRUE];
+        [_saveButton setHidden:TRUE];
          
     } else {
         _bioField.text = profile[@"bio"];
