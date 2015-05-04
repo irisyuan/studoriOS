@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Neu-zC-HiR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Neu-zC-HiR">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -191,7 +191,7 @@
                         <outlet property="PasswordField" destination="UOM-CC-JWA" id="hOe-F3-WOq"/>
                         <outlet property="confirmPasswordField" destination="E87-Fw-sbI" id="ZRj-Lf-bl2"/>
                         <outlet property="confirmPasswordLabel" destination="g5e-nC-xcW" id="Oup-8J-SrG"/>
-                        <segue destination="rHE-RQ-V4d" kind="show" identifier="signUpSuccessful" id="G4W-7A-WgF"/>
+                        <segue destination="rHE-RQ-V4d" kind="custom" identifier="signUpSuccessful" id="G4W-7A-WgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaG-0i-XEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -211,6 +211,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="c6W-tg-10C"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Home"/>

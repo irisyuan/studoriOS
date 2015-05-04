@@ -17,6 +17,17 @@
 
 @implementation SignUpViewController
 
+/*
+//hiding the navigation controller
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+ */
+
+
+
 - (void)viewDidLoad {
     _MainErrorLabel.text = @"";
     _FirstNameErrorLabel.text = @"";
