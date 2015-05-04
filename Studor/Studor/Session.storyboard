@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dmf-ay-r3e">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Session View Controller-->
+        <scene sceneID="4Gc-Lp-acn">
+            <objects>
+                <viewController id="dmf-ay-r3e" customClass="SessionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nt7-ED-QXA"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bfw-Pf-2Sy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wgi-gx-GEf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7R1-Mc-rMQ">
+                                <rect key="frame" x="164" y="482" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmSessionEnded:" destination="dmf-ay-r3e" eventType="touchUpInside" id="0wO-zg-9iy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nX-Z9-DVE">
+                                <rect key="frame" x="164" y="48" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmSessionEnded:" destination="dmf-ay-r3e" eventType="touchUpInside" id="0lj-dd-CHe"/>
+                                    <action selector="startSession:" destination="dmf-ay-r3e" eventType="touchUpInside" id="umI-5q-ku9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKg-yv-zlE">
+                                <rect key="frame" x="118" y="161" width="246" height="157"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91796292180000005" green="0.90129749889999999" blue="0.95479786069999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="sessionEndedButton" destination="7R1-Mc-rMQ" id="1oN-ca-ptS"/>
+                        <outlet property="sessionStartedButton" destination="0nX-Z9-DVE" id="Wal-lu-flD"/>
+                        <outlet property="timeLabel" destination="zKg-yv-zlE" id="Gxc-bz-mk6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HxL-OV-wZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="223.5" y="231.5"/>
+        </scene>
+    </scenes>
+</document>

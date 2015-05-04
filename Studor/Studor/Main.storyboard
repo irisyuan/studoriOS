@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--Login-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController title="Login" definesPresentationContext="YES" modalPresentationStyle="overCurrentContext" id="vXZ-lx-hvc" customClass="LogInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS" customClass="LogInVIewController">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffC-26-XGC">
+                                <rect key="frame" x="76" y="333" width="223" height="30"/>
+                                <color key="backgroundColor" red="0.80485733695652173" green="0.80485733695652173" blue="0.80485733695652173" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log In">
+                                    <color key="titleColor" red="0.12941177189350128" green="0.75294125080108643" blue="0.7568628191947937" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressLogin:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6KO-Tz-N5j"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uQJ-dJ-72o">
+                                <rect key="frame" x="76" y="217" width="223" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZTl-zY-c7Q">
+                                <rect key="frame" x="76" y="255" width="223" height="30"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="New to Studor?" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HNS-0e-6Rd">
+                                <rect key="frame" x="76" y="466" width="223" height="36"/>
+                                <color key="backgroundColor" red="0.91764712333679199" green="0.90980398654937744" blue="0.94117653369903564" alpha="0.0" colorSpace="deviceRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIz-0G-O3w">
+                                <rect key="frame" x="76" y="371" width="223" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MIa-FX-G5k" kind="custom" customClass="RBStoryboardModalSegue" id="bvl-kN-ybd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE6-LE-Wgn">
+                                <rect key="frame" x="76" y="510" width="223" height="30"/>
+                                <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Create an Account">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wnn-pM-aYz" kind="custom" customClass="RBStoryboardModalSegue" id="5RZ-dQ-dES"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoSmall" translatesAutoresizingMaskIntoConstraints="NO" id="QNW-lg-Rct">
+                                <rect key="frame" x="114" y="58" width="146" height="63"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llN-5I-Lpa">
+                                <rect key="frame" x="76" y="188" width="223" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333339691162109" green="0.92941182851791382" blue="0.95294123888015747" alpha="1" colorSpace="deviceRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ErrorLabel" destination="llN-5I-Lpa" id="r94-Xh-ZJa"/>
+                        <outlet property="passwordTextField" destination="ZTl-zY-c7Q" id="hH3-fT-eJq"/>
+                        <outlet property="usernameTextField" destination="uQJ-dJ-72o" id="DkF-Pd-5uW"/>
+                        <segue destination="ZN6-dE-noa" kind="show" identifier="loginSuccessful" id="G7g-jy-SnM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="265.5" y="-1036.5"/>
+        </scene>
+        <!--Link to Tab Bar-->
+        <scene sceneID="Bbe-45-ANM">
+            <objects>
+                <viewController title="Link to Tab Bar" id="ZN6-dE-noa" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MAL-NW-A4B"/>
+                        <viewControllerLayoutGuide type="bottom" id="0DT-2E-pWK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8ak-2E-Wcv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Home"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Urs-8h-PX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.5" y="-1804.5"/>
+        </scene>
+        <!--Forgot Password Link-->
+        <scene sceneID="Ui9-v1-GrH">
+            <objects>
+                <viewController title="Forgot Password Link" id="MIa-FX-G5k" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nlr-LW-KKi"/>
+                        <viewControllerLayoutGuide type="bottom" id="YnC-wR-1kZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="naw-NG-IbZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="ForgotPassword"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YXi-Dz-srD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1456.5" y="-511.5"/>
+        </scene>
+        <!--Link to SignUp-->
+        <scene sceneID="bjR-yf-LND">
+            <objects>
+                <viewController title="Link to SignUp" id="wnn-pM-aYz" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kr3-be-JXJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="GpL-F5-hbv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WdF-vi-cOX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kP5-LO-SZJ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="SignUp"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsZ-LC-dKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465.5" y="-1290.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logoSmall" width="923" height="325"/>
+    </resources>
+</document>
