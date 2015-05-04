@@ -7,12 +7,15 @@
 //
 
 #import "TutorRequestDetailViewController.h"
+#import "SessionViewController.h"
 
 @interface TutorRequestDetailViewController ()
 
 @end
 
 @implementation TutorRequestDetailViewController
+
+NSNumber *wage;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +27,7 @@
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
     _rateLabel.text = profile[@"rate"];
+    wage = profile[@"rate"];
     _descriptionLabel.text = self.request[@"requestDesc"];
     
     if([self.type isEqualToString:@"pending"]){
@@ -47,15 +51,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([[segue identifier] isEqualToString:@"startSessionSegue"])
+    {
+        SessionViewController *destViewController = segue.destinationViewController;
+        
+        destViewController.wage = wage;
+        
+    }
+
 }
-*/
+
 
 - (IBAction)startButtonPressed:(id)sender {
     

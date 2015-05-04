@@ -75,6 +75,7 @@
 		B2A649FA1AF545E600C9E674 /* BecomeTutor.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A649F91AF545E600C9E674 /* BecomeTutor.Storyboard */; };
 		B2A649FC1AF54E5D00C9E674 /* TutorCenter.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */; };
 		B2A649FF1AF5593700C9E674 /* SelectSubjectsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A649FE1AF5593700C9E674 /* SelectSubjectsController.m */; };
+		B2D762761AF7F59B001B7E75 /* ShowPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D762751AF7F59B001B7E75 /* ShowPriceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +192,8 @@
 		B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorCenter.Storyboard; sourceTree = "<group>"; };
 		B2A649FD1AF5593700C9E674 /* SelectSubjectsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSubjectsController.h; sourceTree = "<group>"; };
 		B2A649FE1AF5593700C9E674 /* SelectSubjectsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSubjectsController.m; sourceTree = "<group>"; };
+		B2D762741AF7F59B001B7E75 /* ShowPriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPriceViewController.h; sourceTree = "<group>"; };
+		B2D762751AF7F59B001B7E75 /* ShowPriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPriceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -510,6 +513,8 @@
 				03A9FFB11AF5B442003AC11F /* TutorCenterViewController.h */,
 				B221B4871AF79403005F8C20 /* TutorRequestDetailViewController.h */,
 				B221B4881AF79403005F8C20 /* TutorRequestDetailViewController.m */,
+				B2D762741AF7F59B001B7E75 /* ShowPriceViewController.h */,
+				B2D762751AF7F59B001B7E75 /* ShowPriceViewController.m */,
 			);
 			name = TutorCenter;
 			sourceTree = "<group>";
@@ -646,6 +651,7 @@
 				2E8FEFFE1AD5C0E900926A78 /* LogInViewController.m in Sources */,
 				03724E0C1AE7DA0B00C3CCB9 /* RBStoryboardPopoverSegue.m in Sources */,
 				B221B4891AF79403005F8C20 /* TutorRequestDetailViewController.m in Sources */,
+				B2D762761AF7F59B001B7E75 /* ShowPriceViewController.m in Sources */,
 				0353F33A1AF4F8480001B6B4 /* CameraViewController.m in Sources */,
 				0353F3411AF504220001B6B4 /* SettingsViewController.m in Sources */,
 				03724E0A1AE7DA0B00C3CCB9 /* RBStoryboardLink.m in Sources */,

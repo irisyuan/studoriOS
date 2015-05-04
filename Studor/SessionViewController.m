@@ -7,6 +7,7 @@
 //
 
 #import "SessionViewController.h"
+#import "ShowPriceViewController.h"
 
 @interface SessionViewController ()
 
@@ -34,7 +35,8 @@ NSTimeInterval time;
     [super viewDidLoad];
     
     // Sets the text of our Label to a default time of 0.
-    self.display.text = @"0:00";
+    self.timeLabel.text = @"0:00";
+    self.endButton.enabled=NO;
     
     // We set start to false because we don't want the time to be on until we press the button.
     start = false;
@@ -62,7 +64,7 @@ NSTimeInterval time;
     int seconds = (int)(elapsedTime = elapsedTime - (minutes * 60));
     
     // We update our Label with the current time.
-    self.display.text = [NSString stringWithFormat:@"%u:%02u", minutes, seconds];
+    self.timeLabel.text = [NSString stringWithFormat:@"%u:%02u", minutes, seconds];
     
     // We recursively call update to get the new time.
     [self performSelector:@selector(update) withObject:self afterDelay:0.1];
@@ -75,37 +77,79 @@ NSTimeInterval time;
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)buttonPressed:(id)sender {
-    
-    // If start is false then we need to start update the Label with the new time.
+
+
+
+- (IBAction)startButtonPressed:(id)sender {
     if (start == false) {
         
         // Since it is false we need to reset it back to true.
         start = true;
-        
+        self.endButton.enabled=NO;
+
         // Gets the current time.
         time = [NSDate timeIntervalSinceReferenceDate];
         
-        // Changes the title of the button to Stop!
-        [sender setTitle:@"Stop!" forState:UIControlStateNormal];
-        
-        // Calls the update method.
         [self update];
-        
-    }else {
-        
-        // Since it is false we need to reset it back to false.
-        start = false;
-        
-        // Changes the title of the button back to Start.
-        [sender setTitle:@"Start" forState:UIControlStateNormal];
-        
+
+    
     }
     
 }
+- (IBAction)cancelButtonPressed:(id)sender {
+    
+    [self performSegueWithIdentifier:@"cancelSegue" sender:nil];
+    
+}
 
+- (IBAction)stopButtonPressed:(id)sender {
+    
+    start = false;
+    self.endButton.enabled=YES;
 
+    
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"pickTutorSegue"])
+    {
+        NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
+        NSTimeInterval elapsedTime = currentTime - time;
+        ShowPriceViewController *destViewController = segue.destinationViewController;
+        double wage = [self.wage doubleValue];
+
+        destViewController.price = [NSNumber numberWithDouble:((elapsedTime/360) * wage)];
+        
+    }
+}
+
+-(void) updateTime {
+    if (!start) return;
+    
+    NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
+    NSTimeInterval elapsed = currentTime - time;
+    
+    int mins = (int) (elapsed / 60.0);
+    elapsed -= mins*60;
+    int secs = (int) (elapsed);
+    elapsed -= secs;
+    int fraction = elapsed * 10.0;
+    
+    _timeLabel.text = [NSString stringWithFormat:@"%u:%02u.%u", mins, secs, fraction];
+    
+    [self performSelector:@selector(updateTime) withObject:self afterDelay:0.1];
+}
+- (IBAction)endSessionButtonPressed:(id)sender {
+
+    if(!start){
+        [self performSegueWithIdentifier:@"endSessionSegue" sender:nil];}
+    
+}
 @end
+
+
 /*
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -125,22 +169,7 @@ NSTimeInterval time;
     }
 }
 
--(void) updateTime {
-    if (running == false) return;
-    
-    NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
-    NSTimeInterval elapsed = currentTime - startTime;
-    
-    int mins = (int) (elapsed / 60.0);
-    elapsed -= mins*60;
-    int secs = (int) (elapsed);
-    elapsed -= secs;
-    int fraction = elapsed * 10.0;
-    
-    _timeLabel.text = [NSString stringWithFormat:@"%u:%02u.%u", mins, secs, fraction];
-    
-    [self performSelector:@selector(updateTime) withObject:self afterDelay:0.1];
-}
+
 
 -(IBAction)confirmSessionEnded:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Confirm" message:@"Please confirm session has ended!" delegate:nil cancelButtonTitle:@"Yes" otherButtonTitles:nil, nil];

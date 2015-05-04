@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z7i-mN-igY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z7i-mN-igY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Tutor Center View Controller-->
@@ -310,7 +310,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEY-Lx-ReE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1023.5" y="87.5"/>
+            <point key="canvasLocation" x="827.5" y="-146.5"/>
         </scene>
         <!--Session View Controller-->
         <scene sceneID="KBg-Yx-ccH">
@@ -325,22 +325,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHG-Wh-Zt2">
-                                <rect key="frame" x="164" y="482" width="33" height="30"/>
+                                <rect key="frame" x="217" y="139" width="33" height="30"/>
                                 <state key="normal" title="Stop">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="confirmSessionEnded:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="HRf-Kb-tbt"/>
+                                    <action selector="stopButtonPressed:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="Prk-VZ-17O"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-TF-dFw">
-                                <rect key="frame" x="164" y="48" width="33" height="30"/>
+                                <rect key="frame" x="118" y="139" width="33" height="30"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="confirmSessionEnded:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="3Qe-Uz-ocU"/>
-                                    <action selector="startSession:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="OEF-ig-B1c"/>
+                                    <action selector="startButtonPressed:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="Hwj-rS-Det"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nq-YR-ITz">
@@ -349,18 +348,205 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vY-Rw-csG">
+                                <rect key="frame" x="80" y="449" width="214" height="47"/>
+                                <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.1280691964" green="0.70438058039999996" blue="0.70438058039999996" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressed:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="kbZ-D7-83q"/>
+                                    <action selector="startButtonPressed:" destination="0dn-TO-wSR" eventType="touchUpInside" id="uDK-uO-pk1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8B-jk-xWJ">
+                                <rect key="frame" x="80" y="389" width="214" height="47"/>
+                                <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.1280691964" green="0.70438058039999996" blue="0.70438058039999996" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="End Session">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endSessionButtonPressed:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="c7l-OS-Qza"/>
+                                    <action selector="startButtonPressed:" destination="0dn-TO-wSR" eventType="touchUpInside" id="Ul3-HV-Ia1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91796292180000005" green="0.90129749889999999" blue="0.95479786069999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="endButton" destination="Q8B-jk-xWJ" id="bVg-zP-Rue"/>
+                        <outlet property="startButton" destination="Py0-TF-dFw" id="WUA-Bt-l2F"/>
+                        <outlet property="stopButton" destination="OHG-Wh-Zt2" id="i9C-R0-vOH"/>
+                        <outlet property="timeLabel" destination="4nq-YR-ITz" id="8hr-zk-bGb"/>
+                        <segue destination="iIb-V8-oh0" kind="show" identifier="endSessionSegue" id="A79-4y-f6F"/>
+                        <segue destination="wSG-69-ont" kind="show" identifier="cancelSegue" id="lCe-uY-vZa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sS5-xa-KXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1478.5" y="109.5"/>
+            <point key="canvasLocation" x="1444.5" y="71.5"/>
+        </scene>
+        <!--Show Price View Controller-->
+        <scene sceneID="iZU-qN-9S4">
+            <objects>
+                <viewController id="iIb-V8-oh0" customClass="ShowPriceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AQ2-eq-9Ho"/>
+                        <viewControllerLayoutGuide type="bottom" id="mmX-EX-BBH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vcJ-I6-Jq0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkA-Hk-olw">
+                                <rect key="frame" x="217" y="139" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieZ-dL-SEq">
+                                <rect key="frame" x="118" y="139" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayv-hn-ovn">
+                                <rect key="frame" x="118" y="161" width="246" height="157"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvc-1r-Cx5">
+                                <rect key="frame" x="80" y="447" width="214" height="65"/>
+                                <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.1280691964" green="0.70438058039999996" blue="0.70438058039999996" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="End Session">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="0dn-TO-wSR" eventType="touchUpInside" id="sJt-CB-a4V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Charge the Tutoree: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkX-2Q-phZ">
+                                <rect key="frame" x="109" y="154" width="156" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ghp-qu-yzu">
+                                <rect key="frame" x="80" y="370" width="214" height="47"/>
+                                <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.1280691964" green="0.70438058039999996" blue="0.70438058039999996" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Go Back">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="endSessionButtonPressed:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="w9s-Id-WQb"/>
+                                    <action selector="startButtonPressed:" destination="0dn-TO-wSR" eventType="touchUpInside" id="ATn-Qb-BQa"/>
+                                    <segue destination="Ph1-oc-eqn" kind="show" id="NTh-HO-od3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cN-st-KEk">
+                                <rect key="frame" x="109" y="202" width="165" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91796292180000005" green="0.90129749889999999" blue="0.95479786069999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="BkA-Hk-olw"/>
+                                <exclude reference="ieZ-dL-SEq"/>
+                                <exclude reference="ayv-hn-ovn"/>
+                                <exclude reference="Hvc-1r-Cx5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="priceLabel" destination="6cN-st-KEk" id="xR0-5m-rGT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wOY-jZ-Bmf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1923.5" y="80.5"/>
+        </scene>
+        <!--Storyboard Link-->
+        <scene sceneID="6i8-dw-leq">
+            <objects>
+                <viewController id="Ph1-oc-eqn" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kgU-5l-sCl"/>
+                        <viewControllerLayoutGuide type="bottom" id="0jy-af-pFX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OJc-Vg-lZE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0O-8V-vUC">
+                                <rect key="frame" x="217" y="139" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLd-wX-Nmn">
+                                <rect key="frame" x="118" y="139" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJI-Mg-xr4">
+                                <rect key="frame" x="118" y="161" width="246" height="157"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xc8-T2-an9">
+                                <rect key="frame" x="80" y="447" width="214" height="65"/>
+                                <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.1280691964" green="0.70438058039999996" blue="0.70438058039999996" alpha="0.87" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="End Session">
+                                    <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startButtonPressed:" destination="0dn-TO-wSR" eventType="touchUpInside" id="TXO-OG-ITS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91796292180000005" green="0.90129749889999999" blue="0.95479786069999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="E0O-8V-vUC"/>
+                                <exclude reference="tLd-wX-Nmn"/>
+                                <exclude reference="bJI-Mg-xr4"/>
+                                <exclude reference="Xc8-T2-an9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="TutorCenter"/>
+                    </userDefinedRuntimeAttributes>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8mb-5G-V62" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2400.5" y="71.5"/>
         </scene>
     </scenes>
     <resources>
         <image name="default_pic" width="185" height="185"/>
         <image name="menu" width="20" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lCe-uY-vZa"/>
+    </inferredMetricsTieBreakers>
 </document>
