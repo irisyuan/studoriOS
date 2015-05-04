@@ -32,9 +32,8 @@
 -(void)viewWillAppear:(BOOL)animated {
     
     PFObject *profile = [Helpers getProfile];
-    _firstNameField.text = profile[@"firstName"];
-    _lastNameField.text = profile[@"lastName"];
-    _emailField.text = profile[@"email"];
+    _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
+    _emailLabel.text = profile[@"email"];
     _zipCodeField.text = profile[@"zipCode"];
     
     PFFile *imageFile = profile[@"image"];
@@ -58,9 +57,6 @@
 // To do: need to add same validation as sign up page here
 - (IBAction)saveButtonPressed:(id)sender {
     PFObject *currentProfile = [Helpers getProfile];
-    currentProfile[@"firstName"] = _firstNameField.text;
-    currentProfile[@"lastName"] = _lastNameField.text;
-    currentProfile[@"email"] = _emailField.text;
     currentProfile[@"zipCode"] = _zipCodeField.text;
     
     // If not tutor, this is blank anyways
