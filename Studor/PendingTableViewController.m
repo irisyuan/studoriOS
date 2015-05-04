@@ -34,8 +34,22 @@ PFObject *selectedRequest;
 
 - (void) getRequests {
     
+    PFQuery *query;
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Request"];
+    if([self.senderInfo[1] isEqualToString:@"pending"]){
+        
+         query = [PFQuery queryWithClassName:@"Request"];}
+    
+    else{
+        
+         query = [PFQuery queryWithClassName:@"Session"];}
+    
+    if([self.senderInfo[1] isEqualToString:@"past"]){
+        
+        [query whereKey:@"isCompleted" equalTo:@YES];
+    }
+    
+    
 
     if([self.senderInfo[0] isEqualToString:@"student"]){
         [query whereKey:@"studentId" equalTo: [PFUser currentUser].username];
