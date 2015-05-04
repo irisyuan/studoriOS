@@ -129,7 +129,7 @@ CLLocationManager *locationManager;
 }
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    NSLog(@"yoyoyo");
+
     CLLocation *crnLoc = [locations lastObject];
     PFObject *profile = [Helpers getProfile];
     profile[@"location"] = [PFGeoPoint geoPointWithLocation:crnLoc];
