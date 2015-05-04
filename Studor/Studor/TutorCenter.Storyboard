@@ -52,7 +52,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zEG-04-ZnM">
-                                <rect key="frame" x="3" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="dc2-kw-RyL">
                                         <barButtonItem key="leftBarButtonItem" image="menu" id="6n1-fX-K5e">
