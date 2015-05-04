@@ -110,10 +110,9 @@ PFObject *selectedRequest;
     name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
     emailLabel.text = [object objectForKey:@"username"];
     subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
-    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", [[object objectForKey:@"hourlyRate"] stringValue]];
+    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ /hr", [[object objectForKey:@"hourlyRate"] stringValue]];
     
     return cell;
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
