@@ -42,4 +42,9 @@
     return [profileQuery getFirstObject];
 }
 
++(BOOL) isTutor {
+    PFObject *profile = [Helpers getProfile];
+    return [profile[@"isTutor"] boolValue];
+}
+
 @end
