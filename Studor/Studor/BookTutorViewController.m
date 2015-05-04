@@ -35,7 +35,7 @@
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
     _emailLabel.text = self.tutorProfile[@"email"];
-    _hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", @"asdasdf"];
+    _hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", [self.tutorProfile[@"hourlyRate"] stringValue]];
     _bioLabel.text = self.tutorProfile[@"bio"];
     
     _subjectsLabel.text = @"";
@@ -49,14 +49,14 @@
 - (void)bookTutor:(id)sender {
     NSLog(@"yaya");
     
-    PFObject *session = [PFObject objectWithClassName:@"Request"];
-    session[@"tutorId"] = self.tutorProfile[@"username"];
-    session[@"studentId"] = [Helpers getProfile];
-    session[@"requestDesc"] = _requestDescField.text;
+    PFObject *request = [PFObject objectWithClassName:@"Request"];
+    request[@"tutorId"] = self.tutorProfile[@"username"];
+    request[@"studentId"] = [Helpers getProfile];
+    request[@"requestDesc"] = _requestDescField.text;
     
-    // session[@"subjectId"] = _subjectsLabel.text;
+    // request[@"subjectId"] = _subjectsLabel.text;
     
-    [session saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             // segue to Student Center
             [self performSegueWithIdentifier:@"bookToStudentCenter" sender:nil];
