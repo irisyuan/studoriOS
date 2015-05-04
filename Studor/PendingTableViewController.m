@@ -41,27 +41,25 @@ PFObject *selectedRequest;
          query = [PFQuery queryWithClassName:@"Request"];}
     
     else{
-        
          query = [PFQuery queryWithClassName:@"Session"];}
     
-    if([self.senderInfo[1] isEqualToString:@"past"]){
-        
-        [query whereKey:@"isCompleted" equalTo:@YES];
-    }
+    
     
     
 
-    if([self.senderInfo[0] isEqualToString:@"student"]){
+/*    if([self.senderInfo[0] isEqualToString:@"student"]){
         [query whereKey:@"studentId" equalTo: [PFUser currentUser].username];
     
      }
     if([self.senderInfo[0] isEqualToString:@"tutor"]){
         [query whereKey:@"tutorId" equalTo: [PFUser currentUser].username];
         
-    }
+    }*/
     
     requests = [query findObjects];
     
+    NSLog([NSString stringWithFormat:@"amount of requests %lu ---------------", [requests count]]);
+
     [self.tableView reloadData];
     
     
@@ -77,7 +75,8 @@ PFObject *selectedRequest;
 {
     NSLog([NSString stringWithFormat:@"%lu ", [requests count]]);
     
-    
+    NSLog([NSString stringWithFormat:@"amount of requests %lu ", [requests count]]);
+
     return [requests count];
 }
 
