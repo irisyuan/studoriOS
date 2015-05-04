@@ -65,6 +65,7 @@
 		B21530621AF6BCED00882CA1 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B21530611AF6BCED00882CA1 /* SearchResultsViewController.m */; };
 		B221B4831AF72E54005F8C20 /* BookTutorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B221B4821AF72E54005F8C20 /* BookTutorViewController.m */; };
 		B221B4861AF78135005F8C20 /* StudentRequestDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B221B4851AF78135005F8C20 /* StudentRequestDetailViewController.m */; };
+		B221B4891AF79403005F8C20 /* TutorRequestDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B221B4881AF79403005F8C20 /* TutorRequestDetailViewController.m */; };
 		B223D3701AF1E0B3008E8DDE /* RequestConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B223D36F1AF1E0B3008E8DDE /* RequestConfirmViewController.m */; };
 		B24300CC1AE60235006FF3AD /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300CB1AE60235006FF3AD /* SignUpViewController.m */; };
 		B24300D11AE6044E006FF3AD /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300D01AE6044E006FF3AD /* Helpers.m */; };
@@ -172,6 +173,8 @@
 		B221B4821AF72E54005F8C20 /* BookTutorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTutorViewController.m; sourceTree = "<group>"; };
 		B221B4841AF78135005F8C20 /* StudentRequestDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StudentRequestDetailViewController.h; sourceTree = "<group>"; };
 		B221B4851AF78135005F8C20 /* StudentRequestDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StudentRequestDetailViewController.m; sourceTree = "<group>"; };
+		B221B4871AF79403005F8C20 /* TutorRequestDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorRequestDetailViewController.h; sourceTree = "<group>"; };
+		B221B4881AF79403005F8C20 /* TutorRequestDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorRequestDetailViewController.m; sourceTree = "<group>"; };
 		B223D36E1AF1E0B3008E8DDE /* RequestConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RequestConfirmViewController.h; path = ../RequestConfirmViewController.h; sourceTree = "<group>"; };
 		B223D36F1AF1E0B3008E8DDE /* RequestConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RequestConfirmViewController.m; path = ../RequestConfirmViewController.m; sourceTree = "<group>"; };
 		B24300CA1AE60235006FF3AD /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
@@ -505,6 +508,8 @@
 				B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */,
 				03A9FFAF1AF5B438003AC11F /* TutorCenterViewController.m */,
 				03A9FFB11AF5B442003AC11F /* TutorCenterViewController.h */,
+				B221B4871AF79403005F8C20 /* TutorRequestDetailViewController.h */,
+				B221B4881AF79403005F8C20 /* TutorRequestDetailViewController.m */,
 			);
 			name = TutorCenter;
 			sourceTree = "<group>";
@@ -640,6 +645,7 @@
 				03F6F03B1ADE0B32006DD5B1 /* RequestViewController.m in Sources */,
 				2E8FEFFE1AD5C0E900926A78 /* LogInViewController.m in Sources */,
 				03724E0C1AE7DA0B00C3CCB9 /* RBStoryboardPopoverSegue.m in Sources */,
+				B221B4891AF79403005F8C20 /* TutorRequestDetailViewController.m in Sources */,
 				0353F33A1AF4F8480001B6B4 /* CameraViewController.m in Sources */,
 				0353F3411AF504220001B6B4 /* SettingsViewController.m in Sources */,
 				03724E0A1AE7DA0B00C3CCB9 /* RBStoryboardLink.m in Sources */,

@@ -146,6 +146,24 @@ PFObject *selectedRequest;
 
         
     }
+    
+    if ([[segue identifier] isEqualToString:@"tutorPendingDetail"])
+    {
+        StudentRequestDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.type = @"pending";
+        destViewController.request = selectedRequest;
+        
+        
+    }
+    
+    if ([[segue identifier] isEqualToString:@"tutorCurrentDetail"])
+    {
+        StudentRequestDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.type = @"current";
+        destViewController.request = selectedRequest;
+        
+        
+    }
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
