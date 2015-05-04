@@ -19,10 +19,7 @@
 @implementation StudentCenterViewController
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
-    
-    
     self.navigationController.navigationBar.hidden = YES;
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -31,8 +28,6 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {
