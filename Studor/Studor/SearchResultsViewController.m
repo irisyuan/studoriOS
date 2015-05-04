@@ -8,11 +8,14 @@
 
 #import "SearchResultsViewController.h"
 #import "Helpers.h"
+#import "BookTutorViewController.h"
 
 
 @interface SearchResultsViewController ()
 
 @property (retain, nonatomic) NSArray *tutors;
+@property PFObject *selectedTutor;
+
 
 
 @end
@@ -113,10 +116,21 @@ BOOL found;
     return cell;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"pickTutorSegue"])
+    {
+        BookTutorViewController *destViewController = segue.destinationViewController;
+        destViewController.tutorProfile = self.selectedTutor;
+        
+    }
+}
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   
     
+    self.selectedTutor = self.tutors[indexPath.row];
+    [self performSegueWithIdentifier:@"pickTutorSegue" sender:self];
     
     
     

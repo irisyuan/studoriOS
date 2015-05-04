@@ -65,6 +65,9 @@
     profile[@"bio"] = self.bioField.text;
     [profile save];
     
+    [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
+
+    
     
 }
 @end

@@ -16,6 +16,7 @@
 @interface SidebarViewController ()
 
 @property (nonatomic, strong) NSArray *menuItems;
+
 @end
 
 @implementation SidebarViewController {
