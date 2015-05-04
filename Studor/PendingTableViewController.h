@@ -10,7 +10,7 @@
 #import <ParseUI/ParseUI.h>
 #import <Parse/Parse.h>
 
-@interface PendingTableViewController : PFQueryTableViewController
+@interface PendingTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (retain, strong) NSArray *senderInfo;
 

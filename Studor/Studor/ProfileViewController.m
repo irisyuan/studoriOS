@@ -36,12 +36,14 @@
     _emailLabel.text = profile[@"email"];
     
     PFFile *imageFile = profile[@"image"];
+    
     if (imageFile) {
         _photo.file = imageFile;
         [_photo loadInBackground];
     } else {
         // Use default picture if there isn't one in Parse
-        _photo.image = [UIImage imageNamed:@"default-pic.png"];
+     _photo.image = [UIImage imageNamed:@"default-pic.png"];
+
     }
     
     if (![profile[@"isTutor"] boolValue]) {

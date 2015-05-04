@@ -161,7 +161,7 @@ BOOL found;
     
     // Configure the cell
     PFFile *thumbnail = [object objectForKey:@"image"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:1];
+    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
     thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
@@ -172,12 +172,12 @@ BOOL found;
     UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:3];
     
     name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
+    
     //emailLabel.text = [object objectForKey:@"username"];
     //subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
     hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", [[object objectForKey:@"hourlyRate"] stringValue]];
     
     return cell;
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
