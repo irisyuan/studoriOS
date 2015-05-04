@@ -248,15 +248,15 @@
 			isa = PBXGroup;
 			children = (
 				03A9FFA91AF56C80003AC11F /* StudentCenter */,
-				B2A649F31AF53F8A00C9E674 /* TutorCenter */,
 				03A9FFB61AF5BA56003AC11F /* PendingTableViewController.h */,
 				03A9FFB71AF5BA56003AC11F /* PendingTableViewController.m */,
+				036998741AF6652200B07E2F /* TableDetailViewController.h */,
+				036998751AF6652200B07E2F /* TableDetailViewController.m */,
 				0369986E1AF662CE00B07E2F /* CurrentTableViewController.h */,
 				0369986F1AF662CE00B07E2F /* CurrentTableViewController.m */,
 				036998711AF663BC00B07E2F /* PastTableViewController.h */,
 				036998721AF663BC00B07E2F /* PastTableViewController.m */,
-				036998741AF6652200B07E2F /* TableDetailViewController.h */,
-				036998751AF6652200B07E2F /* TableDetailViewController.m */,
+				B2A649F31AF53F8A00C9E674 /* TutorCenter */,
 			);
 			name = Center;
 			sourceTree = "<group>";

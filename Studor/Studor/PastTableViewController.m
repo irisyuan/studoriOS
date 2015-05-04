@@ -74,7 +74,7 @@
     return query;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
     static NSString *simpleTableIdentifier = @"TutorCell";
@@ -103,7 +103,7 @@
     
     
     return cell;
-}
+}*/
 
 - (void) objectsDidLoad:(NSError *)error
 {
