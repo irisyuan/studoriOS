@@ -32,12 +32,6 @@
                                     <action selector="saveButtonPressed:" destination="68N-Pi-xfJ" eventType="touchUpInside" id="LUI-b6-lat"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69F-ww-UtL">
-                                <rect key="frame" x="14" y="300" width="345" height="105"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Label" translatesAutoresizingMaskIntoConstraints="NO" id="74a-un-W5Q">
                                 <rect key="frame" x="145" y="516" width="150" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -52,24 +46,6 @@
                                     <action selector="logoutButtonPressed:" destination="68N-Pi-xfJ" eventType="touchUpInside" id="dJ5-tV-8pB"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2fw-R1-IP0">
-                                <rect key="frame" x="136" y="132" width="223" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zfv-FX-dzK">
-                                <rect key="frame" x="136" y="176" width="223" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3tK-pw-c3X">
-                                <rect key="frame" x="136" y="222" width="223" height="30"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                            </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Update your profile:" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-qm-N5v">
                                 <rect key="frame" x="14" y="85" width="150" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -85,13 +61,13 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Zip Code" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="17h-YF-omF">
-                                <rect key="frame" x="14" y="262" width="122" height="30"/>
+                                <rect key="frame" x="136" y="182" width="122" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hourly Rate ($)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q57-Xh-r8K">
-                                <rect key="frame" x="145" y="262" width="122" height="30"/>
+                                <rect key="frame" x="136" y="224" width="122" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -106,6 +82,24 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Last" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tqf-Uo-Cyf">
+                                <rect key="frame" x="136" y="124" width="223" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMo-M3-yFW">
+                                <rect key="frame" x="136" y="153" width="223" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69F-ww-UtL">
+                                <rect key="frame" x="25" y="270" width="334" height="105"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.89019607840000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -118,11 +112,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bioField" destination="69F-ww-UtL" id="oVR-Id-7oJ"/>
-                        <outlet property="emailField" destination="3tK-pw-c3X" id="w7q-ne-H9A"/>
-                        <outlet property="firstNameField" destination="2fw-R1-IP0" id="ygY-C7-EI7"/>
+                        <outlet property="emailLabel" destination="dMo-M3-yFW" id="edz-Qf-C73"/>
                         <outlet property="hourlyRateField" destination="Q57-Xh-r8K" id="Zw8-YX-nuW"/>
-                        <outlet property="lastNameField" destination="Zfv-FX-dzK" id="SK4-Vg-px0"/>
                         <outlet property="logoutButton" destination="SA8-OW-YKo" id="2Yi-tl-vNl"/>
+                        <outlet property="nameLabel" destination="Tqf-Uo-Cyf" id="SNR-LM-btH"/>
                         <outlet property="photo" destination="wPC-fo-EGG" id="2gl-QS-3Uz"/>
                         <outlet property="saveButton" destination="S19-Ur-dGd" id="1De-Bg-2ZJ"/>
                         <outlet property="sidebarButton" destination="V4a-nJ-m4X" id="RJf-D1-iBg"/>
@@ -179,6 +172,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZp-mf-sGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3999.5" y="59.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u5Y-Ls-1Yz">
+            <objects>
+                <viewController id="z7a-Gs-Sm8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qaa-TR-FX8"/>
+                        <viewControllerLayoutGuide type="bottom" id="lxm-wn-NfL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3b0-Ra-K0i">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qDT-Hr-S45" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

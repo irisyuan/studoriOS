@@ -21,9 +21,11 @@
 
 @property (weak, nonatomic) IBOutlet PFImageView *photo;
 
-@property (weak, nonatomic) IBOutlet UITextField *firstNameField;
-@property (weak, nonatomic) IBOutlet UITextField *lastNameField;
-@property (weak, nonatomic) IBOutlet UITextField *emailField;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
+
 @property (weak, nonatomic) IBOutlet UITextField *zipCodeField;
 @property (weak, nonatomic) IBOutlet UITextField *hourlyRateField;
 @property (weak, nonatomic) IBOutlet UITextField *bioField;
