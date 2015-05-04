@@ -59,8 +59,35 @@
 
 - (IBAction)startButtonPressed:(id)sender {
     
+    [self performSegueWithIdentifier:@"startSessionSegue" sender:self];
     
     
+    
+    
+}
+
+- (IBAction)acceptButtonPressed:(id)sender {
+    
+    
+    PFObject *session = [PFObject objectWithClassName:@"Session"];
+    session[@"isCanceled"] = @NO;
+    session[@"isCompleted"] = @NO;
+    session[@"studentId"] = self.request[@"studentId"];
+    session[@"tutorId"] = self.request[@"tutorId"];
+    [session saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            [self.request delete];
+            [self performSegueWithIdentifier:@"acceptedRequestSegue" sender:self];
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Error booking session. Please try again later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }];
+
+    
+    
+    
+
     
 }
 @end

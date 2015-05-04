@@ -76,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Rn-Ia-5Gu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-278.5" y="160.5"/>
+            <point key="canvasLocation" x="-62.5" y="462.5"/>
         </scene>
         <!--Pending Table View Controller-->
         <scene sceneID="LTL-ji-c3y">
@@ -198,7 +198,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLj-Mo-MDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208.5" y="-161.5"/>
+            <point key="canvasLocation" x="514.5" y="-127.5"/>
         </scene>
         <!--Tutor Request Detail View Controller-->
         <scene sceneID="oHO-nM-VEj">
@@ -283,6 +283,9 @@
                                     <color key="titleColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="acceptButtonPressed:" destination="0dn-TO-wSR" eventType="touchUpInside" id="Kl9-qp-tab"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First and Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbz-Qc-PH6">
                                 <rect key="frame" x="170" y="112" width="155" height="21"/>
@@ -315,7 +318,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-Gg-VOQ">
-                                <rect key="frame" x="190" y="543" width="116" height="36"/>
+                                <rect key="frame" x="189" y="542" width="116" height="36"/>
                                 <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.1280691964" green="0.70438058039999996" blue="0.70438058039999996" alpha="0.87" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Start Session">
@@ -359,17 +362,69 @@
                     <navigationItem key="navigationItem" id="gqc-Tn-q7T"/>
                     <connections>
                         <outlet property="acceptButton" destination="mfr-Ri-SSV" id="0u7-Ta-tAe"/>
-                        <outlet property="acceptButtonPressed" destination="mfr-Ri-SSV" id="4bd-Xz-7dV"/>
                         <outlet property="cancelButton" destination="Gpk-40-W3p" id="Ic1-yw-hmQ"/>
                         <outlet property="descriptionLabel" destination="uO7-UO-pec" id="tH6-a1-0xD"/>
                         <outlet property="nameLabel" destination="Zbz-Qc-PH6" id="ghX-e2-wVx"/>
                         <outlet property="rateLabel" destination="QNe-Ul-qVf" id="4kr-bC-psk"/>
                         <outlet property="startButton" destination="yU8-Gg-VOQ" id="xtG-4D-0QA"/>
+                        <segue destination="MGY-Kt-8Oh" kind="show" identifier="startSessionSegue" id="UAV-oQ-XGi"/>
+                        <segue destination="Z7i-mN-igY" kind="show" identifier="acceptedRequestSegue" id="6md-rv-pVu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEY-Lx-ReE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="621.5" y="109.5"/>
+            <point key="canvasLocation" x="1023.5" y="87.5"/>
+        </scene>
+        <!--Session View Controller-->
+        <scene sceneID="KBg-Yx-ccH">
+            <objects>
+                <viewController id="MGY-Kt-8Oh" customClass="SessionViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nz1-yr-MlQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="aw8-pN-PAs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="erg-FE-djA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHG-Wh-Zt2">
+                                <rect key="frame" x="164" y="482" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmSessionEnded:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="HRf-Kb-tbt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Py0-TF-dFw">
+                                <rect key="frame" x="164" y="48" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmSessionEnded:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="3Qe-Uz-ocU"/>
+                                    <action selector="startSession:" destination="MGY-Kt-8Oh" eventType="touchUpInside" id="OEF-ig-B1c"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nq-YR-ITz">
+                                <rect key="frame" x="118" y="161" width="246" height="157"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.91796292180000005" green="0.90129749889999999" blue="0.95479786069999995" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="sessionEndedButton" destination="OHG-Wh-Zt2" id="0hJ-iR-tj0"/>
+                        <outlet property="sessionStartedButton" destination="Py0-TF-dFw" id="nR1-Nw-bOJ"/>
+                        <outlet property="timeLabel" destination="4nq-YR-ITz" id="ZpK-2j-env"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sS5-xa-KXq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1478.5" y="109.5"/>
         </scene>
     </scenes>
     <resources>
