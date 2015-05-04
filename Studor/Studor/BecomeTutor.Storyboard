@@ -69,8 +69,11 @@
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="udk-5O-BcQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="0.1176470588" green="0.58039215690000001" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="vaS-3s-ge5">
+                                    <navigationItem title="Become a Tutor" id="vaS-3s-ge5">
                                         <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="dlm-y3-kZa">
                                             <color key="tintColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>

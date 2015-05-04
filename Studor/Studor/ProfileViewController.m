@@ -15,6 +15,7 @@
 
 @implementation ProfileViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -27,6 +28,7 @@
         [self.sidebarButton setAction: @selector( revealToggle: )];
         [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
     }
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
