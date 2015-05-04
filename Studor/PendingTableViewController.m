@@ -8,11 +8,13 @@
 
 #import "PendingTableViewController.h"
 #import "Helpers.h"
+#import "StudentRequestDetailViewController.h"
 
 @implementation PendingTableViewController
 
 
 NSArray *requests;
+PFObject *selectedRequest;
 
 
 - (void)viewDidLoad
@@ -111,6 +113,63 @@ NSArray *requests;
     hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", [[object objectForKey:@"hourlyRate"] stringValue]];
     
     return cell;
+    
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    
+    if ([[segue identifier] isEqualToString:@"studentPendingDetail"])
+    {
+        StudentRequestDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.type = @"pending";
+        destViewController.request = selectedRequest;
+        
+        
+    }
+    
+    if ([[segue identifier] isEqualToString:@"studentCurrentDetail"])
+    {
+        StudentRequestDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.type = @"current";
+        destViewController.request = selectedRequest;
+
+        
+        
+    }
+    if ([[segue identifier] isEqualToString:@"studentPastDetail"])
+    {
+        StudentRequestDetailViewController *destViewController = segue.destinationViewController;
+        destViewController.type = @"past";
+        destViewController.request = selectedRequest;
+
+        
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    selectedRequest = requests[indexPath.row];
+    
+    if([self.senderInfo[0] isEqualToString:@"student"] && [self.senderInfo[1] isEqualToString:@"pending"]){
+        [self performSegueWithIdentifier:@"studentPendingDetail" sender:self];
+    }
+    if([self.senderInfo[0] isEqualToString:@"student"] && [self.senderInfo[1] isEqualToString:@"current"]){
+        [self performSegueWithIdentifier:@"studentCurrentDetail" sender:self];
+    }
+    if([self.senderInfo[0] isEqualToString:@"student"] && [self.senderInfo[1] isEqualToString:@"past"]){
+        [self performSegueWithIdentifier:@"studentPastDetail" sender:self];
+    }
+    if([self.senderInfo[0] isEqualToString:@"tutor"] && [self.senderInfo[1] isEqualToString:@"pending"]){
+        [self performSegueWithIdentifier:@"tutorPendingDetail" sender:self];
+    }
+    if([self.senderInfo[0] isEqualToString:@"tutor"] && [self.senderInfo[1] isEqualToString:@"current"]){
+        [self performSegueWithIdentifier:@"tutorCurrentDetail" sender:self];
+    }
+
+    
     
 }
 

@@ -121,7 +121,7 @@
                                     <color key="tintColor" red="0.36243327310000001" green="0.89135877070000002" blue="0.42614392029999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="0dn-TO-wSR" kind="show" identifier="showCurrentDetail" id="64h-WK-HWR"/>
+                                    <segue destination="0dn-TO-wSR" kind="show" identifier="tutorCurrentDetail" id="64h-WK-HWR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -182,7 +182,7 @@
                                     <color key="tintColor" red="0.36243327310000001" green="0.89135877070000002" blue="0.42614392029999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="0dn-TO-wSR" kind="show" identifier="showPendingDetail" id="wEX-eU-wGO"/>
+                                    <segue destination="0dn-TO-wSR" kind="show" identifier="tutorPendingDetail" id="wEX-eU-wGO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
