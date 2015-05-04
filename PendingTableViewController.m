@@ -48,6 +48,7 @@ PFObject *selectedRequest;
         
         [sessionQuery whereKey:@"studentId" equalTo:PFUser.currentUser.username];
         current = [sessionQuery findObjects];
+        [sessionQuery whereKey:@"isCompleted" equalTo:@YES];
         past = [sessionQuery findObjects];
         
         

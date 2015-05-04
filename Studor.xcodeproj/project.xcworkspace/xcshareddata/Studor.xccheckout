@@ -10,29 +10,29 @@
 	<string>Studor</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>AF6BFD00A22AA421427ABCCE4E087D4AFCBF2A06</key>
+		<key>EDFAD4F932DEC95AD62DC805F18B2F549AA3F3EC</key>
 		<string>https://bitbucket.org/ok455/studoriosapp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Studor/Studor.xcodeproj</string>
+	<string>Studor.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>AF6BFD00A22AA421427ABCCE4E087D4AFCBF2A06</key>
-		<string>../../..</string>
+		<key>EDFAD4F932DEC95AD62DC805F18B2F549AA3F3EC</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://bitbucket.org/ok455/studoriosapp.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>AF6BFD00A22AA421427ABCCE4E087D4AFCBF2A06</string>
+	<string>EDFAD4F932DEC95AD62DC805F18B2F549AA3F3EC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>AF6BFD00A22AA421427ABCCE4E087D4AFCBF2A06</string>
+			<string>EDFAD4F932DEC95AD62DC805F18B2F549AA3F3EC</string>
 			<key>IDESourceControlWCCName</key>
 			<string>studoriosapp</string>
 		</dict>
