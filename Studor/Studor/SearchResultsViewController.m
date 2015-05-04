@@ -28,7 +28,18 @@ BOOL found;
 
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    NSString *string1 = @"The following tutors teach ";
+    NSString *string2 =  self.subject[@"subject"];
+    NSString *string3 = @" in your area.";
+    
+    string1 = [string1 stringByAppendingString:string2];
+    string1 = [string1 stringByAppendingString:string2];
+
+    self.resultLabel.text = string1;
+    
     found = false;
     locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
     locationManager.delegate = self; // we set the delegate of locationManager to self.
@@ -43,7 +54,14 @@ BOOL found;
 - (void) updateSearchResults {
     
     UITableView *tableView = (id)[self.view viewWithTag:1];
-    [tableView reloadData];
+
+    
+    if([self.tutors count]==0){
+        tableView.hidden = true;
+        self.resultLabel.text = @"There are no tutors in your area.";
+    }
+    else{
+        [tableView reloadData];}
     
     
     
