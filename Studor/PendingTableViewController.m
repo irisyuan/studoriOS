@@ -14,6 +14,9 @@
 - (id)initWithCoder:(NSCoder *)aCoder
 {
     self = [super initWithCoder:aCoder];
+    
+
+    
     if (self) {
         // The className to query on
         self.parseClassName = @"Request";
@@ -41,10 +44,7 @@
     [super viewDidLoad];
     
     
-    
-    
-    
-    
+
     
     
     

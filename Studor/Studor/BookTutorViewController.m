@@ -51,7 +51,7 @@
     
     PFObject *request = [PFObject objectWithClassName:@"Request"];
     request[@"tutorId"] = self.tutorProfile[@"username"];
-    request[@"studentId"] = [Helpers getProfile];
+    request[@"studentId"] = [Helpers getProfile][@"email"];
     request[@"requestDesc"] = _requestDescField.text;
     
     // request[@"subjectId"] = _subjectsLabel.text;
