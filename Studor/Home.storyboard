@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yxn-UT-UpB">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="yxn-UT-UpB">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -685,6 +685,7 @@
                         <outlet property="image" destination="wqx-Wq-aWg" id="VxN-O7-EvB"/>
                         <outlet property="nameLabel" destination="f4w-Kx-Egc" id="xR9-s0-cYA"/>
                         <outlet property="requestDesField" destination="xzL-eB-7k5" id="XdT-uX-dSD"/>
+                        <outlet property="requestDescField" destination="xzL-eB-7k5" id="0Ci-pd-Qcx"/>
                         <outlet property="subjectsLabel" destination="dkF-Bx-GJS" id="FyT-64-6iK"/>
                         <segue destination="AHJ-e4-sfE" kind="custom" identifier="bookToStudentCenter" customClass="RBStoryboardPushSegue" id="BC3-RO-gAU"/>
                     </connections>
