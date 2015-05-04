@@ -36,7 +36,7 @@ BOOL found;
     NSString *string3 = @" in your area.";
     
     string1 = [string1 stringByAppendingString:string2];
-    string1 = [string1 stringByAppendingString:string2];
+    string1 = [string1 stringByAppendingString:string3];
 
     self.resultLabel.text = string1;
     
