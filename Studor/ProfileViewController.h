@@ -32,6 +32,12 @@
 @property (weak, nonatomic) IBOutlet UITextView *successLabel;
 @property (weak, nonatomic) IBOutlet UIButton *subjectsButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *bioLabel;
+@property (weak, nonatomic) IBOutlet UILabel *perHourLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dollarSign;
+
+
+
 - (IBAction) saveButtonPressed:(id)sender;
 - (IBAction) editButtonPressed:(id)sender;
 
