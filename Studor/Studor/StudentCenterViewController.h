@@ -15,5 +15,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *PastSessionsLabel;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *noPendingResults;
+@property (weak, nonatomic) IBOutlet UILabel *noCurrentResults;
+@property (weak, nonatomic) IBOutlet UILabel *noPastResults;
+
+
 
 @end
