@@ -52,6 +52,9 @@
         [_bioField setHidden:TRUE];
         [_hourlyRateField setHidden:TRUE];
         [_subjectsButton setHidden:TRUE];
+        [_bioLabel setHidden:TRUE];
+        [_dollarSign setHidden:TRUE];
+        [_perHourLabel setHidden:TRUE];
          
     } else {
         _bioField.text = profile[@"bio"];
@@ -64,12 +67,14 @@
     PFObject *currentProfile = [Helpers getProfile];
     
     // If not tutor, this is blank anyways
+    if ([currentProfile[@"isTutor"] boolValue]) {
     currentProfile[@"bio"] = _bioField.text;
     
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber *hourlyRate = [f numberFromString:_hourlyRateField.text];
     currentProfile[@"hourlyRate"] = hourlyRate;
+    }
 
     if ([currentProfile saveInBackground]) {
         _successLabel.text = @"Profile saved!";

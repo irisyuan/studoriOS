@@ -136,10 +136,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="bioField" destination="69F-ww-UtL" id="oVR-Id-7oJ"/>
+                        <outlet property="bioLabel" destination="4iC-eT-NTq" id="ha6-Zb-fFs"/>
+                        <outlet property="dollarSign" destination="aLh-CH-qWD" id="l0n-8E-Zwa"/>
                         <outlet property="emailLabel" destination="dMo-M3-yFW" id="edz-Qf-C73"/>
                         <outlet property="hourlyRateField" destination="Q57-Xh-r8K" id="Zw8-YX-nuW"/>
                         <outlet property="logoutButton" destination="SA8-OW-YKo" id="2Yi-tl-vNl"/>
                         <outlet property="nameLabel" destination="Tqf-Uo-Cyf" id="SNR-LM-btH"/>
+                        <outlet property="perHourLabel" destination="4he-vc-U6C" id="MEi-3X-eLT"/>
                         <outlet property="photo" destination="wPC-fo-EGG" id="2gl-QS-3Uz"/>
                         <outlet property="saveButton" destination="S19-Ur-dGd" id="1De-Bg-2ZJ"/>
                         <outlet property="sidebarButton" destination="V4a-nJ-m4X" id="RJf-D1-iBg"/>
@@ -252,23 +255,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZp-mf-sGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3999.5" y="59.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="u5Y-Ls-1Yz">
-            <objects>
-                <viewController id="z7a-Gs-Sm8" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qaa-TR-FX8"/>
-                        <viewControllerLayoutGuide type="bottom" id="lxm-wn-NfL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3b0-Ra-K0i">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qDT-Hr-S45" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>
