@@ -20,8 +20,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *hourlyRateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bioLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subjectsLabel;
+@property (weak, nonatomic) IBOutlet UITextField *requestDescField;
+/*
+// changed this to textfield
+ 
 @property (weak, nonatomic) IBOutlet UITextView *requestDescField;
 
+*/
 
 @property (weak, nonatomic) IBOutlet UIButton *bookButton;
 

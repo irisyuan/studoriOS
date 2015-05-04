@@ -619,9 +619,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_pic" translatesAutoresizingMaskIntoConstraints="NO" id="wqx-Wq-aWg" customClass="PFImageView">
-                                <rect key="frame" x="16" y="101" width="117" height="114"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Last" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-Kx-Egc">
                                 <rect key="frame" x="141" y="101" width="223" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -652,29 +649,32 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="What do you need help with?" translatesAutoresizingMaskIntoConstraints="NO" id="bhI-o4-h07">
-                                <rect key="frame" x="10" y="376" width="332" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Request Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D12-nC-HeS">
-                                <rect key="frame" x="16" y="359" width="156" height="21"/>
+                                <rect key="frame" x="16" y="347" width="156" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="089-vs-VIc">
-                                <rect key="frame" x="158" y="558" width="36" height="30"/>
-                                <state key="normal" title="Book">
+                                <rect key="frame" x="124" y="554" width="104" height="30"/>
+                                <state key="normal" title="Book this Tutor">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="bookTutor:" destination="dTb-PF-RUj" eventType="touchUpInside" id="tg4-PP-Bb5"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_pic" translatesAutoresizingMaskIntoConstraints="NO" id="wqx-Wq-aWg" customClass="PFImageView">
+                                <rect key="frame" x="16" y="101" width="117" height="114"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="What do you need help with?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xzL-eB-7k5">
+                                <rect key="frame" x="16" y="376" width="343" height="139"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196078430000004" green="0.89019607840000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -684,7 +684,7 @@
                         <outlet property="hourlyRateLabel" destination="uQz-wR-3bd" id="h3I-vH-x5P"/>
                         <outlet property="image" destination="wqx-Wq-aWg" id="VxN-O7-EvB"/>
                         <outlet property="nameLabel" destination="f4w-Kx-Egc" id="xR9-s0-cYA"/>
-                        <outlet property="requestDescField" destination="bhI-o4-h07" id="JSV-Pc-Huh"/>
+                        <outlet property="requestDesField" destination="xzL-eB-7k5" id="XdT-uX-dSD"/>
                         <outlet property="subjectsLabel" destination="dkF-Bx-GJS" id="FyT-64-6iK"/>
                         <segue destination="AHJ-e4-sfE" kind="custom" identifier="bookToStudentCenter" customClass="RBStoryboardPushSegue" id="BC3-RO-gAU"/>
                     </connections>
