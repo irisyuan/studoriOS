@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
 @interface AppDelegate ()
 //new commit
@@ -32,6 +33,8 @@
     
     // Tab bar appearance
     [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+    
+    [PFImageView class];
     
     return YES;
 }
