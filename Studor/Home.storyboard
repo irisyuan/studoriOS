@@ -552,7 +552,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Search" id="y9N-4d-0Qk">
+                    <navigationItem key="navigationItem" title="Search" id="y9N-4d-0Qk" colorLabel="IBBuiltInLabel-Green">
                         <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="bxH-2f-AEG">
                             <color key="tintColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>

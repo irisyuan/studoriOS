@@ -36,6 +36,14 @@
     
     [PFImageView class];
     
+    //Tab tiltle color
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor colorWithRed:38.0/255.0 green:169.0/255.0 blue:174.0/255.0 alpha:1.0],
+      UITextAttributeTextColor,
+      
+      nil]];
+    
     return YES;
 }
 
