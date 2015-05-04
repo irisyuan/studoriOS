@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Login-->
@@ -66,7 +66,7 @@
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wnn-pM-aYz" kind="custom" customClass="RBStoryboardModalSegue" id="O2n-S4-gbA"/>
+                                    <segue destination="tb6-ey-0CZ" kind="show" id="a1h-Th-TOG"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logoSmall" translatesAutoresizingMaskIntoConstraints="NO" id="QNW-lg-Rct">
@@ -113,12 +113,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urs-8h-PX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="946.5" y="-1616.5"/>
+            <point key="canvasLocation" x="886.5" y="-1804.5"/>
         </scene>
-        <!--Storyboard Link-->
+        <!--Forgot Password Link-->
         <scene sceneID="Ui9-v1-GrH">
             <objects>
-                <viewController id="MIa-FX-G5k" customClass="RBStoryboardLink" sceneMemberID="viewController">
+                <viewController title="Forgot Password Link" id="MIa-FX-G5k" customClass="RBStoryboardLink" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nlr-LW-KKi"/>
                         <viewControllerLayoutGuide type="bottom" id="YnC-wR-1kZ"/>
@@ -135,7 +135,24 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YXi-Dz-srD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1122.5" y="-715.5"/>
+            <point key="canvasLocation" x="1964.5" y="-463.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BC7-IN-hcg">
+            <objects>
+                <navigationController id="tb6-ey-0CZ" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aoy-dz-yLn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wnn-pM-aYz" kind="relationship" relationship="rootViewController" id="n7j-K0-gbW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jxq-jf-V0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1200.5" y="-1231.5"/>
         </scene>
         <!--Link to SignUp-->
         <scene sceneID="bjR-yf-LND">
@@ -150,6 +167,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="kP5-LO-SZJ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="SignUp"/>
@@ -157,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xsZ-LC-dKn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1399.5" y="-1449.5"/>
+            <point key="canvasLocation" x="1727.5" y="-1399.5"/>
         </scene>
     </scenes>
     <resources>
