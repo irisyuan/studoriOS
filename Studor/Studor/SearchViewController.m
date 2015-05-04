@@ -14,7 +14,7 @@
 @interface SearchViewController ()
 
 @property (retain, nonatomic) NSArray *subjects;
-@property NSString *selectedSubject;
+@property PFObject *selectedSubject;
 
 @end
 

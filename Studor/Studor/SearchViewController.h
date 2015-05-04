@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 
-@interface SearchViewController : UIViewController
-<UITableViewDataSource, UITableViewDelegate>
 
+@interface SearchViewController : UIViewController
+ <UITableViewDataSource, UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
