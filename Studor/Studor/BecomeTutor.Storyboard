@@ -151,7 +151,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="TutorCenter"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="Profile"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jK-a4-QMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
