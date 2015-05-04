@@ -67,29 +67,29 @@
 
 - (PFQuery *)queryForTable
 {
-    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    [query whereKey:@"studentId" equalTo:PFUser.currentUser.username];
     
-    // if student match by tutor
-    NSString *tutor = [[query getFirstObject] objectForKey:@"tutorId"];
-    NSLog(@"got it! %@", tutor);
-    
-    // get profile for that tutor
+    PFQuery *query = [PFQuery queryWithClassName:@"Request"];
     PFQuery *profileQuery = [PFQuery queryWithClassName:@"Profile"];
-    [profileQuery whereKey:@"username" equalTo:tutor];
+    
+    if([self.senderInfo[0] isEqualToString:@"student"]){
+       return [query whereKey:@"studentId" equalTo:PFUser.currentUser.username];
+
+        
+    }
+    else {
+        return [query whereKey:@"tutorId" equalTo:PFUser.currentUser.username];
+
+    }
+    
     
     // else if tutor match by student
-    
-    
-    
-    
-    
-    
+
     
 
     
     return profileQuery;
 }
+
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
