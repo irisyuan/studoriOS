@@ -14,6 +14,7 @@
 @interface SearchResultsViewController : UIViewController
 <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
+@property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (nonatomic, strong) PFObject *subject;
 
 
