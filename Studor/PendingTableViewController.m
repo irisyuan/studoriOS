@@ -23,7 +23,7 @@ NSArray *requests;
 
     [self getRequests];
     
-    
+    NSLog(self.senderInfo[1]);
     
     
     
@@ -100,10 +100,10 @@ NSArray *requests;
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
     
-    UILabel *emailLabel = (UILabel*) [cell viewWithTag:101];
-    UILabel *name = (UILabel*) [cell viewWithTag:102];
-    UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:104];
-    UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:105];
+    UILabel *emailLabel = (UILabel*) [cell viewWithTag:108];
+    UILabel *name = (UILabel*) [cell viewWithTag:106];
+    UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:110];
+    UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:112];
     
     name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
     emailLabel.text = [object objectForKey:@"username"];
