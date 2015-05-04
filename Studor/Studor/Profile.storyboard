@@ -122,6 +122,7 @@
                         <outlet property="photo" destination="wPC-fo-EGG" id="2gl-QS-3Uz"/>
                         <outlet property="saveButton" destination="S19-Ur-dGd" id="1De-Bg-2ZJ"/>
                         <outlet property="sidebarButton" destination="V4a-nJ-m4X" id="RJf-D1-iBg"/>
+                        <outlet property="subjectsButton" destination="Fw0-WB-KY6" id="8zv-Sm-lfE"/>
                         <outlet property="successLabel" destination="74a-un-W5Q" id="GcR-qr-0Ue"/>
                         <segue destination="Yk1-8K-4Fu" kind="push" identifier="loggedOut" id="07n-1t-qpf"/>
                     </connections>
