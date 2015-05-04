@@ -10,18 +10,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="psd-ww-adi">
-                    <rect key="frame" x="48" y="260" width="278" height="147"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoSmall" translatesAutoresizingMaskIntoConstraints="NO" id="PFd-fn-EMw">
+                    <rect key="frame" x="61" y="286" width="253" height="95"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="147" id="V6P-DA-w5t"/>
+                        <constraint firstAttribute="height" constant="95" id="GcD-J6-1it"/>
                     </constraints>
                 </imageView>
             </subviews>
             <color key="backgroundColor" red="0.91796292180000005" green="0.90129749889999999" blue="0.95479786069999995" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="psd-ww-adi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="48" id="ctA-b1-vV2"/>
-                <constraint firstItem="psd-ww-adi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="h5u-4A-2l0"/>
-                <constraint firstItem="psd-ww-adi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="wXE-1y-bVm"/>
+                <constraint firstItem="PFd-fn-EMw" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="2Yw-f2-erO"/>
+                <constraint firstItem="PFd-fn-EMw" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bFx-GI-5et"/>
+                <constraint firstItem="PFd-fn-EMw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="61" id="gF2-ai-aIt"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -29,6 +29,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo" width="1334" height="750"/>
+        <image name="logoSmall" width="923" height="325"/>
     </resources>
 </document>
