@@ -684,7 +684,6 @@
                         <outlet property="hourlyRateLabel" destination="uQz-wR-3bd" id="h3I-vH-x5P"/>
                         <outlet property="image" destination="wqx-Wq-aWg" id="VxN-O7-EvB"/>
                         <outlet property="nameLabel" destination="f4w-Kx-Egc" id="xR9-s0-cYA"/>
-                        <outlet property="requestDesField" destination="xzL-eB-7k5" id="XdT-uX-dSD"/>
                         <outlet property="requestDescField" destination="xzL-eB-7k5" id="0Ci-pd-Qcx"/>
                         <outlet property="subjectsLabel" destination="dkF-Bx-GJS" id="FyT-64-6iK"/>
                         <segue destination="AHJ-e4-sfE" kind="custom" identifier="bookToStudentCenter" customClass="RBStoryboardPushSegue" id="BC3-RO-gAU"/>
