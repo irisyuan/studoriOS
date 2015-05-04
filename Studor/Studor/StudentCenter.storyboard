@@ -22,7 +22,7 @@
                                 <items>
                                     <navigationItem title="Title" id="eL8-C4-SDF">
                                         <barButtonItem key="leftBarButtonItem" image="menu" id="Lxx-ou-TTt">
-                                            <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
+                                            <color key="tintColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
