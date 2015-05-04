@@ -10,6 +10,8 @@
 #import <Parse/Parse.h>
 #import "SWRevealViewController.h"
 #import "Helpers.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 
 
@@ -18,6 +20,9 @@
 @end
 
 @implementation TutorCenterViewController
+
+CLLocationManager *locationManager;
+
 
 - (void)viewDidLoad {
     
@@ -99,6 +104,16 @@
     PFObject *profile = [Helpers getProfile];
     if([sender isOn]){
         NSLog(@"available");
+
+
+        
+        locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
+        locationManager.delegate = self; // we set the delegate of locationManager to self.
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest; // setting the accuracy
+        [locationManager requestWhenInUseAuthorization];
+        [locationManager startUpdatingLocation];  //requesting location updates
+        
+        
         profile[@"isAvailable"] = @YES;
     } else {
         NSLog(@"not available");
@@ -106,5 +121,26 @@
     }
     [profile saveInBackground];
 }
+
+-(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error{
+    UIAlertView *errorAlert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"There was an error retrieving your location" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [errorAlert show];
+    NSLog(@"Error: %@",error.description);
+}
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
+{
+    NSLog(@"yoyoyo");
+    CLLocation *crnLoc = [locations lastObject];
+    PFObject *profile = [Helpers getProfile];
+    profile[@"location"] = [PFGeoPoint geoPointWithLocation:crnLoc];
+    [profile save];
+    [locationManager stopUpdatingLocation];
+    
+    
+    
+}
+
+
+
 
 @end

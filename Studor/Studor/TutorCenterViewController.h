@@ -8,11 +8,14 @@
 
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface TutorCenterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface TutorCenterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @property (weak, nonatomic) IBOutlet UISwitch *toggleAvailability;
+
+- (IBAction)availableSwitched:(id)sender;
 
 @end
