@@ -7,7 +7,7 @@
         <!--Session View Controller-->
         <scene sceneID="4Gc-Lp-acn">
             <objects>
-                <viewController id="dmf-ay-r3e" customClass="SessionViewController" sceneMemberID="viewController">
+                <viewController id="dmf-ay-r3e" customClass="SessionViewController" customModule="SessionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nt7-ED-QXA"/>
                         <viewControllerLayoutGuide type="bottom" id="Bfw-Pf-2Sy"/>

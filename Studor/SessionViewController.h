@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parse/Parse.h"
+#import "Helpers.h"
 
 @interface SessionViewController : UIViewController
-
-@property (weak, nonatomic) IBOutlet UILabel *display;
-
-- (IBAction)buttonPressed:(id)sender;
-
 @end
