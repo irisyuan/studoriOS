@@ -11,6 +11,7 @@
 #import "SWRevealViewController.h"
 #import "Helpers.h"
 #import <CoreLocation/CoreLocation.h>
+#import "PendingTableViewController.h"
 
 
 
@@ -139,6 +140,30 @@ CLLocationManager *locationManager;
     
     
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    
+    if ([[segue identifier] isEqualToString:@"pendingSegue"])
+    {
+        PendingTableViewController *destViewController = segue.destinationViewController;
+        destViewController.senderInfo = @[@"tutor", @"pending"];
+        
+        
+    }
+    
+    if ([[segue identifier] isEqualToString:@"currentSegue"])
+    {
+        PendingTableViewController *destViewController = segue.destinationViewController;
+        destViewController.senderInfo = @[@"tutor", @"current"];
+        
+    }
+    
+    
+}
+
+
 
 
 

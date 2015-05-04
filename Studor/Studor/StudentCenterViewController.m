@@ -9,7 +9,7 @@
 #import "StudentCenterViewController.h"
 #import <Parse/Parse.h>
 #import "SWRevealViewController.h"
-
+#import "PendingTableViewController.h"
 
 @interface StudentCenterViewController()
     @property (retain, nonatomic) NSMutableArray *requests;
@@ -57,6 +57,34 @@
     cell.textLabel.text = self.requests[indexPath.row];
     return cell;
 }*/
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    
+    if ([[segue identifier] isEqualToString:@"pendingSegue"])
+    {
+        PendingTableViewController *destViewController = segue.destinationViewController;
+        destViewController.senderInfo = @[@"student", @"pending"];
+
+        
+    }
+    
+   if ([[segue identifier] isEqualToString:@"currentSegue"])
+    {
+        PendingTableViewController *destViewController = segue.destinationViewController;
+        destViewController.senderInfo = @[@"student", @"current"];
+        
+    }
+    
+    if ([[segue identifier] isEqualToString:@"pastSegue"])
+    {
+        PendingTableViewController *destViewController = segue.destinationViewController;
+        destViewController.senderInfo = @[@"student", @"past"];
+        
+    }
+    
+}
 
 
 @end

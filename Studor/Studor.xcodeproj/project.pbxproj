@@ -10,8 +10,6 @@
 		0353F33A1AF4F8480001B6B4 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353F3391AF4F8480001B6B4 /* CameraViewController.m */; };
 		0353F33D1AF4F86A0001B6B4 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0353F33C1AF4F86A0001B6B4 /* Camera.storyboard */; };
 		0353F3411AF504220001B6B4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0353F3401AF504220001B6B4 /* SettingsViewController.m */; };
-		036998701AF662CE00B07E2F /* CurrentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0369986F1AF662CE00B07E2F /* CurrentTableViewController.m */; };
-		036998731AF663BC00B07E2F /* PastTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036998721AF663BC00B07E2F /* PastTableViewController.m */; };
 		036998761AF6652200B07E2F /* TableDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036998751AF6652200B07E2F /* TableDetailViewController.m */; };
 		036E47741AF0A09A00070405 /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 036E47731AF0A09A00070405 /* ForgotPassword.storyboard */; };
 		036E47771AF0A0C200070405 /* ForgotPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 036E47761AF0A0C200070405 /* ForgotPasswordViewController.m */; };
@@ -94,10 +92,6 @@
 		0353F33C1AF4F86A0001B6B4 /* Camera.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		0353F3401AF504220001B6B4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		0353F3421AF504320001B6B4 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		0369986E1AF662CE00B07E2F /* CurrentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentTableViewController.h; sourceTree = "<group>"; };
-		0369986F1AF662CE00B07E2F /* CurrentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentTableViewController.m; sourceTree = "<group>"; };
-		036998711AF663BC00B07E2F /* PastTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PastTableViewController.h; sourceTree = "<group>"; };
-		036998721AF663BC00B07E2F /* PastTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PastTableViewController.m; sourceTree = "<group>"; };
 		036998741AF6652200B07E2F /* TableDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableDetailViewController.h; sourceTree = "<group>"; };
 		036998751AF6652200B07E2F /* TableDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableDetailViewController.m; sourceTree = "<group>"; };
 		036E47731AF0A09A00070405 /* ForgotPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ForgotPassword.storyboard; path = ../ForgotPassword.storyboard; sourceTree = "<group>"; };
@@ -252,10 +246,6 @@
 				03A9FFB71AF5BA56003AC11F /* PendingTableViewController.m */,
 				036998741AF6652200B07E2F /* TableDetailViewController.h */,
 				036998751AF6652200B07E2F /* TableDetailViewController.m */,
-				0369986E1AF662CE00B07E2F /* CurrentTableViewController.h */,
-				0369986F1AF662CE00B07E2F /* CurrentTableViewController.m */,
-				036998711AF663BC00B07E2F /* PastTableViewController.h */,
-				036998721AF663BC00B07E2F /* PastTableViewController.m */,
 				B2A649F31AF53F8A00C9E674 /* TutorCenter */,
 			);
 			name = Center;
@@ -671,9 +661,7 @@
 				03A9FFAE1AF5A0C6003AC11F /* StudentCenterViewController.m in Sources */,
 				03A9FFB81AF5BA56003AC11F /* PendingTableViewController.m in Sources */,
 				036E47771AF0A0C200070405 /* ForgotPasswordViewController.m in Sources */,
-				036998701AF662CE00B07E2F /* CurrentTableViewController.m in Sources */,
 				B221B4831AF72E54005F8C20 /* BookTutorViewController.m in Sources */,
-				036998731AF663BC00B07E2F /* PastTableViewController.m in Sources */,
 				03724E0E1AE7DA0B00C3CCB9 /* RBStoryboardSegue.m in Sources */,
 				03F6F0411ADE0C6C006DD5B1 /* MessageViewController.m in Sources */,
 			);

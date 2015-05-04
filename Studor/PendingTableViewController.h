@@ -12,4 +12,8 @@
 
 @interface PendingTableViewController : PFQueryTableViewController
 
+@property (retain, strong) NSArray *senderInfo;
+
+
+
 @end
