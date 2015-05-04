@@ -22,7 +22,7 @@
     _FirstNameErrorLabel.text = @"";
     _LastNameErrorLabel.text = @"";
     _PasswordErrorLabel.text = @"";
-    _ZipCodeErrorLabel.text = @"";
+    _confirmPasswordLabel.text = @"";
     _EmailErrorLabel.text = @"";
 
     
@@ -44,7 +44,7 @@
     _LastNameErrorLabel.text = @"";
     _EmailErrorLabel.text = @"";
     _PasswordErrorLabel.text = @"";
-    _ZipCodeErrorLabel.text = @"";
+    _confirmPasswordLabel.text = @"";
 
     
     NSMutableDictionary *errors = [[NSMutableDictionary alloc] init];
@@ -73,10 +73,10 @@
         NSLog(@"Error in zip password");
 
     }
-    NSString *zipCode = _ZipCodeField.text;
-    if(![Helpers NSStringIsValidZipCode:zipCode]){
-        NSLog(@"Error in zip code");
-        [errors setObject:@"Please provide a valid zip code" forKey: @"ZipCode"];
+    NSString *confirmPassword = _confirmPasswordField.text;
+    if(![confirmPassword isEqualToString:password]){
+        NSLog(@"Passwords don't match");
+        [errors setObject:@"Passwords do not match." forKey: @"ConfirmPassword"];
     }
     
 
@@ -100,8 +100,8 @@
             _PasswordErrorLabel.text = value;
 
         }
-        if([key isEqualToString:@"ZipCode"]){
-            _ZipCodeErrorLabel.text = value;
+        if([key isEqualToString:@"ConfirmPassword"]){
+            _confirmPasswordLabel.text = value;
         }
     }
     }
@@ -113,7 +113,6 @@
         /* We don't need name or zip code in User table - any updates to name will go in Profile */
         user[@"firstName"] = firstName;
         user[@"lastName"] = lastName;
-        user[@"zipCode"] = zipCode;
         /* Need email field for forgot password */
         user[@"email"] = email;
     
@@ -129,7 +128,6 @@
                 
                 profile[@"firstName"] = firstName;
                 profile[@"lastName"] = lastName;
-                profile[@"zipCode"] = zipCode;
                 profile[@"email"] = email;
                 profile[@"username"] = email;
                 profile[@"isAvailable"] = @YES;
