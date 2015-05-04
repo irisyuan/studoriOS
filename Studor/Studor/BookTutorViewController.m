@@ -7,6 +7,7 @@
 //
 
 #import "BookTutorViewController.h"
+#import "Helpers.h"
 
 @interface BookTutorViewController ()
 
@@ -20,11 +21,51 @@
     NSLog([self.tutorProfile objectId]);
     
     // Do any additional setup after loading the view.
+    
+    NSString *firstName = self.tutorProfile[@"firstName"];
+    NSString *lastName =  self.tutorProfile[@"lastName"];
+    
+    PFFile *imageFile = self.tutorProfile[@"image"];
+    if (imageFile) {
+        _image.file = imageFile;
+        [_image loadInBackground];
+    } else {
+        _image.image = [UIImage imageNamed:@"default-pic.png"];
+    }
+    
+    _nameLabel.text = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+    _emailLabel.text = self.tutorProfile[@"email"];
+    _hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", @"asdasdf"];
+    _bioLabel.text = self.tutorProfile[@"bio"];
+    
+    _subjectsLabel.text = @"";
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)bookTutor:(id)sender {
+    NSLog(@"yaya");
+    
+    PFObject *session = [PFObject objectWithClassName:@"Request"];
+    session[@"tutorId"] = self.tutorProfile[@"username"];
+    session[@"studentId"] = [Helpers getProfile];
+    session[@"requestDesc"] = _requestDescField.text;
+    
+    // session[@"subjectId"] = _subjectsLabel.text;
+    
+    [session saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if (succeeded) {
+            // segue to Student Center
+            [self performSegueWithIdentifier:@"bookToStudentCenter" sender:nil];
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Error booking session. Please try again later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+    }];
+    
 }
 
 /*
