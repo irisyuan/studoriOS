@@ -205,6 +205,9 @@
                                     </subviews>
                                     <color key="tintColor" red="0.36243327310000001" green="0.89135877070000002" blue="0.42614392029999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Xf5-Fu-9vw" kind="show" identifier="showPastDetail" id="MGn-Gb-TCU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -263,6 +266,9 @@
                                     </subviews>
                                     <color key="tintColor" red="0.36243327310000001" green="0.89135877070000002" blue="0.42614392029999998" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Xf5-Fu-9vw" kind="show" identifier="showCurrentDetail" id="Kx6-Pq-gGJ"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -378,4 +384,7 @@
         <image name="default_pic" width="185" height="185"/>
         <image name="menu" width="20" height="20"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="MGn-Gb-TCU"/>
+    </inferredMetricsTieBreakers>
 </document>
