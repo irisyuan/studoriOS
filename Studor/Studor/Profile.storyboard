@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_pic" translatesAutoresizingMaskIntoConstraints="NO" id="wPC-fo-EGG" customClass="PFImageView">
-                                <rect key="frame" x="14" y="132" width="114" height="122"/>
+                                <rect key="frame" x="14" y="124" width="114" height="122"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S19-Ur-dGd">
@@ -33,7 +33,8 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Label" translatesAutoresizingMaskIntoConstraints="NO" id="74a-un-W5Q">
-                                <rect key="frame" x="145" y="516" width="150" height="39"/>
+                                <rect key="frame" x="139" y="516" width="150" height="39"/>
+                                <color key="textColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -46,14 +47,10 @@
                                     <action selector="logoutButtonPressed:" destination="68N-Pi-xfJ" eventType="touchUpInside" id="dJ5-tV-8pB"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Update your profile:" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-qm-N5v">
-                                <rect key="frame" x="14" y="85" width="150" height="39"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imW-cY-Jtu">
                                 <rect key="frame" x="46" y="178" width="50" height="30"/>
                                 <state key="normal" title="Upload">
+                                    <color key="titleColor" red="0.091144888239484148" green="0.4518036115026407" blue="0.46149033493922653" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -61,7 +58,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hourly Rate ($)" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q57-Xh-r8K">
-                                <rect key="frame" x="136" y="224" width="122" height="30"/>
+                                <rect key="frame" x="136" y="211" width="122" height="30"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -71,7 +68,7 @@
                                 <items>
                                     <navigationItem title="Profile" id="ufq-8f-rPJ">
                                         <barButtonItem key="leftBarButtonItem" image="menu" id="V4a-nJ-m4X">
-                                            <color key="tintColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="deviceWhite"/>
+                                            <color key="tintColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -89,20 +86,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69F-ww-UtL">
-                                <rect key="frame" x="16" y="270" width="343" height="105"/>
+                                <rect key="frame" x="14" y="254" width="343" height="105"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fw0-WB-KY6">
-                                <rect key="frame" x="120" y="413" width="134" height="30"/>
-                                <state key="normal" title="Subjects you Teach">
+                                <rect key="frame" x="120" y="413" width="135" height="30"/>
+                                <state key="normal" title="Subjects You Teach">
+                                    <color key="titleColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="Ixe-lt-hyc" kind="show" id="IOf-ag-9te"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Update Profile" translatesAutoresizingMaskIntoConstraints="NO" id="ZCD-qm-N5v">
+                                <rect key="frame" x="120" y="58" width="171" height="40"/>
+                                <color key="textColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.90196078430000004" green="0.89019607840000003" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
