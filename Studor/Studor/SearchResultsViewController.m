@@ -120,7 +120,7 @@ BOOL found;
 - (UITableViewCell *)tableView:(UITableView *)tableView
     cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
+    /*static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                              SimpleTableIdentifier];
     if (cell == nil) {
@@ -146,7 +146,38 @@ BOOL found;
     NSString *hourlyRate = [self.tutors[indexPath.row][@"hourlyRate"] stringValue];
     hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", hourlyRate];
     
+    return cell;*/
+    
+    PFObject *object = self.tutors[indexPath.row];
+    
+    static NSString *simpleTableIdentifier = @"TutorCell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    if (cell == nil) {
+        // NSLog(@"make a new cell");
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    // Configure the cell
+    PFFile *thumbnail = [object objectForKey:@"image"];
+    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+    thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
+    thumbnailImageView.file = thumbnail;
+    [thumbnailImageView loadInBackground];
+    
+    UILabel *emailLabel = (UILabel*) [cell viewWithTag:101];
+    UILabel *name = (UILabel*) [cell viewWithTag:102];
+    UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:104];
+    UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:105];
+    
+    name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
+    emailLabel.text = [object objectForKey:@"username"];
+    subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
+    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", [[object objectForKey:@"hourlyRate"] stringValue]];
+    
     return cell;
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
