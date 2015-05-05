@@ -105,9 +105,7 @@ CLLocationManager *locationManager;
     PFObject *profile = [Helpers getProfile];
     if([sender isOn]){
         NSLog(@"available");
-
-
-        
+ 
         locationManager = [[CLLocationManager alloc]init]; // initializing locationManager
         locationManager.delegate = self; // we set the delegate of locationManager to self.
         locationManager.desiredAccuracy = kCLLocationAccuracyBest; // setting the accuracy
@@ -136,8 +134,6 @@ CLLocationManager *locationManager;
     profile[@"location"] = [PFGeoPoint geoPointWithLocation:crnLoc];
     [profile save];
     [locationManager stopUpdatingLocation];
-    
-    
     
 }
 

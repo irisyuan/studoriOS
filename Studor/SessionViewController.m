@@ -26,6 +26,10 @@ bool start;
 
 // Gets the exact time when the button is pressed.
 NSTimeInterval time;
+    
+NSTimeInterval finalTime;
+NSNumber *price;
+
 
 }
 
@@ -33,6 +37,9 @@ NSTimeInterval time;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"Enterring viewDidLoat in session view controller");
+
     
     // Sets the text of our Label to a default time of 0.
     self.timeLabel.text = @"0:00";
@@ -106,6 +113,8 @@ NSTimeInterval time;
     
     start = false;
     self.endButton.enabled=YES;
+    NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
+    finalTime = currentTime - time;
 
     
     
@@ -113,14 +122,16 @@ NSTimeInterval time;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"pickTutorSegue"])
+    if ([[segue identifier] isEqualToString:@"endSessionSegue"])
     {
         NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
         NSTimeInterval elapsedTime = currentTime - time;
         ShowPriceViewController *destViewController = segue.destinationViewController;
-        double wage = [self.wage doubleValue];
-
-        destViewController.price = [NSNumber numberWithDouble:((elapsedTime/360) * wage)];
+        
+        
+        destViewController.price = price;
+        
+        NSLog(@"Price sent to show price page -- %@", destViewController.price);
         
     }
 }
@@ -142,7 +153,26 @@ NSTimeInterval time;
     [self performSelector:@selector(updateTime) withObject:self afterDelay:0.1];
 }
 - (IBAction)endSessionButtonPressed:(id)sender {
-
+    
+    
+    //calculate price of session
+    double wage = [self.wage doubleValue];
+    price = [NSNumber numberWithDouble:((finalTime/3600.0) * wage)];
+    
+    self.session[@"price"] = price;
+    
+    //create string to store length
+    double elapsed = finalTime;
+    int mins = (int) (elapsed / 60.0);
+    elapsed -= mins*60;
+    int secs = (int) (elapsed);
+    elapsed -= secs;
+    int fraction = elapsed * 10.0;
+    self.session[@"length"] = [NSString stringWithFormat:@"%u:%02u.%u", mins, secs, fraction];
+    
+    self.session[@"isCompleted"] = @YES;
+    [self.session save];
+    
     if(!start){
         [self performSegueWithIdentifier:@"endSessionSegue" sender:nil];}
     

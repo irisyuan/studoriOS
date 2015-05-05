@@ -31,9 +31,6 @@ PFObject *selectedRequest;
     
     NSLog(self.senderInfo[1]);
     
-    
-    
-    
 }
 
 - (void) getRequests {
@@ -47,13 +44,12 @@ PFObject *selectedRequest;
         pending = [requestQuery findObjects];
         
         [sessionQuery whereKey:@"studentId" equalTo:PFUser.currentUser.username];
+        [sessionQuery whereKey:@"isCompleted" equalTo:@NO];
         current = [sessionQuery findObjects];
         [sessionQuery whereKey:@"isCompleted" equalTo:@YES];
         past = [sessionQuery findObjects];
         
-        
         }
-    
     
     if([self.senderInfo[0] isEqualToString:@"tutor"]){
         
@@ -61,21 +57,14 @@ PFObject *selectedRequest;
         pending = [requestQuery findObjects];
         
         [sessionQuery whereKey:@"tutorId" equalTo:PFUser.currentUser.username];
+        [sessionQuery whereKey:@"isCompleted" equalTo:@NO];
         current = [sessionQuery findObjects];
     
         }
-
-    
-
     
     [self.tableView reloadData];
     
-    
-    
 }
-
-
-
 
 
 - (NSInteger)tableView:(UITableView *)tableView
@@ -123,7 +112,7 @@ PFObject *selectedRequest;
     PFObject *object;
     
     
-    if(indexPath.section ==0){
+    if(indexPath.section == 0){
     if([self.senderInfo[0] isEqualToString:@"student"]){
         [profileQuery whereKey:@"username" equalTo: thisRequest[@"tutorId"]];
          }
@@ -179,7 +168,7 @@ PFObject *selectedRequest;
     name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
     emailLabel.text = [object objectForKey:@"username"];
     subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
-    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ /hr", [[object objectForKey:@"hourlyRate"] stringValue]];
+    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ /hr", [[thisRequest objectForKey:@"hourlyRate"] stringValue]];
     
     return cell;
 }
@@ -189,7 +178,8 @@ PFObject *selectedRequest;
     
     
     if ([[segue identifier] isEqualToString:@"studentSegue"])
-    {
+    {   NSLog(@"Peforming Student Segue");
+
         StudentRequestDetailViewController *destViewController = segue.destinationViewController;
         destViewController.type = selectedType;
         destViewController.request = selectedRequest;
@@ -199,6 +189,7 @@ PFObject *selectedRequest;
     
     if ([[segue identifier] isEqualToString:@"tutorSegue"])
     {
+        NSLog(@"Peforming Tutor Segue");
         TutorRequestDetailViewController *destViewController = segue.destinationViewController;
         destViewController.type = selectedType;
         destViewController.request = selectedRequest;
@@ -219,7 +210,7 @@ PFObject *selectedRequest;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+{   NSLog(@"Selected a row in the table -- %@ , %@", self.senderInfo[0], self.senderInfo[1]);
     
     if(indexPath.section == 0){
         
@@ -237,7 +228,6 @@ PFObject *selectedRequest;
         
         selectedRequest = past[indexPath.row];
         selectedType = @"past";
-
         
     }
     

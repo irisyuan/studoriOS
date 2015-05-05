@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
 
 @property (retain, strong) NSNumber *wage;
+@property (retain, strong) PFObject *session;
 
 
 - (IBAction)endSessionButtonPressed:(id)sender;

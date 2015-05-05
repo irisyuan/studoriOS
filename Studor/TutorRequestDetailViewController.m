@@ -26,8 +26,10 @@ NSNumber *wage;
     PFObject *profile = [profileQuery getFirstObject];
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
-    _rateLabel.text = profile[@"rate"];
-    wage = profile[@"rate"];
+    
+    _rateLabel.text = [NSString stringWithFormat:@"%@", profile[@"hourlyRate"]];
+    wage = profile[@"hourlyRate"];
+    
     _descriptionLabel.text = self.request[@"requestDesc"];
     
     if([self.type isEqualToString:@"pending"]){
@@ -56,9 +58,15 @@ NSNumber *wage;
     
     if ([[segue identifier] isEqualToString:@"startSessionSegue"])
     {
+        NSLog(@"Performing start session segue");
+        
         SessionViewController *destViewController = segue.destinationViewController;
         
+        NSLog([NSString stringWithFormat:@"Wage being sent to start session segue is %@", wage]);
+        
+        destViewController.session = self.request;
         destViewController.wage = wage;
+        
         
     }
 

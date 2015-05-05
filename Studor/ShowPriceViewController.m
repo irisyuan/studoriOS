@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.priceLabel.text = @"$0.05";
+    NSNumberFormatter *fmt = [[NSNumberFormatter alloc] init];
+    [fmt setPositiveFormat:@"$0.##"];
+    self.priceLabel.text = [fmt stringFromNumber: self.price];
     
     // Do any additional setup after loading the view.
 }

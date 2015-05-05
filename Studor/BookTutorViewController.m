@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"yoyoyo");
     NSLog([self.tutorProfile objectId]);
     
     // Do any additional setup after loading the view.
@@ -47,12 +46,12 @@
 }
 
 - (void)bookTutor:(id)sender {
-    NSLog(@"yaya");
     
     PFObject *request = [PFObject objectWithClassName:@"Request"];
     request[@"tutorId"] = self.tutorProfile[@"username"];
     request[@"studentId"] = [Helpers getProfile][@"email"];
     request[@"requestDesc"] = _requestDescField.text;
+    request[@"rate"] = self.tutorProfile[@"hourlyRate"];
     
     //request[@"subjectId"] = _subjectsLabel.text;
     

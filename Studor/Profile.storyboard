@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="68N-Pi-xfJ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="68N-Pi-xfJ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Studor-->
@@ -177,33 +177,27 @@
                                     <outlet property="delegate" destination="Ixe-lt-hyc" id="rP3-Ro-JYh"/>
                                 </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-fa-y2S">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZwS-fa-y2S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Add Subjects" id="xC4-kN-Wfw">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="cHX-ms-Ve8">
-                                            <color key="tintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
-                                            <connections>
-                                                <segue destination="68N-Pi-xfJ" kind="show" id="1fy-SE-AWo"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="Add Subjects" id="xC4-kN-Wfw"/>
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select the subjects you know how to teach!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sxh-du-3bP">
-                                <rect key="frame" x="22" y="62" width="330" height="21"/>
+                                <rect key="frame" x="16" y="71" width="330" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <color key="textColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ZwS-fa-y2S"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="Hmp-en-OyQ">
-                            <color key="tintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
