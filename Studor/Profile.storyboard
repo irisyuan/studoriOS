@@ -148,12 +148,11 @@
                         <outlet property="sidebarButton" destination="V4a-nJ-m4X" id="RJf-D1-iBg"/>
                         <outlet property="subjectsButton" destination="Fw0-WB-KY6" id="8zv-Sm-lfE"/>
                         <outlet property="successLabel" destination="74a-un-W5Q" id="GcR-qr-0Ue"/>
-                        <segue destination="Yk1-8K-4Fu" kind="push" identifier="loggedOut" id="07n-1t-qpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kV-r1-f0C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3343.5" y="459.5"/>
+            <point key="canvasLocation" x="3326.5" y="396.5"/>
         </scene>
         <!--Select Subjects Controller-->
         <scene sceneID="vrt-Py-10K">
@@ -203,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xtr-UR-1YG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3292.5" y="1323.5"/>
+            <point key="canvasLocation" x="3292.5" y="1266.5"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="ro8-NV-oNG">
@@ -226,29 +225,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbS-Qx-NT7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4118.5" y="808.5"/>
-        </scene>
-        <!--Storyboard Link-->
-        <scene sceneID="FxO-GT-7bn">
-            <objects>
-                <viewController id="Yk1-8K-4Fu" customClass="RBStoryboardLink" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="CY0-qH-kGW"/>
-                        <viewControllerLayoutGuide type="bottom" id="eKI-AB-E5i"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Gkz-sz-SBg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="tng-l2-HOd"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Main"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SZp-mf-sGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3999.5" y="59.5"/>
         </scene>
     </scenes>
     <resources>
