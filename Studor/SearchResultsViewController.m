@@ -170,12 +170,13 @@ BOOL found;
         
         subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
         hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [[object objectForKey:@"hourlyRate"] stringValue]];
-    
+    // this code would hide a cell
    /* } else {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         cell.userInteractionEnabled = NO;
     }*/
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
