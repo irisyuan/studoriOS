@@ -107,11 +107,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    if(self.searchDisplayController.active){
     NSString *subjectName = _searchResults[indexPath.row];
     PFQuery *subjectQuery = [PFQuery queryWithClassName:@"Subject"];
     [subjectQuery whereKey:@"subject" equalTo:subjectName];
-    self.selectedSubject = [subjectQuery getFirstObject];
+        self.selectedSubject = [subjectQuery getFirstObject];}
+    else{
+        
+        self.selectedSubject = self.subjects[indexPath.row];
+        
+    }
     
     [self performSegueWithIdentifier:@"searchResultsSegue" sender:self];
     
