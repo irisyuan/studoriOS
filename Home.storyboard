@@ -785,14 +785,16 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hold down the point you would like to select. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nz4-Kd-AH2">
                                 <rect key="frame" x="12" y="74" width="351" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vQp-6z-s5V">
                                 <rect key="frame" x="3" y="0.0" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="wpN-OJ-yPa">
-                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="uyq-Ek-7rq"/>
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="uyq-Ek-7rq">
+                                            <color key="tintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

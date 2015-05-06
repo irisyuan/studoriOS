@@ -37,11 +37,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D43-tM-cbW">
-                                <rect key="frame" x="0.0" y="92" width="375" height="575"/>
+                                <rect key="frame" x="0.0" y="111" width="375" height="575"/>
                                 <connections>
                                     <segue destination="KyD-LA-mII" kind="embed" identifier="pendingSegue" id="uVq-5u-nfC"/>
                                 </connections>
                             </containerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="My Tutor History" translatesAutoresizingMaskIntoConstraints="NO" id="86e-2T-Awe">
+                                <rect key="frame" x="11" y="59" width="307" height="38"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Sessions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VW7-Jn-2Up">
                                 <rect key="frame" x="16" y="258" width="155" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>

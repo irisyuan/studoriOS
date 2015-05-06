@@ -23,12 +23,6 @@
                                     <action selector="toggleAvailable:" destination="Z7i-mN-igY" eventType="valueChanged" id="OYC-WH-J9I"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pending Requests" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pr-bC-eOk">
-                                <rect key="frame" x="9" y="91" width="141" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ufe-cC-5ao">
                                 <rect key="frame" x="0.0" y="142" width="375" height="525"/>
                                 <connections>
@@ -62,6 +56,12 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GwZ-Da-8A7">
                                 <rect key="frame" x="0.0" y="412" width="380" height="227"/>
                             </containerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Tutor History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pr-bC-eOk">
+                                <rect key="frame" x="16" y="91" width="141" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -585,6 +585,6 @@
         <image name="menu" width="20" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lCe-uY-vZa"/>
+        <segue reference="d7r-pc-cEv"/>
     </inferredMetricsTieBreakers>
 </document>
