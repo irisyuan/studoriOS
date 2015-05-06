@@ -141,8 +141,6 @@
                 profile[@"lastName"] = lastName;
                 profile[@"email"] = [email lowercaseString];
                 profile[@"username"] = [email lowercaseString];
-                NSLog(@"FUCKKKKKKKK%@", profile[@"username"]);
-
                 profile[@"isAvailable"] = @YES;
                 
                 [profile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

@@ -31,7 +31,7 @@
     }
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
-    _rateLabel.text = profile[@"rate"];
+    _rateLabel.text = [profile[@"rate"] stringValue];
     _descriptionLabel.text = self.request[@"requestDesc"];
     
     if([self.type isEqualToString:@"pending"]){
