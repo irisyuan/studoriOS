@@ -170,7 +170,7 @@ BOOL found;
         UILabel *distanceLabel = (UILabel*) [cell viewWithTag:155];
     
         bioLabel.text = object[@"bio"];
-        distanceLabel.text = [NSString stringWithFormat:@"%d km.", (int)(distance/1000)];
+        distanceLabel.text = [NSString stringWithFormat:@"%d Mile", (int)(distance*0.000621371)];
         name.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"firstName"]];
         hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ /hour", [[object objectForKey:@"hourlyRate"] stringValue]];
     // this code would hide a cell
