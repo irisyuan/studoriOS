@@ -34,8 +34,13 @@
     // Tab bar appearance
     [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
     
+   // Tab bar title color
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+                                                           [UIColor colorWithRed:40.0/255.0 green:171.0/255.0 blue:174.0/255.0 alpha:1.0], NSForegroundColorAttributeName, nil]];
+    
     [PFImageView class];
     
+
     return YES;
 }
 
