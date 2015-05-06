@@ -33,7 +33,6 @@
     }
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
-    _emailLabel.text = self.tutorProfile[@"email"];
     _hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [self.tutorProfile[@"hourlyRate"] stringValue]];
     _bioLabel.text = self.tutorProfile[@"bio"];
     
@@ -75,5 +74,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//making the keyboard disapear when clicking an empty space
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 
 @end

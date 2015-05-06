@@ -32,12 +32,12 @@ BOOL found;
     
     [super viewDidLoad];
     
-    NSString *string1 = @"The following tutors teach ";
-    NSString *string2 =  self.subject[@"subject"];
-    NSString *string3 = @" in your area.";
+   
+    NSString *string1 =  self.subject[@"subject"];
+    NSString *string2 = @" tutors in your area.";
     
     string1 = [string1 stringByAppendingString:string2];
-    string1 = [string1 stringByAppendingString:string3];
+
 
     self.resultLabel.text = string1;
     
@@ -98,6 +98,7 @@ BOOL found;
     [locationManager stopUpdatingLocation];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
+    [query whereKey:@"username" notEqualTo: [Helpers getProfile][@"username"]];
     [query whereKey:@"isTutor" equalTo:(@YES)];
     [query whereKey:@"isAvailable" equalTo:@YES];
     [query whereKey:@"subjects" equalTo:[self.subject objectId]];
@@ -131,24 +132,7 @@ BOOL found;
                 reuseIdentifier:SimpleTableIdentifier];
     }
     
-    // cell.textLabel.text = self.tutors[indexPath.row][@"email"];
-    
-    // Configure the cell
-    PFFile *thumbnail = self.tutors[indexPath.row][@"image"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:1];
-    thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
-    
-    UILabel *nameLabel = (UILabel*) [cell viewWithTag:2];
-    UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:3];
-    
-    nameLabel.text = [NSString stringWithFormat:@"%@ %@", self.tutors[indexPath.row][@"firstName"],self.tutors[indexPath.row][@"lastName"]];
-    
-    NSString *hourlyRate = [self.tutors[indexPath.row][@"hourlyRate"] stringValue];
-    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", hourlyRate];
-    
-    return cell;*/
+    // cell.textLabel.text = self.tutors[indexPath.row][@"email"]; */
     
     PFObject *object = self.tutors[indexPath.row];
     
@@ -165,29 +149,34 @@ BOOL found;
     CLLocation *tutorLocation = [[CLLocation alloc ] initWithLatitude:tutorpoint.latitude longitude:tutorpoint.longitude];
     CLLocationDistance distance = [currentLocation distanceFromLocation:tutorLocation];
     
- 
-    
     // Configure the cell
-    PFFile *thumbnail = [object objectForKey:@"image"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-    thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
     
-    UILabel *emailLabel = (UILabel*) [cell viewWithTag:108];
-    UILabel *name = (UILabel*) [cell viewWithTag:106];
-    UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:110];
-    UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:112];
-    UILabel *distanceLabel = (UILabel*) [cell viewWithTag:155];
+    // You can't find or book yourself...
+   // if (![[object objectForKey:@"username"] isEqualToString:[Helpers getProfile][@"username"]]) {
+        PFFile *thumbnail = [object objectForKey:@"image"];
+        PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+        thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
+        thumbnailImageView.file = thumbnail;
+        [thumbnailImageView loadInBackground];
     
-    distanceLabel.text = [NSString stringWithFormat:@"%d km.", (int)(distance/1000)];
+        UILabel *name = (UILabel*) [cell viewWithTag:106];
+        UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:110];
+        UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:112];
+        UILabel *distanceLabel = (UILabel*) [cell viewWithTag:155];
     
-    name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
+        distanceLabel.text = [NSString stringWithFormat:@"%d km.", (int)(distance/1000)];
     
-    emailLabel.text = [object objectForKey:@"username"];
-    subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
-    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [[object objectForKey:@"hourlyRate"] stringValue]];
-    
+        name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
+        
+        subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
+        hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [[object objectForKey:@"hourlyRate"] stringValue]];
+    // this code would hide a cell
+   /* } else {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        cell.userInteractionEnabled = NO;
+    }*/
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 

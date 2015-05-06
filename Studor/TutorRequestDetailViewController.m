@@ -24,11 +24,20 @@ NSNumber *wage;
     [profileQuery whereKey:@"username" equalTo:self.request[@"studentId"]];
     
     PFObject *profile = [profileQuery getFirstObject];
+
+    PFFile *imageFile = profile[@"image"];
+    if (imageFile) {
+        _photo.file = imageFile;
+        [_photo loadInBackground];
+    } else {
+        // Use default picture if there isn't one in Parse
+        _photo.image = [UIImage imageNamed:@"default-pic.png"];
+    }
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
     
-    _rateLabel.text = [NSString stringWithFormat:@"%@", profile[@"hourlyRate"]];
-    wage = profile[@"hourlyRate"];
+    _rateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [profile[@"hourlyRate"] stringValue]];
+    wage = [profile[@"hourlyRate"] stringValue];
     
     _descriptionLabel.text = self.request[@"requestDesc"];
     
@@ -41,10 +50,6 @@ NSNumber *wage;
         [self.cancelButton setTitle:@"Cancel Session" forState:UIControlStateNormal];
         self.acceptButton.hidden = YES;
     }
-
-    
-    
-    
     // Do any additional setup after loading the view.
 }
 
@@ -66,8 +71,6 @@ NSNumber *wage;
         
         destViewController.session = self.request;
         destViewController.wage = wage;
-        
-        
     }
 
 }
@@ -76,14 +79,9 @@ NSNumber *wage;
 - (IBAction)startButtonPressed:(id)sender {
     
     [self performSegueWithIdentifier:@"startSessionSegue" sender:self];
-    
-    
-    
-    
 }
 
 - (IBAction)acceptButtonPressed:(id)sender {
-    
     
     PFObject *session = [PFObject objectWithClassName:@"Session"];
     session[@"isCanceled"] = @NO;
@@ -94,16 +92,23 @@ NSNumber *wage;
         if (succeeded) {
             [self.request delete];
             [self performSegueWithIdentifier:@"acceptedRequestSegue" sender:self];
-        } else {
-            UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Error" message:@"Error booking session. Please try again later." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
         }
     }];
-
-    
-    
-    
-
-    
 }
+
+- (IBAction)cancelButtonPressed:(id)sender {
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Are you sure?" message:@"Please confirm you want to cancel this request." delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+       // don't delete yet because you still need the rate information
+
+      //  [self.request delete];
+        // change this to a 'canceledSegue' later but for now they do the same thing
+        [self performSegueWithIdentifier:@"acceptedRequestSegue" sender:self];
+    }
+}
+
 @end
