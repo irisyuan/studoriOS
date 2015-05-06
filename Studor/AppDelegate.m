@@ -36,6 +36,24 @@
     
     [PFImageView class];
     
+    /*NSUUID *appID = [[NSUUID alloc] initWithUUIDString:@"2b03b78c-f395-11e4-a7ab-d4f488002dc1"];
+    self.layerClient = [LYRClient clientWithAppID:appID];
+    [self.layerClient connectWithCompletion:^(BOOL success, NSError *error) {
+        if (!success) {
+            NSLog(@"Failed to connect to Layer: %@", error);
+        } else {
+            // For the purposes of this Quick Start project, let's authenticate as a user named 'Device'.  Alternatively, you can authenticate as a user named 'Simulator' if you're running on a Simulator.
+            NSString *userIDString = @"Device";
+            // Once connected, authenticate user.
+            // Check Authenticate step for authenticateLayerWithUserID source
+            [self authenticateLayerWithUserID:userIDString completion:^(BOOL success, NSError *error) {
+                if (!success) {
+                    NSLog(@"Failed Authenticating Layer Client with error:%@", error);
+                }
+            }];
+        }
+    }];*/
+    
     return YES;
 }
 

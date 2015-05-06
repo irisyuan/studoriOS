@@ -7,16 +7,20 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4AF41F85-97A4-4AAF-A41F-29C2D38C50F6</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Studor</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>0172658E0AB690536375C4C9E4DFFA5A2CD459D4</key>
+		<string>https://github.com/layerhq/releases-ios.git</string>
 		<key>EDFAD4F932DEC95AD62DC805F18B2F549AA3F3EC</key>
 		<string>https://bitbucket.org/ok455/studoriosapp.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Studor.xcodeproj/project.xcworkspace</string>
+	<string>Studor.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>0172658E0AB690536375C4C9E4DFFA5A2CD459D4</key>
+		<string>../../../../Desktop/layer/releases-ios</string>
 		<key>EDFAD4F932DEC95AD62DC805F18B2F549AA3F3EC</key>
 		<string>../..</string>
 	</dict>
@@ -28,6 +32,14 @@
 	<string>EDFAD4F932DEC95AD62DC805F18B2F549AA3F3EC</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0172658E0AB690536375C4C9E4DFFA5A2CD459D4</string>
+			<key>IDESourceControlWCCName</key>
+			<string>releases-ios</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

@@ -74,6 +74,7 @@
 		B2A649FA1AF545E600C9E674 /* BecomeTutor.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A649F91AF545E600C9E674 /* BecomeTutor.Storyboard */; };
 		B2A649FC1AF54E5D00C9E674 /* TutorCenter.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */; };
 		B2A649FF1AF5593700C9E674 /* SelectSubjectsController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A649FE1AF5593700C9E674 /* SelectSubjectsController.m */; };
+		B2A96F4B1AF9B63D00128D1F /* LayerKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A96F4A1AF9B63D00128D1F /* LayerKit.framework */; };
 		B2D762761AF7F59B001B7E75 /* ShowPriceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2D762751AF7F59B001B7E75 /* ShowPriceViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +191,7 @@
 		B2A649FB1AF54E5D00C9E674 /* TutorCenter.Storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TutorCenter.Storyboard; sourceTree = "<group>"; };
 		B2A649FD1AF5593700C9E674 /* SelectSubjectsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectSubjectsController.h; sourceTree = "<group>"; };
 		B2A649FE1AF5593700C9E674 /* SelectSubjectsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectSubjectsController.m; sourceTree = "<group>"; };
+		B2A96F4A1AF9B63D00128D1F /* LayerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LayerKit.framework; sourceTree = "<group>"; };
 		B2D762741AF7F59B001B7E75 /* ShowPriceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPriceViewController.h; sourceTree = "<group>"; };
 		B2D762751AF7F59B001B7E75 /* ShowPriceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPriceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,16 +201,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2A96F4B1AF9B63D00128D1F /* LayerKit.framework in Frameworks */,
+				03FE6C511AD6264500C3239E /* Security.framework in Frameworks */,
+				03FE6C4D1AD6263700C3239E /* MobileCoreServices.framework in Frameworks */,
+				03FE6C471AD6261A00C3239E /* CFNetwork.framework in Frameworks */,
+				03FE6C551AD6265400C3239E /* SystemConfiguration.framework in Frameworks */,
 				03FE6C4B1AD6262D00C3239E /* CoreLocation.framework in Frameworks */,
 				03FE6C591AD6266600C3239E /* libsqlite3.dylib in Frameworks */,
 				03FE6C571AD6265E00C3239E /* libz.dylib in Frameworks */,
-				03FE6C551AD6265400C3239E /* SystemConfiguration.framework in Frameworks */,
 				03FE6C531AD6264C00C3239E /* StoreKit.framework in Frameworks */,
-				03FE6C511AD6264500C3239E /* Security.framework in Frameworks */,
 				03FE6C4F1AD6263F00C3239E /* QuartzCore.framework in Frameworks */,
-				03FE6C4D1AD6263700C3239E /* MobileCoreServices.framework in Frameworks */,
 				03FE6C491AD6262400C3239E /* CoreGraphics.framework in Frameworks */,
-				03FE6C471AD6261A00C3239E /* CFNetwork.framework in Frameworks */,
 				03FE6C451AD6261100C3239E /* AudioToolbox.framework in Frameworks */,
 				03FE6C431AD625B100C3239E /* ParseUI.framework in Frameworks */,
 				03FE6C411AD625B100C3239E /* ParseFacebookUtils.framework in Frameworks */,
@@ -384,6 +387,7 @@
 		03FE6C371AD5CF0900C3239E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B2A96F4A1AF9B63D00128D1F /* LayerKit.framework */,
 				03FE6C581AD6266600C3239E /* libsqlite3.dylib */,
 				03FE6C561AD6265E00C3239E /* libz.dylib */,
 				03FE6C541AD6265400C3239E /* SystemConfiguration.framework */,
@@ -783,10 +787,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Studor",
+					"/Users/marci93/Desktop/layer/releases-ios/LayerKit.embeddedframework",
 				);
 				INFOPLIST_FILE = Studor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/Studor/LayerKit.framework/Versions/A/LayerKit",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
@@ -801,10 +810,15 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Studor",
+					"/Users/marci93/Desktop/layer/releases-ios/LayerKit.embeddedframework",
 				);
 				INFOPLIST_FILE = Studor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(SRCROOT)/Studor/LayerKit.framework/Versions/A/LayerKit",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
