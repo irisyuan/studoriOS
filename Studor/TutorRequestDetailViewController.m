@@ -88,6 +88,7 @@ NSNumber *wage;
     session[@"isCompleted"] = @NO;
     session[@"studentId"] = self.request[@"studentId"];
     session[@"tutorId"] = self.request[@"tutorId"];
+    session[@"rate"] = self.request[@"rate"];
     [session saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [self.request delete];
