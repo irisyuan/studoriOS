@@ -72,16 +72,13 @@ PFObject *selectedRequest;
 {
 
     if(section == 0){
-        NSLog([NSString stringWithFormat:@" pending -- %lu", [pending count]]);
         return [pending count];
     }
     if(section == 1){
-        NSLog([NSString stringWithFormat:@" current -- %lu", [current count]]);
 
         return [current count];
     }
     else{
-        NSLog([NSString stringWithFormat:@" past -- %lu", [past count]]);
 
         return [past count];
     }
@@ -168,7 +165,7 @@ PFObject *selectedRequest;
     name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
     emailLabel.text = [object objectForKey:@"username"];
     subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
-    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ /hr", [[thisRequest objectForKey:@"hourlyRate"] stringValue]];
+    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ /hr", [[thisRequest objectForKey:@"rate"] stringValue]];
     
     return cell;
 }

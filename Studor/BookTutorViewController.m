@@ -33,7 +33,6 @@
     }
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
-    _emailLabel.text = self.tutorProfile[@"email"];
     _hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [self.tutorProfile[@"hourlyRate"] stringValue]];
     _bioLabel.text = self.tutorProfile[@"bio"];
     

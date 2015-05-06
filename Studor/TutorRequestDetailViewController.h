@@ -8,12 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import <ParseUI/ParseUI.h>
 
 @interface TutorRequestDetailViewController : UIViewController
 
 @property (retain, strong) NSString *type;
 @property (retain, strong) PFObject *request;
 
+@property (weak, nonatomic) IBOutlet PFImageView *photo;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
