@@ -22,5 +22,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *EmailErrorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *PasswordErrorLabel;
 @property (weak, nonatomic) IBOutlet UILabel *confirmPasswordLabel;
+- (IBAction)backButtonPressed:(id)sender;
 
 @end

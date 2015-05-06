@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Neu-zC-HiR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Neu-zC-HiR">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Studor-->
@@ -81,7 +81,7 @@
                                     <action selector="signUpButtonPressed:" destination="Neu-zC-HiR" eventType="touchUpInside" id="E3L-Ga-tmJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCN-xx-mKA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCN-xx-mKA">
                                 <rect key="frame" x="37" y="515" width="300" height="30"/>
                                 <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Cancel">
@@ -90,7 +90,6 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonPressed:" destination="Neu-zC-HiR" eventType="touchUpInside" id="njm-Ud-otb"/>
-                                    <segue destination="oXi-rf-fWt" kind="show" id="bmu-EG-PsR"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5r-CD-B5s">
@@ -107,6 +106,11 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.91764712329999998" green="0.90980398650000005" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lCN-xx-mKA"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Studor" id="WOH-5u-Yu8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -128,28 +132,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VaG-0i-XEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="84.5" y="137.5"/>
-        </scene>
-        <!--Storyboard Link-->
-        <scene sceneID="pin-Oh-nMT">
-            <objects>
-                <viewController id="oXi-rf-fWt" customClass="RBStoryboardLink" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="78v-Ei-h7K"/>
-                        <viewControllerLayoutGuide type="bottom" id="b7m-d5-BY2"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gzg-1S-IAK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Main"/>
-                    </userDefinedRuntimeAttributes>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="d6f-v9-5vT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="95.5" y="978.5"/>
         </scene>
         <!--Storyboard Link-->
         <scene sceneID="XmJ-Lu-ztV">

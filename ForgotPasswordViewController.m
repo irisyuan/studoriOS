@@ -17,6 +17,11 @@
     [super viewDidLoad];
 }
 
+- (IBAction)backButtonPressed:(id)sender {
+
+    [self dismissMe];
+}
+
 - (IBAction)sendReset:(id)sender {
     
     NSString *email = _EmailField.text;
@@ -38,6 +43,24 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
 }
+
+-(void) dismissMe {
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.35;
+    transition.timingFunction =
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromLeft;
+    
+    // NSLog(@"%s: controller.view.window=%@", _func_, controller.view.window);
+    UIView *containerView = self.view.window;
+    [containerView.layer addAnimation:transition forKey:nil];
+    
+    [self dismissModalViewControllerAnimated:NO];
+}
+
+
+
 
 
 
