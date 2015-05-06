@@ -166,7 +166,6 @@ PFObject *selectedRequest;
     emailLabel.text = [object objectForKey:@"username"];
     subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
     hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ /hr", [[thisRequest objectForKey:@"rate"] stringValue]];
-    NSLog(@"FUCKKKKK%@", hourlyRateLabel.text);
     return cell;
 }
 
