@@ -148,27 +148,33 @@ BOOL found;
     CLLocation *tutorLocation = [[CLLocation alloc ] initWithLatitude:tutorpoint.latitude longitude:tutorpoint.longitude];
     CLLocationDistance distance = [currentLocation distanceFromLocation:tutorLocation];
     
- 
-    
     // Configure the cell
-    PFFile *thumbnail = [object objectForKey:@"image"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-    thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
     
-    UILabel *name = (UILabel*) [cell viewWithTag:106];
-    UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:110];
-    UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:112];
-    UILabel *distanceLabel = (UILabel*) [cell viewWithTag:155];
+    // You can't find or book yourself...
+    if (![[object objectForKey:@"username"] isEqualToString:[Helpers getProfile][@"username"]]) {
+        PFFile *thumbnail = [object objectForKey:@"image"];
+        PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
+        thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
+        thumbnailImageView.file = thumbnail;
+        [thumbnailImageView loadInBackground];
     
-    distanceLabel.text = [NSString stringWithFormat:@"%d km.", (int)(distance/1000)];
+        UILabel *name = (UILabel*) [cell viewWithTag:106];
+        UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:110];
+        UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:112];
+        UILabel *distanceLabel = (UILabel*) [cell viewWithTag:155];
     
-    name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
+        distanceLabel.text = [NSString stringWithFormat:@"%d km.", (int)(distance/1000)];
     
-    subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
-    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [[object objectForKey:@"hourlyRate"] stringValue]];
+        name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
+        
+        subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
+        hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [[object objectForKey:@"hourlyRate"] stringValue]];
     
+    } else {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        cell.userInteractionEnabled = NO;
+    }
     return cell;
 }
 
