@@ -32,10 +32,10 @@
     self.subjects = [[NSMutableArray alloc] init];
     
     PFQuery *subjectQuery = [PFQuery queryWithClassName:@"Subject"];
+    [subjectQuery orderByAscending:@"subject"];
     self.subjects = [subjectQuery findObjects];
     self.subjectString = [[NSMutableArray alloc] init];
     for(int x = 0; x < [self.subjects count]; x++){
-        NSLog(_subjects[x][@"subject"]);
         [self.subjectString addObject:_subjects[x][@"subject"]];
         
     }

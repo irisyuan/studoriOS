@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eai-aD-jGa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eai-aD-jGa">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Student Center View Controller-->
@@ -242,6 +242,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sR-Ke-UJs">
+                                <rect key="frame" x="151" y="173" width="136" height="30"/>
+                                <state key="normal" title="Location of Session">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eNv-i7-iOS" kind="presentation" identifier="segueToMap" id="ydA-MU-D5P"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subjects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqs-yF-Fyy">
                                 <rect key="frame" x="146" y="152" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -273,7 +282,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRd-NO-GE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182.5" y="762.5"/>
+            <point key="canvasLocation" x="1050.5" y="-537.5"/>
+        </scene>
+        <!--Map View Container View Controller-->
+        <scene sceneID="JW3-dO-NFa">
+            <objects>
+                <viewController id="eNv-i7-iOS" customClass="MapViewContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aO8-pq-B0o"/>
+                        <viewControllerLayoutGuide type="bottom" id="bu3-cC-rhn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dgP-aC-Lph">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qoA-fg-bJw">
+                                <rect key="frame" x="0.0" y="110" width="381" height="557"/>
+                                <connections>
+                                    <segue destination="9Yu-N6-71E" kind="embed" identifier="editableSegue" id="nrz-8g-FAd"/>
+                                </connections>
+                            </containerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CRU-q6-LA4">
+                                <rect key="frame" x="3" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="wrT-oO-T7b">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="H2T-d1-noi">
+                                            <color key="tintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="eNv-i7-iOS" id="JHO-8W-1uN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location of the session. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qJ2-bO-zLP">
+                                <rect key="frame" x="96" y="75" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="doy-60-smV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1533.5" y="-412.5"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="6QF-zs-NyJ">
+            <objects>
+                <viewController id="9Yu-N6-71E" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XZv-pa-ORO"/>
+                        <viewControllerLayoutGuide type="bottom" id="08f-MQ-45l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yse-Jk-qbX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZM-H3-jCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2112.5" y="20.5"/>
         </scene>
     </scenes>
     <resources>

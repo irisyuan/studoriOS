@@ -8,6 +8,7 @@
 
 #import "TutorRequestDetailViewController.h"
 #import "SessionViewController.h"
+#import "MapViewContainerViewController.h"
 
 @interface TutorRequestDetailViewController ()
 
@@ -71,8 +72,24 @@ NSNumber *wage;
         destViewController.session = self.request;
         destViewController.wage = wage;
     }
+    
+    if ([[segue identifier] isEqualToString:@"segueToMap"])
+    {
+        
+        MapViewContainerViewController *destViewController = segue.destinationViewController;
+        
+        PFGeoPoint *tutorpoint = self.request[@"location"];
+        CLLocation *requestLocation = [[CLLocation alloc ] initWithLatitude:tutorpoint.latitude longitude:tutorpoint.longitude];
+        
+        
+        destViewController.currentLocation = requestLocation;
+        
+    }
+    
 
 }
+
+
 
 
 
@@ -111,6 +128,7 @@ NSNumber *wage;
     session[@"studentId"] = self.request[@"studentId"];
     session[@"tutorId"] = self.request[@"tutorId"];
     session[@"rate"] = self.request[@"rate"];
+    session[@"location"] = self.request[@"location"];
     [session saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
             [self.request delete];

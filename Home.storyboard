@@ -793,8 +793,9 @@
                                 <items>
                                     <navigationItem id="wpN-OJ-yPa">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="uyq-Ek-7rq">
+                                            <color key="tintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                             <connections>
-                                                <action selector="backButtonPressed:" destination="eQ9-T6-8eE" id="g4G-eO-yvS"/>
+                                                <action selector="backButtonPressed:" destination="eQ9-T6-8eE" id="7Fj-3d-8LF"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -849,24 +850,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBb-34-RlZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="234.5" y="-835.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Hqx-Yc-SKc">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="c7x-rz-iDi" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dJZ-Iz-2q6"/>
-                        <viewControllerLayoutGuide type="bottom" id="2Dh-Xf-4B4"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="57a-9J-03G">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DFk-30-9Rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

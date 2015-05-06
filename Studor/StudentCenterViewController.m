@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "SWRevealViewController.h"
 #import "PendingTableViewController.h"
+#import "MapViewContainerViewController.h"
 
 @interface StudentCenterViewController()
     @property (retain, nonatomic) NSMutableArray *requests;
@@ -85,6 +86,8 @@
     }
     
 }
+
+
 
 
 @end

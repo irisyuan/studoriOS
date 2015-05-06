@@ -287,6 +287,21 @@
                                 <rect key="frame" x="43" y="112" width="114" height="122"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r8V-jj-RHO">
+                                <rect key="frame" x="179" y="164" width="136" height="30"/>
+                                <state key="normal" title="Location of Session">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="lFv-K0-V3e" kind="presentation" identifier="showMap" id="63V-M9-OtM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location of Session" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kff-e8-p6R">
+                                <rect key="frame" x="173" y="172" width="152" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.9261480808" green="0.909334058" blue="0.96331146410000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -302,6 +317,7 @@
                                 <exclude reference="XZS-3d-BGO"/>
                                 <exclude reference="7We-gA-6Eo"/>
                                 <exclude reference="Jkx-Xp-OcZ"/>
+                                <exclude reference="kff-e8-p6R"/>
                             </mask>
                         </variation>
                     </view>
@@ -320,7 +336,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HEY-Lx-ReE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="828.5" y="-219.5"/>
+            <point key="canvasLocation" x="745.5" y="-384.5"/>
         </scene>
         <!--Session View Controller-->
         <scene sceneID="KBg-Yx-ccH">
@@ -571,6 +587,71 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8mb-5G-V62" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2400.5" y="71.5"/>
+        </scene>
+        <!--Map View Container View Controller-->
+        <scene sceneID="tYu-tE-niZ">
+            <objects>
+                <viewController id="lFv-K0-V3e" customClass="MapViewContainerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MeY-fJ-yDd"/>
+                        <viewControllerLayoutGuide type="bottom" id="IGR-DA-vis"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="s47-Jd-UYV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBf-Vf-yix">
+                                <rect key="frame" x="0.0" y="110" width="381" height="557"/>
+                                <connections>
+                                    <segue destination="aSl-5m-gLQ" kind="embed" identifier="editableSegue" id="7dY-Lo-7AY"/>
+                                </connections>
+                            </containerView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="soX-VF-CQa">
+                                <rect key="frame" x="3" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="Z82-RS-7Cp">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="uec-BQ-a45">
+                                            <color key="tintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="lFv-K0-V3e" id="Ty5-hK-aQB"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location of the session. " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsu-Al-yWk">
+                                <rect key="frame" x="96" y="75" width="188" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WB6-Qn-epw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.5" y="-783.5"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="qSl-W1-H3P">
+            <objects>
+                <viewController id="aSl-5m-gLQ" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bXB-Ea-K38"/>
+                        <viewControllerLayoutGuide type="bottom" id="PME-4r-Ga9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3YL-cs-jJU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdO-Vd-bMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784.5" y="-783.5"/>
         </scene>
     </scenes>
     <resources>
