@@ -155,9 +155,14 @@ BOOL found;
    // if (![[object objectForKey:@"username"] isEqualToString:[Helpers getProfile][@"username"]]) {
         PFFile *thumbnail = [object objectForKey:@"image"];
         PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-        thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
-        thumbnailImageView.file = thumbnail;
+    if (thumbnailImageView) {  thumbnailImageView.file = thumbnail;
         [thumbnailImageView loadInBackground];
+    } else {
+        // Use default picture if there isn't one in Parse
+        thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
+        
+    }
+    
     
         UILabel *name = (UILabel*) [cell viewWithTag:106];
         UILabel *bioLabel = (UILabel*)[cell viewWithTag:133];
