@@ -160,16 +160,14 @@ BOOL found;
         [thumbnailImageView loadInBackground];
     
         UILabel *name = (UILabel*) [cell viewWithTag:106];
-        UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:110];
+        UILabel *bioLabel = (UILabel*)[cell viewWithTag:133];
         UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:112];
         UILabel *distanceLabel = (UILabel*) [cell viewWithTag:155];
     
+        bioLabel.text = object[@"bio"];
         distanceLabel.text = [NSString stringWithFormat:@"%d km.", (int)(distance/1000)];
-    
         name.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"firstName"]];
-        
-        subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
-        hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [[object objectForKey:@"hourlyRate"] stringValue]];
+        hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ /hour", [[object objectForKey:@"hourlyRate"] stringValue]];
     // this code would hide a cell
    /* } else {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
