@@ -17,7 +17,6 @@
 
 @property (weak, nonatomic) IBOutlet PFImageView *photo;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *rateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 - (IBAction)cancelButtonPressed:(id)sender;

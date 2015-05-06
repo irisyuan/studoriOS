@@ -30,6 +30,9 @@
         _photo.image = [UIImage imageNamed:@"default-pic.png"];
     }
     
+    [_photo.layer setBorderColor: [[UIColor colorWithRed:15.0f/255.0f green:166.0f/255.0f blue:182.0f/255.0f alpha:1.0] CGColor]];
+    [_photo.layer setBorderWidth: 2.0];
+    
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
     _rateLabel.text = [profile[@"rate"] stringValue];
     _descriptionLabel.text = self.request[@"requestDesc"];
