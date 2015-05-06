@@ -26,6 +26,9 @@ bool start;
 
 // Gets the exact time when the button is pressed.
 NSTimeInterval time;
+
+// So user can press start button to continue without resetting time.
+bool paused;
     
 NSTimeInterval finalTime;
 NSNumber *price;
@@ -94,12 +97,23 @@ NSNumber *price;
         start = true;
         self.endButton.enabled=NO;
 
+        if (paused != YES) {
         // Gets the current time.
         time = [NSDate timeIntervalSinceReferenceDate];
+        } else {
+            NSTimeInterval elapsed = finalTime;
+
+            int mins = (int) (elapsed / 60.0)-1;
+            elapsed -= mins*60;
+            int secs = (int) (elapsed);
+            elapsed -= secs;
+            int fraction = elapsed * 10.0;
+            
+            _timeLabel.text = [NSString stringWithFormat:@"%u:%02u.%u", mins, secs, fraction];
+        }
         
         [self update];
 
-    
     }
     
 }
@@ -116,6 +130,8 @@ NSNumber *price;
     NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
     finalTime = currentTime - time;
 
+    paused = YES;
+    
     
     
 }
