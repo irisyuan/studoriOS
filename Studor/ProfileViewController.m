@@ -35,7 +35,6 @@
     
     PFObject *profile = [Helpers getProfile];
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
-    _emailLabel.text = profile[@"email"];
     
     PFFile *imageFile = profile[@"image"];
     

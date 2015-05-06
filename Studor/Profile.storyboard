@@ -83,12 +83,6 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dMo-M3-yFW">
-                                <rect key="frame" x="136" y="141" width="220" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iC-eT-NTq">
                                 <rect key="frame" x="16" y="262" width="220" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -138,7 +132,6 @@
                         <outlet property="bioField" destination="69F-ww-UtL" id="oVR-Id-7oJ"/>
                         <outlet property="bioLabel" destination="4iC-eT-NTq" id="ha6-Zb-fFs"/>
                         <outlet property="dollarSign" destination="aLh-CH-qWD" id="l0n-8E-Zwa"/>
-                        <outlet property="emailLabel" destination="dMo-M3-yFW" id="edz-Qf-C73"/>
                         <outlet property="hourlyRateField" destination="Q57-Xh-r8K" id="Zw8-YX-nuW"/>
                         <outlet property="logoutButton" destination="SA8-OW-YKo" id="2Yi-tl-vNl"/>
                         <outlet property="nameLabel" destination="Tqf-Uo-Cyf" id="SNR-LM-btH"/>

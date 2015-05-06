@@ -24,9 +24,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 
-@property (weak, nonatomic) IBOutlet UILabel *emailLabel;
-
-@property (weak, nonatomic) IBOutlet UITextField *zipCodeField;
 @property (weak, nonatomic) IBOutlet UITextField *hourlyRateField;
 @property (weak, nonatomic) IBOutlet UITextField *bioField;
 @property (weak, nonatomic) IBOutlet UITextView *successLabel;
