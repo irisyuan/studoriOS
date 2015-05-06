@@ -175,6 +175,7 @@
                                 <items>
                                     <navigationItem title="Title" id="rh3-b5-fgt">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Profile" id="d45-qr-ngA">
+                                            <color key="tintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                             <connections>
                                                 <action selector="backButtonPressed:" destination="Ixe-lt-hyc" id="hT3-gR-6to"/>
                                             </connections>

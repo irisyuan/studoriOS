@@ -18,6 +18,7 @@
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rMw-oF-4wo">
                                 <rect key="frame" x="241" y="91" width="51" height="31"/>
+                                <color key="onTintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <action selector="toggleAvailable:" destination="Z7i-mN-igY" eventType="valueChanged" id="OYC-WH-J9I"/>
                                 </connections>
@@ -242,6 +243,7 @@
                                 <items>
                                     <navigationItem id="zui-pO-T4I">
                                         <barButtonItem key="leftBarButtonItem" title="&lt;Tutor Center" id="cWx-wZ-pbv">
+                                            <color key="tintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                             <connections>
                                                 <action selector="backButtonPressed:" destination="0dn-TO-wSR" id="rhR-sF-AgV"/>
                                             </connections>
@@ -408,7 +410,9 @@
                         <color key="backgroundColor" red="0.91796292180000005" green="0.90129749889999999" blue="0.95479786069999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="&lt; Back" id="gtt-YG-wr9"/>
+                        <barButtonItem title="&lt; Back" id="gtt-YG-wr9">
+                            <color key="tintColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
