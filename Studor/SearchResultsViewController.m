@@ -153,7 +153,7 @@ BOOL found;
     
     // You can't find or book yourself...
    // if (![[object objectForKey:@"username"] isEqualToString:[Helpers getProfile][@"username"]]) {
-        PFFile *thumbnail = [object objectForKey:@"image"];
+    /*    PFFile *thumbnail = [object objectForKey:@"image"];
         PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
     if (thumbnailImageView) {  thumbnailImageView.file = thumbnail;
         [thumbnailImageView loadInBackground];
@@ -161,7 +161,7 @@ BOOL found;
         // Use default picture if there isn't one in Parse
         thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
         
-    }
+    }*/
     
     
         UILabel *name = (UILabel*) [cell viewWithTag:106];
