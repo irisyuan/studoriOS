@@ -151,17 +151,13 @@ BOOL found;
     
     // Configure the cell
     
-    // You can't find or book yourself...
-   // if (![[object objectForKey:@"username"] isEqualToString:[Helpers getProfile][@"username"]]) {
-    /*    PFFile *thumbnail = [object objectForKey:@"image"];
+        PFFile *thumbnail = [object objectForKey:@"image"];
         PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
-    if (thumbnailImageView) {  thumbnailImageView.file = thumbnail;
-        [thumbnailImageView loadInBackground];
-    } else {
-        // Use default picture if there isn't one in Parse
-        thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
         
-    }*/
+        thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
+        thumbnailImageView.file = thumbnail;
+        [thumbnailImageView loadInBackground];
+    
     
     
         UILabel *name = (UILabel*) [cell viewWithTag:106];
@@ -170,15 +166,15 @@ BOOL found;
         UILabel *distanceLabel = (UILabel*) [cell viewWithTag:155];
     
         bioLabel.text = object[@"bio"];
-        distanceLabel.text = [NSString stringWithFormat:@"%d Mile", (int)(distance*0.000621371)];
+        distanceLabel.text = [NSString stringWithFormat:@"%d miles", (int)(distance*0.000621371)];
         name.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"firstName"]];
         hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ /hour", [[object objectForKey:@"hourlyRate"] stringValue]];
     // this code would hide a cell
-   /* } else {
+   /*
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         cell.userInteractionEnabled = NO;
-    }*/
+    */
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
