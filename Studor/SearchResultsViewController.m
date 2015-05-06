@@ -32,12 +32,12 @@ BOOL found;
     
     [super viewDidLoad];
     
-    NSString *string1 = @"The following tutors teach ";
-    NSString *string2 =  self.subject[@"subject"];
-    NSString *string3 = @" in your area.";
+   
+    NSString *string1 =  self.subject[@"subject"];
+    NSString *string2 = @" tutors in your area.";
     
     string1 = [string1 stringByAppendingString:string2];
-    string1 = [string1 stringByAppendingString:string3];
+
 
     self.resultLabel.text = string1;
     
