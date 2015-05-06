@@ -8,6 +8,7 @@
 
 #import "BookTutorViewController.h"
 #import "Helpers.h"
+#import "MapViewContainerViewController.h"
 
 @interface BookTutorViewController ()
 
@@ -55,6 +56,14 @@
     request[@"requestDesc"] = _requestDescField.text;
     request[@"rate"] = self.tutorProfile[@"hourlyRate"];
     
+    
+    //Location
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:[self.latitude doubleValue] longitude:[self.longtitude doubleValue]];
+    
+    PFGeoPoint *geolocation = [PFGeoPoint geoPointWithLocation:location];
+    
+    request[@"location"] = geolocation;
+    
     //request[@"subjectId"] = _subjectsLabel.text;
     
     [request saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -67,20 +76,18 @@
         }
     }];
 }
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{   NSLog(@"Peforming Editable Segue");
+    
+    if ([[segue identifier] isEqualToString:@"segueToMap"])
+    {
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-//making the keyboard disapear when clicking an empty space
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES];
+        MapViewContainerViewController *destViewController = segue.destinationViewController;
+        destViewController.currentLocation = self.currentLocation; 
+        destViewController.parentVC = self;
+        
+    }
+    
 }
 
 @end

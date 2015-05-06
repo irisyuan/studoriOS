@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface BookTutorViewController : UIViewController
 
@@ -20,6 +22,12 @@
 @property (weak, nonatomic) IBOutlet UILabel *bioLabel;
 @property (weak, nonatomic) IBOutlet UILabel *subjectsLabel;
 @property (weak, nonatomic) IBOutlet UITextField *requestDescField;
+@property (strong, nonatomic) NSNumber *latitude;
+@property (strong, nonatomic) NSNumber *longtitude;
+@property (strong, nonatomic) CLLocation *currentLocation;
+
+
+
 /*
 // changed this to textfield
  

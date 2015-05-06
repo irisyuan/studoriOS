@@ -7,6 +7,7 @@
 //
 
 #import "MapViewContainerViewController.h"
+#import "MapViewController.h"
 
 @interface MapViewContainerViewController ()
 
@@ -34,4 +35,43 @@
 }
 */
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{   NSLog(@"Peforming Editable Segue");
+    
+    if ([[segue identifier] isEqualToString:@"editableSegue"])
+    {   NSLog(@"Peforming Editable Segue");
+        
+        MapViewController *destViewController = segue.destinationViewController;
+        destViewController.parentVC = self;
+        destViewController.editable = true;
+        destViewController.currentLocation = self.currentLocation;
+        
+    }
+    
+}
+
+
+- (IBAction)backButtonPressed:(id)sender {
+    
+    self.parentVC.longtitude = self.longtitude;
+    self.parentVC.latitude = self.latitude;
+    
+    [self dismissMe];
+    
+}
+
+-(void) dismissMe {
+    CATransition *transition = [CATransition animation];
+    transition.duration = 0.35;
+    transition.timingFunction =
+    [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    transition.type = kCATransitionMoveIn;
+    transition.subtype = kCATransitionFromLeft;
+    
+    // NSLog(@"%s: controller.view.window=%@", _func_, controller.view.window);
+    UIView *containerView = self.view.window;
+    [containerView.layer addAnimation:transition forKey:nil];
+    
+    [self dismissModalViewControllerAnimated:NO];
+}
 @end

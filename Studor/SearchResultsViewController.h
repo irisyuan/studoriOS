@@ -16,6 +16,9 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
 @property (nonatomic, strong) PFObject *subject;
+@property (strong, nonatomic) NSNumber *latitude;
+@property (strong, nonatomic) NSNumber *longtitude;
+
 
 
 @end

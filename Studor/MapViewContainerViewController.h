@@ -7,13 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+
 
 @interface MapViewContainerViewController : UIViewController
 
 @property (strong, nonatomic) MapViewContainerViewController *parentVC;
+
 @property (strong, nonatomic) NSNumber *latitude;
 
 @property (strong, nonatomic) NSNumber *longtitude;
+
+@property (strong, nonatomic) CLLocation *currentLocation;
+
+
+
+- (IBAction)backButtonPressed:(id)sender;
+
 
 
 

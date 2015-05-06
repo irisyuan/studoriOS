@@ -88,6 +88,7 @@ BOOL found;
     [errorAlert show];
     NSLog(@"Error: %@",error.description);
 }
+
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
     NSLog(@"location found");
@@ -186,6 +187,7 @@ BOOL found;
     {
         BookTutorViewController *destViewController = segue.destinationViewController;
         destViewController.tutorProfile = self.selectedTutor;
+        destViewController.currentLocation = currentLocation;
         
     }
 }
