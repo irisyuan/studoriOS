@@ -131,24 +131,7 @@ BOOL found;
                 reuseIdentifier:SimpleTableIdentifier];
     }
     
-    // cell.textLabel.text = self.tutors[indexPath.row][@"email"];
-    
-    // Configure the cell
-    PFFile *thumbnail = self.tutors[indexPath.row][@"image"];
-    PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:1];
-    thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
-    thumbnailImageView.file = thumbnail;
-    [thumbnailImageView loadInBackground];
-    
-    UILabel *nameLabel = (UILabel*) [cell viewWithTag:2];
-    UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:3];
-    
-    nameLabel.text = [NSString stringWithFormat:@"%@ %@", self.tutors[indexPath.row][@"firstName"],self.tutors[indexPath.row][@"lastName"]];
-    
-    NSString *hourlyRate = [self.tutors[indexPath.row][@"hourlyRate"] stringValue];
-    hourlyRateLabel.text = [NSString stringWithFormat:@"$%@/hr", hourlyRate];
-    
-    return cell;*/
+    // cell.textLabel.text = self.tutors[indexPath.row][@"email"]; */
     
     PFObject *object = self.tutors[indexPath.row];
     
@@ -174,7 +157,6 @@ BOOL found;
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
     
-    UILabel *emailLabel = (UILabel*) [cell viewWithTag:108];
     UILabel *name = (UILabel*) [cell viewWithTag:106];
     UILabel *subjectsLabel = (UILabel*)[cell viewWithTag:110];
     UILabel *hourlyRateLabel = (UILabel*) [cell viewWithTag:112];
@@ -184,7 +166,6 @@ BOOL found;
     
     name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
     
-    emailLabel.text = [object objectForKey:@"username"];
     subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
     hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [[object objectForKey:@"hourlyRate"] stringValue]];
     
