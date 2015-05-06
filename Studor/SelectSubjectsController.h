@@ -14,5 +14,6 @@
 
 - (BOOL) userTeachesSubject: (NSInteger)row;
 
+- (IBAction)backButtonPressed:(id)sender;
 
 @end
