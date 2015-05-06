@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
-#import <LayerKit/LayerKit.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>

@@ -6,8 +6,7 @@
 //  Copyright (c) 2015 Omid Keypour. All rights reserved.
 //
 
-/*#import "MapViewController.h"
-#import <GoogleMaps/GoogleMaps.h>
+#import "MapViewController.h"
 
 
 @interface MapViewController ()
@@ -20,7 +19,7 @@
     [super viewDidLoad];
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.868
                                                             longitude:151.2086
-                                                                 zoom:6];
+                                                                 zoom:16];
     GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     
     GMSMarker *marker = [[GMSMarker alloc] init];
@@ -28,6 +27,10 @@
     marker.snippet = @"Hello World";
     marker.appearAnimation = kGMSMarkerAnimationPop;
     marker.map = mapView;
+    mapView.delegate = self;
+
+    
+   // [mapView clear];
     
     self.view = mapView;
 }
@@ -37,7 +40,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -45,6 +48,13 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
 
-//@end
+#pragma mark - GMSMapViewDelegate
+
+- (void)mapView:(GMSMapView *)mapView
+didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
+    NSLog(@"You tapped at %f,%f", coordinate.latitude, coordinate.longitude);
+}
+
+
+@end

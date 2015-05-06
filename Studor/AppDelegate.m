@@ -60,6 +60,9 @@
         }
     }];*/
     
+    [GMSServices provideAPIKey:@"AIzaSyBZww6zW9Megg-CxLC4eR6pf9OKZHQKuaQ"];
+
+    
     return YES;
 }
 
