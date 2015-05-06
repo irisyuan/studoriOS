@@ -48,6 +48,9 @@
 
     }
     
+    [_photo.layer setBorderColor: [[UIColor colorWithRed:15.0f/255.0f green:166.0f/255.0f blue:182.0f/255.0f alpha:1.0] CGColor]];
+    [_photo.layer setBorderWidth: 2.0];
+    
     if (![profile[@"isTutor"] boolValue]) {
         [_bioField setHidden:TRUE];
         [_hourlyRateField setHidden:TRUE];

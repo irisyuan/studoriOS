@@ -162,6 +162,9 @@ PFObject *selectedRequest;
     thumbnailImageView.file = thumbnail;
     [thumbnailImageView loadInBackground];
     
+    [thumbnailImageView.layer setBorderColor: [[UIColor colorWithRed:15.0f/255.0f green:166.0f/255.0f blue:182.0f/255.0f alpha:1.0] CGColor]];
+    [thumbnailImageView.layer setBorderWidth: 2.0];
+    
     name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
     emailLabel.text = [object objectForKey:@"username"];
     subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
