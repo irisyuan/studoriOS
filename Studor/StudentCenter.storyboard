@@ -247,6 +247,7 @@
                         <outlet property="cancelButton" destination="Ag3-Vr-RaG" id="fCJ-JB-ho3"/>
                         <outlet property="descriptionLabel" destination="yy2-X5-BYI" id="U4Z-pE-yod"/>
                         <outlet property="nameLabel" destination="lYR-Yg-cC7" id="HgQ-nb-ZkK"/>
+                        <outlet property="photo" destination="4wH-dJ-orx" id="AD9-Ye-IgY"/>
                         <outlet property="rateLabel" destination="l0N-kl-zwM" id="e09-AR-H9W"/>
                         <segue destination="eai-aD-jGa" kind="show" identifier="cancelledSegue" id="d6e-As-Rhn"/>
                     </connections>

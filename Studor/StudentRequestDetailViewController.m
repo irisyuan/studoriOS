@@ -21,6 +21,14 @@
     [profileQuery whereKey:@"username" equalTo:self.request[@"tutorId"]];
     
     PFObject *profile = [profileQuery getFirstObject];
+    PFFile *imageFile = profile[@"image"];
+    if (imageFile) {
+        _photo.file = imageFile;
+        [_photo loadInBackground];
+    } else {
+        // Use default picture if there isn't one in Parse
+        _photo.image = [UIImage imageNamed:@"default-pic.png"];
+    }
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
     _rateLabel.text = profile[@"rate"];
