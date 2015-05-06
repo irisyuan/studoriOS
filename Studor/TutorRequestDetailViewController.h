@@ -26,6 +26,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *acceptButton;
 - (IBAction)startButtonPressed:(id)sender;
+- (IBAction)backButtonPressed:(id)sender;
+
 
 - (IBAction)acceptButtonPressed:(id)sender;
 

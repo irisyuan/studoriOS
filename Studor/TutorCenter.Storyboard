@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z7i-mN-igY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z7i-mN-igY">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
         <!--Tutor Center View Controller-->
@@ -136,7 +136,7 @@
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <segue destination="0dn-TO-wSR" kind="show" identifier="tutorSegue" id="roS-r1-97h"/>
+                        <segue destination="0dn-TO-wSR" kind="presentation" identifier="tutorSegue" modalPresentationStyle="overCurrentContext" id="roS-r1-97h"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLj-Mo-MDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -237,6 +237,18 @@
                                 <rect key="frame" x="16" y="117" width="114" height="122"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEw-ri-cMu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="zui-pO-T4I">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;Tutor Center" id="cWx-wZ-pbv">
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="0dn-TO-wSR" id="rhR-sF-AgV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Bio" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6aF-Hq-v9V">
                                 <rect key="frame" x="14" y="285" width="345" height="47"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -307,7 +319,7 @@
                         <outlet property="photo" destination="SU5-L1-cSX" id="xOh-h4-xKO"/>
                         <outlet property="rateLabel" destination="QNe-Ul-qVf" id="4kr-bC-psk"/>
                         <outlet property="startButton" destination="yU8-Gg-VOQ" id="xtG-4D-0QA"/>
-                        <segue destination="MGY-Kt-8Oh" kind="show" identifier="startSessionSegue" id="UAV-oQ-XGi"/>
+                        <segue destination="MGY-Kt-8Oh" kind="presentation" identifier="startSessionSegue" modalPresentationStyle="overCurrentContext" id="UAV-oQ-XGi"/>
                         <segue destination="Z7i-mN-igY" kind="show" identifier="acceptedRequestSegue" id="6md-rv-pVu"/>
                     </connections>
                 </viewController>
@@ -377,9 +389,25 @@
                                     <action selector="startButtonPressed:" destination="0dn-TO-wSR" eventType="touchUpInside" id="Ul3-HV-Ia1"/>
                                 </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNb-lJ-6Qj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="iK0-zt-nDX">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Gdx-wA-4Zv">
+                                            <connections>
+                                                <action selector="backButtonPressed:" destination="MGY-Kt-8Oh" id="ZmM-5O-mds"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.91796292180000005" green="0.90129749889999999" blue="0.95479786069999995" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="&lt; Back" id="gtt-YG-wr9"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="endButton" destination="Q8B-jk-xWJ" id="bVg-zP-Rue"/>

@@ -21,5 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 - (IBAction)cancelButtonPressed:(id)sender;
+- (IBAction)backButtonPressed:(id)sender;
 
 @end
