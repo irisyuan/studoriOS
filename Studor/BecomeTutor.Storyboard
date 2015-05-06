@@ -95,7 +95,7 @@
                         <outlet property="bioField" destination="WWm-jq-y7B" id="Bx6-zI-s4Q"/>
                         <outlet property="rateField" destination="G4Z-fm-vcV" id="m1k-5n-rgb"/>
                         <outlet property="sidebarButton" destination="dlm-y3-kZa" id="l3c-Vm-Kzw"/>
-                        <segue destination="jko-M4-8rH" kind="show" id="MKW-Oe-Vf3"/>
+                        <segue destination="jko-M4-8rH" kind="show" identifier="profileUpdated" id="MKW-Oe-Vf3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hfv-Wf-k28" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -154,7 +154,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value="Profile"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="storyboardName" value="Profile"/>
                     </userDefinedRuntimeAttributes>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7jK-a4-QMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
