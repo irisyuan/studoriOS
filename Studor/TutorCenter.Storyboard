@@ -183,7 +183,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First and Last Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbz-Qc-PH6">
                                 <rect key="frame" x="170" y="112" width="155" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.1294117719" green="0.75294125079999996" blue="0.75686281919999998" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9z8-GN-btX">
@@ -204,14 +204,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Rate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNe-Ul-qVf">
-                                <rect key="frame" x="170" y="159" width="127" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yU8-Gg-VOQ">
-                                <rect key="frame" x="189" y="542" width="116" height="36"/>
+                                <rect key="frame" x="189" y="543" width="116" height="35"/>
                                 <color key="backgroundColor" red="0.80485733699999995" green="0.80485733699999995" blue="0.80485733699999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.1280691964" green="0.70438058039999996" blue="0.70438058039999996" alpha="0.87" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Start Session">
@@ -234,10 +228,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_pic" translatesAutoresizingMaskIntoConstraints="NO" id="SU5-L1-cSX" customClass="PFImageView">
-                                <rect key="frame" x="16" y="117" width="114" height="122"/>
-                                <color key="backgroundColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEw-ri-cMu">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
@@ -293,6 +283,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="default_pic" translatesAutoresizingMaskIntoConstraints="NO" id="SU5-L1-cSX" customClass="PFImageView">
+                                <rect key="frame" x="43" y="112" width="114" height="122"/>
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.76078431369999999" blue="0.76078431369999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.9261480808" green="0.909334058" blue="0.96331146410000001" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -319,7 +313,6 @@
                         <outlet property="descriptionLabel" destination="uO7-UO-pec" id="tH6-a1-0xD"/>
                         <outlet property="nameLabel" destination="Zbz-Qc-PH6" id="ghX-e2-wVx"/>
                         <outlet property="photo" destination="SU5-L1-cSX" id="xOh-h4-xKO"/>
-                        <outlet property="rateLabel" destination="QNe-Ul-qVf" id="4kr-bC-psk"/>
                         <outlet property="startButton" destination="yU8-Gg-VOQ" id="xtG-4D-0QA"/>
                         <segue destination="MGY-Kt-8Oh" kind="presentation" identifier="startSessionSegue" modalPresentationStyle="overCurrentContext" id="UAV-oQ-XGi"/>
                         <segue destination="Z7i-mN-igY" kind="show" identifier="acceptedRequestSegue" id="6md-rv-pVu"/>

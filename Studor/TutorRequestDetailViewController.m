@@ -34,10 +34,10 @@ NSNumber *wage;
         _photo.image = [UIImage imageNamed:@"default-pic.png"];
     }
     
-    _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
+    [_photo.layer setBorderColor: [[UIColor colorWithRed:15.0f/255.0f green:166.0f/255.0f blue:182.0f/255.0f alpha:1.0] CGColor]];
+    [_photo.layer setBorderWidth: 2.0];
     
-    _rateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [profile[@"hourlyRate"] stringValue]];
-    wage = [profile[@"hourlyRate"] stringValue];
+    _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
     
     _descriptionLabel.text = self.request[@"requestDesc"];
     
@@ -67,7 +67,6 @@ NSNumber *wage;
         
         SessionViewController *destViewController = segue.destinationViewController;
         
-        NSLog([NSString stringWithFormat:@"Wage being sent to start session segue is %@", wage]);
         
         destViewController.session = self.request;
         destViewController.wage = wage;
