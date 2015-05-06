@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view.
     
     NSString *firstName = self.tutorProfile[@"firstName"];
-    NSString *lastName =  self.tutorProfile[@"lastName"];
+    
     
     PFFile *imageFile = self.tutorProfile[@"image"];
     if (imageFile) {
@@ -32,7 +32,7 @@
         _image.image = [UIImage imageNamed:@"default-pic.png"];
     }
     
-    _nameLabel.text = [NSString stringWithFormat:@"%@ %@", firstName, lastName];
+    _nameLabel.text = [NSString stringWithFormat:@"%@", firstName];
     _hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [self.tutorProfile[@"hourlyRate"] stringValue]];
     _bioLabel.text = self.tutorProfile[@"bio"];
     

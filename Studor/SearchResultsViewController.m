@@ -166,7 +166,7 @@ BOOL found;
     
         distanceLabel.text = [NSString stringWithFormat:@"%d km.", (int)(distance/1000)];
     
-        name.text = [NSString stringWithFormat:@"%@ %@", [object objectForKey:@"firstName"],[object objectForKey:@"lastName"]];
+        name.text = [NSString stringWithFormat:@"%@", [object objectForKey:@"firstName"]];
         
         subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
         hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [[object objectForKey:@"hourlyRate"] stringValue]];
