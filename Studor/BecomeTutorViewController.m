@@ -19,6 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _bioErrorLabel.text = @"";
+    _wageErrorLabel.text = @"";
+
+    
     self.navigationController.navigationBar.hidden = YES;
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -53,21 +57,56 @@
 
 
 - (IBAction)buttonPressed:(id)sender {
+    
+    _bioErrorLabel.text = @"";
+    _wageErrorLabel.text = @"";
+
+    
+    NSMutableDictionary *errors = [[NSMutableDictionary alloc] init];
+    
+    if([self.rateField.text length] == 0){
+        [errors setObject:@"Please provide an hourly rate" forKey: @"rate"];
+    }
+    if([self.rateField.text length] < 10){
+        [errors setObject:@"Please provide a bio of at least 10 characters." forKey: @"bio"];
+    }
+    
+    
     PFObject *profile = [Helpers getProfile];
     NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
     f.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber *myNumber = [f numberFromString:self.rateField.text];
     
     
+    if([errors count]==0){
+        profile[@"hourlyRate"] = myNumber;
+        profile[@"isTutor"] = @YES;
+        profile[@"bio"] = self.bioField.text;
+        [profile save];
+        
+        
+        [self performSegueWithIdentifier:@"profileUpdated" sender:nil];}
     
-    profile[@"hourlyRate"] = myNumber;
-    profile[@"isTutor"] = @YES;
-    profile[@"bio"] = self.bioField.text;
-    [profile save];
-    
-    
-    [self performSegueWithIdentifier:@"profileUpdated" sender:nil];
+    else{
+        
+        for(NSString *key in errors){
+            NSString *value = [errors objectForKey:key];
+            
+            if([key isEqualToString:@"bio"]){
+                _bioErrorLabel.text = value;
+            }
+            if([key isEqualToString:@"rate"]){
+                _wageErrorLabel.text = value;
+                
+            }
+         
+        }
 
+        
+        
+    }
+    
+    
     
     
 }

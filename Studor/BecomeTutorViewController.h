@@ -15,5 +15,7 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *bioErrorLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *wageErrorLabel;
 @end

@@ -41,13 +41,7 @@ PFObject *profile;
     
     PFQuery *subjectQuery = [PFQuery queryWithClassName:@"Subject"];
     self.subjects = [subjectQuery findObjects];
-    
-    
-    [profile addUniqueObject:[self.subjects[0] objectId] forKey: @"subjects"];
-    [profile save];
-    
-    NSLog(profile[@"subjects"][0]);
-    
+        
 
     UITableView *tableView = (id)[self.view viewWithTag:1];
     UIEdgeInsets contentInset = tableView.contentInset;
@@ -74,7 +68,6 @@ PFObject *profile;
 - (IBAction)backButtonPressed:(id)sender {
     
     [self dismissMe];
-    
     
 }
 
@@ -122,7 +115,6 @@ PFObject *profile;
     cell.textLabel.text = self.subjects[indexPath.row][@"subject"];
     
    if([self userTeachesSubject:indexPath.row]){
-       NSLog(@"we in heree");
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }
 
@@ -138,10 +130,8 @@ PFObject *profile;
         
         UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         cell.accessoryType = UITableViewCellAccessoryNone;
-
         
     }
-    
     else{
         NSLog([self.subjects[indexPath.row] objectId]);
         [profile addUniqueObject:[self.subjects[indexPath.row] objectId] forKey: @"subjects"];

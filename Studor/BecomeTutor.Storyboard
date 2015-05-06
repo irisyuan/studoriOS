@@ -80,6 +80,18 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL5-V2-e1E">
+                                <rect key="frame" x="167" y="109" width="192" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L1Z-b1-k8s">
+                                <rect key="frame" x="16" y="370" width="343" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.91764712329999998" green="0.90980398650000005" blue="0.94117653369999998" alpha="1" colorSpace="deviceRGB"/>
                         <variation key="default">
@@ -92,9 +104,11 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="bioErrorLabel" destination="L1Z-b1-k8s" id="25Z-B8-E90"/>
                         <outlet property="bioField" destination="WWm-jq-y7B" id="Bx6-zI-s4Q"/>
                         <outlet property="rateField" destination="G4Z-fm-vcV" id="m1k-5n-rgb"/>
                         <outlet property="sidebarButton" destination="dlm-y3-kZa" id="l3c-Vm-Kzw"/>
+                        <outlet property="wageErrorLabel" destination="dL5-V2-e1E" id="Cbh-f1-cjB"/>
                         <segue destination="jko-M4-8rH" kind="show" identifier="profileUpdated" id="MKW-Oe-Vf3"/>
                     </connections>
                 </viewController>
