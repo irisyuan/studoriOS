@@ -69,6 +69,7 @@
 		B24300CC1AE60235006FF3AD /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300CB1AE60235006FF3AD /* SignUpViewController.m */; };
 		B24300D11AE6044E006FF3AD /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300D01AE6044E006FF3AD /* Helpers.m */; };
 		B259C4CE1AF6084100A52234 /* BecomeTutorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B259C4CD1AF6084100A52234 /* BecomeTutorViewController.m */; };
+		B27C29EE1AFA39EC004E718F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27C29ED1AFA39EC004E718F /* MapViewController.m */; };
 		B2A649E81AF4687300C9E674 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A649E71AF4687300C9E674 /* SWRevealViewController.m */; };
 		B2A649F21AF4765900C9E674 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A649F11AF4765900C9E674 /* SidebarViewController.m */; };
 		B2A649FA1AF545E600C9E674 /* BecomeTutor.Storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2A649F91AF545E600C9E674 /* BecomeTutor.Storyboard */; };
@@ -183,6 +184,8 @@
 		B24300D01AE6044E006FF3AD /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Helpers.m; path = ../Helpers.m; sourceTree = "<group>"; };
 		B259C4CC1AF6084100A52234 /* BecomeTutorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BecomeTutorViewController.h; sourceTree = "<group>"; };
 		B259C4CD1AF6084100A52234 /* BecomeTutorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BecomeTutorViewController.m; sourceTree = "<group>"; };
+		B27C29EC1AFA39EC004E718F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		B27C29ED1AFA39EC004E718F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		B2A649E61AF4687300C9E674 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		B2A649E71AF4687300C9E674 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		B2A649F01AF4765900C9E674 /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarViewController.h; path = ../SidebarViewController.h; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 				B21530611AF6BCED00882CA1 /* SearchResultsViewController.m */,
 				B221B4811AF72E54005F8C20 /* BookTutorViewController.h */,
 				B221B4821AF72E54005F8C20 /* BookTutorViewController.m */,
+				B27C29EC1AFA39EC004E718F /* MapViewController.h */,
+				B27C29ED1AFA39EC004E718F /* MapViewController.m */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -658,6 +663,7 @@
 				0384E3A21AF6C93900D72408 /* SessionViewController.m in Sources */,
 				2E8FEFF81AD5C0E900926A78 /* main.m in Sources */,
 				B24300D11AE6044E006FF3AD /* Helpers.m in Sources */,
+				B27C29EE1AFA39EC004E718F /* MapViewController.m in Sources */,
 				B24300CC1AE60235006FF3AD /* SignUpViewController.m in Sources */,
 				B2A649F21AF4765900C9E674 /* SidebarViewController.m in Sources */,
 				B21530621AF6BCED00882CA1 /* SearchResultsViewController.m in Sources */,
