@@ -12,6 +12,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "SWRevealViewController.h"
 #import "Helpers.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation ProfileViewController
 
@@ -60,6 +61,13 @@
         _bioField.text = profile[@"bio"];
         _hourlyRateField.text = [profile[@"hourlyRate"] stringValue];
     }
+    
+   // _photo.layer.borderWidth = 7;
+   // _photo.layer.borderColor = [UIColor colorWithRed:0.22 green:0.22 blue:0.22 alpha:1.0].CGColor;
+    
+    // this is the key command
+    //[_photo setFrame:AVMakeRectWithAspectRatioInsideRect(_photo.size, _photo.frame)];
+    
 }
 
 // To do: need to add same validation as sign up page here

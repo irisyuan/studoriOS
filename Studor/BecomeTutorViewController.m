@@ -67,7 +67,7 @@
     if([self.rateField.text length] == 0){
         [errors setObject:@"Please provide an hourly rate" forKey: @"rate"];
     }
-    if([self.rateField.text length] < 10){
+    if([self.bioField.text length] < 10){
         [errors setObject:@"Please provide a bio of at least 10 characters." forKey: @"bio"];
     }
     
