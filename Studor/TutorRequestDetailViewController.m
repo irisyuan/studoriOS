@@ -37,7 +37,7 @@ NSNumber *wage;
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
     
     _rateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [profile[@"hourlyRate"] stringValue]];
-    wage = profile[@"hourlyRate"];
+    wage = [profile[@"hourlyRate"] stringValue];
     
     _descriptionLabel.text = self.request[@"requestDesc"];
     
@@ -103,7 +103,9 @@ NSNumber *wage;
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
-        [self.request delete];
+       // don't delete yet because you still need the rate information
+
+      //  [self.request delete];
         // change this to a 'canceledSegue' later but for now they do the same thing
         [self performSegueWithIdentifier:@"acceptedRequestSegue" sender:self];
     }

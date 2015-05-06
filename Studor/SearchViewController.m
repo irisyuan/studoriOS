@@ -58,16 +58,20 @@
     static NSString *SimpleTableIdentifier = @"SimpleTableIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                              SimpleTableIdentifier];
+
     if (cell == nil) {
         cell = [[UITableViewCell alloc]
                 initWithStyle:UITableViewCellStyleDefault
                 reuseIdentifier:SimpleTableIdentifier];
+        cell.accessoryType =  UITableViewCellAccessoryDisclosureIndicator;
+
     }
     
     cell.textLabel.text = self.subjects[indexPath.row][@"subject"];
     
     return cell;
 }
+
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {

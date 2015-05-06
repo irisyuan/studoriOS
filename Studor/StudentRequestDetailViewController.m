@@ -67,7 +67,7 @@
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
         // do stuff
-        [self.request delete];
+       [self.request delete];
         [self performSegueWithIdentifier:@"cancelledSegue" sender:self];
     }
 }

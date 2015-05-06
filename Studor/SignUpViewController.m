@@ -122,8 +122,8 @@
         user.username = [email lowercaseString];
         user.password = password;
         /* We don't need name or zip code in User table - any updates to name will go in Profile */
-        user[@"firstName"] = firstName;
-        user[@"lastName"] = lastName;
+        user[@"firstName"] = [firstName capitalizedString];
+        user[@"lastName"] = [lastName capitalizedString];
         /* Need email field for forgot password */
         user[@"email"] = email;
     
