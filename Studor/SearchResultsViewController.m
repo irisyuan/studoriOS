@@ -98,6 +98,7 @@ BOOL found;
     [locationManager stopUpdatingLocation];
     
     PFQuery *query = [PFQuery queryWithClassName:@"Profile"];
+    [query whereKey:@"username" notEqualTo: [Helpers getProfile][@"username"]];
     [query whereKey:@"isTutor" equalTo:(@YES)];
     [query whereKey:@"isAvailable" equalTo:@YES];
     [query whereKey:@"subjects" equalTo:[self.subject objectId]];
@@ -151,7 +152,7 @@ BOOL found;
     // Configure the cell
     
     // You can't find or book yourself...
-    if (![[object objectForKey:@"username"] isEqualToString:[Helpers getProfile][@"username"]]) {
+   // if (![[object objectForKey:@"username"] isEqualToString:[Helpers getProfile][@"username"]]) {
         PFFile *thumbnail = [object objectForKey:@"image"];
         PFImageView *thumbnailImageView = (PFImageView*)[cell viewWithTag:100];
         thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
@@ -170,11 +171,11 @@ BOOL found;
         subjectsLabel.text = [object objectForKey:@"subjectsLabel"];
         hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [[object objectForKey:@"hourlyRate"] stringValue]];
     
-    } else {
+   /* } else {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
         cell.userInteractionEnabled = NO;
-    }
+    }*/
     return cell;
 }
 
