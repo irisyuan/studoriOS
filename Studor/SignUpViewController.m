@@ -119,7 +119,7 @@
     else{
         
         PFUser *user = [PFUser user];
-        user.username = email;
+        user.username = [email lowercaseString];
         user.password = password;
         /* We don't need name or zip code in User table - any updates to name will go in Profile */
         user[@"firstName"] = firstName;
@@ -139,8 +139,8 @@
                 
                 profile[@"firstName"] = firstName;
                 profile[@"lastName"] = lastName;
-                profile[@"email"] = email;
-                profile[@"username"] = email;
+                profile[@"email"] = [email lowercaseString];
+                profile[@"username"] = [email lowercaseString];
                 profile[@"isAvailable"] = @YES;
                 
                 [profile saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {

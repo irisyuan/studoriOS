@@ -31,7 +31,7 @@
     }
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
-    _rateLabel.text = profile[@"rate"];
+    _rateLabel.text = [profile[@"rate"] stringValue];
     _descriptionLabel.text = self.request[@"requestDesc"];
     
     if([self.type isEqualToString:@"pending"]){
@@ -60,12 +60,15 @@
 */
 
 - (IBAction)cancelButtonPressed:(id)sender {
-    
-    
-    [self.request delete];
-    [self performSegueWithIdentifier:@"cancelledSegue" sender:self];
+    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Are you sure?" message:@"Please confirm you want to cancel this!" delegate:self cancelButtonTitle:@"No" otherButtonTitles:@"Yes", nil];
+    [alert show];
+}
 
-    
-    
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
+    if (buttonIndex == 1) {
+        // do stuff
+        [self.request delete];
+        [self performSegueWithIdentifier:@"cancelledSegue" sender:self];
+    }
 }
 @end
