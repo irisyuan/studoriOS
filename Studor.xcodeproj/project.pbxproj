@@ -69,6 +69,7 @@
 		B24300CC1AE60235006FF3AD /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300CB1AE60235006FF3AD /* SignUpViewController.m */; };
 		B24300D11AE6044E006FF3AD /* Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B24300D01AE6044E006FF3AD /* Helpers.m */; };
 		B259C4CE1AF6084100A52234 /* BecomeTutorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B259C4CD1AF6084100A52234 /* BecomeTutorViewController.m */; };
+		B2687B3B1AFA5251005419B5 /* MapViewContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2687B3A1AFA5251005419B5 /* MapViewContainerViewController.m */; };
 		B27C29EE1AFA39EC004E718F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B27C29ED1AFA39EC004E718F /* MapViewController.m */; };
 		B27C29F21AFA3C08004E718F /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27C29F11AFA3C08004E718F /* GoogleMaps.framework */; };
 		B27C29F41AFA3C5C004E718F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B27C29F31AFA3C5C004E718F /* GoogleMaps.bundle */; };
@@ -193,6 +194,8 @@
 		B24300D01AE6044E006FF3AD /* Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Helpers.m; path = ../Helpers.m; sourceTree = "<group>"; };
 		B259C4CC1AF6084100A52234 /* BecomeTutorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BecomeTutorViewController.h; sourceTree = "<group>"; };
 		B259C4CD1AF6084100A52234 /* BecomeTutorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BecomeTutorViewController.m; sourceTree = "<group>"; };
+		B2687B391AFA5251005419B5 /* MapViewContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewContainerViewController.h; sourceTree = "<group>"; };
+		B2687B3A1AFA5251005419B5 /* MapViewContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewContainerViewController.m; sourceTree = "<group>"; };
 		B27C29EC1AFA39EC004E718F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		B27C29ED1AFA39EC004E718F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		B27C29F11AFA3C08004E718F /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
@@ -371,6 +374,8 @@
 				03F6F0371ADE096C006DD5B1 /* SearchViewController.m */,
 				03F6F0361ADE08C8006DD5B1 /* SearchViewController.h */,
 				03724DF71AE7D28100C3CCB9 /* Home.storyboard */,
+				B2687B391AFA5251005419B5 /* MapViewContainerViewController.h */,
+				B2687B3A1AFA5251005419B5 /* MapViewContainerViewController.m */,
 				B2A649F01AF4765900C9E674 /* SidebarViewController.h */,
 				B2A649F11AF4765900C9E674 /* SidebarViewController.m */,
 				B21530601AF6BCED00882CA1 /* SearchResultsViewController.h */,
@@ -684,6 +689,7 @@
 				03F6F03B1ADE0B32006DD5B1 /* RequestViewController.m in Sources */,
 				2E8FEFFE1AD5C0E900926A78 /* LogInViewController.m in Sources */,
 				03724E0C1AE7DA0B00C3CCB9 /* RBStoryboardPopoverSegue.m in Sources */,
+				B2687B3B1AFA5251005419B5 /* MapViewContainerViewController.m in Sources */,
 				B221B4891AF79403005F8C20 /* TutorRequestDetailViewController.m in Sources */,
 				B2D762761AF7F59B001B7E75 /* ShowPriceViewController.m in Sources */,
 				0353F33A1AF4F8480001B6B4 /* CameraViewController.m in Sources */,

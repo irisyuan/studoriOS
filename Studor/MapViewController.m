@@ -15,14 +15,17 @@
 
 @implementation MapViewController
 
+GMSMarker *marker;
+GMSMapView *mapView;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:-33.868
                                                             longitude:151.2086
                                                                  zoom:16];
-    GMSMapView *mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    mapView = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     
-    GMSMarker *marker = [[GMSMarker alloc] init];
+    marker = [[GMSMarker alloc] init];
     marker.position = camera.target;
     marker.snippet = @"Hello World";
     marker.appearAnimation = kGMSMarkerAnimationPop;
@@ -51,9 +54,16 @@
 
 #pragma mark - GMSMapViewDelegate
 
-- (void)mapView:(GMSMapView *)mapView
-didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
-    NSLog(@"You tapped at %f,%f", coordinate.latitude, coordinate.longitude);
+- (void)mapView:(GMSMapView *)mapView didLongPressAtCoordinate:(CLLocationCoordinate2D)coordinate {
+    if(self.editable) { CLLocationCoordinate2D tappedlocation = CLLocationCoordinate2DMake(coordinate.latitude, coordinate.longitude);
+  
+    marker.position =  tappedlocation;
+        self.parentVC.latitude = [NSNumber numberWithDouble:coordinate.latitude];
+        self.parentVC.latitude = [NSNumber numberWithDouble:coordinate.latitude];
+    
+
+
+        NSLog(@"You tapped at %f,%f", coordinate.latitude, coordinate.longitude);}
 }
 
 
