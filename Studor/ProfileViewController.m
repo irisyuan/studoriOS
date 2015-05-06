@@ -12,6 +12,7 @@
 #import <MobileCoreServices/UTCoreTypes.h>
 #import "SWRevealViewController.h"
 #import "Helpers.h"
+#import <AVFoundation/AVFoundation.h>
 
 @implementation ProfileViewController
 
@@ -47,6 +48,9 @@
 
     }
     
+    [_photo.layer setBorderColor: [[UIColor colorWithRed:15.0f/255.0f green:166.0f/255.0f blue:182.0f/255.0f alpha:1.0] CGColor]];
+    [_photo.layer setBorderWidth: 2.0];
+    
     if (![profile[@"isTutor"] boolValue]) {
         [_bioField setHidden:TRUE];
         [_hourlyRateField setHidden:TRUE];
@@ -60,6 +64,13 @@
         _bioField.text = profile[@"bio"];
         _hourlyRateField.text = [profile[@"hourlyRate"] stringValue];
     }
+    
+   // _photo.layer.borderWidth = 7;
+   // _photo.layer.borderColor = [UIColor colorWithRed:0.22 green:0.22 blue:0.22 alpha:1.0].CGColor;
+    
+    // this is the key command
+    //[_photo setFrame:AVMakeRectWithAspectRatioInsideRect(_photo.size, _photo.frame)];
+    
 }
 
 // To do: need to add same validation as sign up page here

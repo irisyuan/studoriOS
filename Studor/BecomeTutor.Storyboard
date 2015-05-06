@@ -138,6 +138,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W3I-TX-nR6" id="bHj-KO-Gqj">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="tintColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -150,6 +151,7 @@
                                 <items>
                                     <navigationItem title="Select Subjects" id="CMI-bL-Lqt">
                                         <barButtonItem key="leftBarButtonItem" title="&lt; Back" id="Sig-Jw-qDE">
+                                            <color key="tintColor" red="0.1454501319" green="0.7136167014" blue="0.72825915399999996" alpha="1" colorSpace="calibratedRGB"/>
                                             <connections>
                                                 <action selector="backButtonPressed:" destination="j5X-MX-sLb" id="p3A-S6-u55"/>
                                             </connections>

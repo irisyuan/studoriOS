@@ -32,6 +32,9 @@
         _image.image = [UIImage imageNamed:@"default-pic.png"];
     }
     
+    [_image.layer setBorderColor: [[UIColor colorWithRed:15.0f/255.0f green:166.0f/255.0f blue:182.0f/255.0f alpha:1.0] CGColor]];
+    [_image.layer setBorderWidth: 2.0];
+    
     _nameLabel.text = [NSString stringWithFormat:@"%@", firstName];
     _hourlyRateLabel.text = [NSString stringWithFormat:@"$%@ per hour", [self.tutorProfile[@"hourlyRate"] stringValue]];
     _bioLabel.text = self.tutorProfile[@"bio"];

@@ -158,7 +158,8 @@ BOOL found;
         thumbnailImageView.file = thumbnail;
         [thumbnailImageView loadInBackground];
     
-    
+    [thumbnailImageView.layer setBorderColor: [[UIColor colorWithRed:15.0f/255.0f green:166.0f/255.0f blue:182.0f/255.0f alpha:1.0] CGColor]];
+    [thumbnailImageView.layer setBorderWidth: 2.0];
     
         UILabel *name = (UILabel*) [cell viewWithTag:106];
         UILabel *bioLabel = (UILabel*)[cell viewWithTag:133];
