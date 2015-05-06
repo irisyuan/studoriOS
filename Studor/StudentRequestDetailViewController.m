@@ -33,14 +33,19 @@
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
     _rateLabel.text = [profile[@"rate"] stringValue];
     _descriptionLabel.text = self.request[@"requestDesc"];
+
+    // hide cancel button if session has past
+    
+    NSLog(@"the type is now: %@", self.type);
     
     if([self.type isEqualToString:@"pending"]){
         [self.cancelButton setTitle:@"Cancel Request" forState:UIControlStateNormal];}
-        
     else if([self.type isEqualToString:@"current"]){
         [self.cancelButton setTitle:@"Cancel Session" forState:UIControlStateNormal];}
+    else if([self.type isEqualToString:@"past"]){
+        [self.cancelButton setHidden:TRUE];
+    }
 
-    
     // Do any additional setup after loading the view.
 }
 
