@@ -18,12 +18,10 @@
 }
 
 - (IBAction)backButtonPressed:(id)sender {
-
     [self dismissMe];
 }
 
 - (IBAction)sendReset:(id)sender {
-    
     NSString *email = _EmailField.text;
     NSLog(@"%@", email);
     
@@ -58,10 +56,5 @@
     
     [self dismissModalViewControllerAnimated:NO];
 }
-
-
-
-
-
 
 @end

@@ -19,6 +19,4 @@
 @property (strong, nonatomic) NSNumber *latitude;
 @property (strong, nonatomic) NSNumber *longtitude;
 
-
-
 @end

@@ -16,23 +16,18 @@
 @property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
-//@property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *saveButton;
 
 @property (weak, nonatomic) IBOutlet PFImageView *photo;
-
-
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
 @property (weak, nonatomic) IBOutlet UITextField *hourlyRateField;
 @property (weak, nonatomic) IBOutlet UITextField *bioField;
 @property (weak, nonatomic) IBOutlet UITextView *successLabel;
 @property (weak, nonatomic) IBOutlet UIButton *subjectsButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *bioLabel;
 @property (weak, nonatomic) IBOutlet UILabel *perHourLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dollarSign;
-
 
 
 - (IBAction) saveButtonPressed:(id)sender;

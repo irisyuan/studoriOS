@@ -16,7 +16,6 @@
 @property (strong, nonatomic) NSArray *subjects;
 @property (strong, nonatomic) NSArray *searchResults;
 @property (strong, nonatomic) NSMutableArray *subjectString;
-
 @property PFObject *selectedSubject;
 
 @end
@@ -39,7 +38,6 @@
         [self.subjectString addObject:_subjects[x][@"subject"]];
         
     }
-    
     
     SWRevealViewController *revealViewController = self.revealViewController;
     if ( revealViewController )
@@ -86,10 +84,9 @@
     if (tableView == self.searchDisplayController.searchResultsTableView) {
         cell.textLabel.text = self.searchResults[indexPath.row];
     }
-    else{
+    else {
         cell.textLabel.text = self.subjects[indexPath.row][@"subject"];
     }
-    
     
     return cell;
 }
@@ -111,17 +108,14 @@
     NSString *subjectName = _searchResults[indexPath.row];
     PFQuery *subjectQuery = [PFQuery queryWithClassName:@"Subject"];
     [subjectQuery whereKey:@"subject" equalTo:subjectName];
-        self.selectedSubject = [subjectQuery getFirstObject];}
-    else{
         
+        self.selectedSubject = [subjectQuery getFirstObject];
+    } else {
         self.selectedSubject = self.subjects[indexPath.row];
-        
     }
     
     [self performSegueWithIdentifier:@"searchResultsSegue" sender:self];
-    
 }
-
 
 
 //size of each cell
@@ -134,7 +128,6 @@
 {
     
     NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"self contains[c] %@", searchText];
-    
     _searchResults = [_subjectString filteredArrayUsingPredicate:resultPredicate];
     
 
@@ -143,7 +136,6 @@
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
     NSLog(searchString);
-
     [self filterContentForSearchText:searchString
                                scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
                                       objectAtIndex:[self.searchDisplayController.searchBar

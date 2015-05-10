@@ -26,8 +26,6 @@
 @property (strong, nonatomic) NSNumber *longtitude;
 @property (strong, nonatomic) CLLocation *currentLocation;
 
-
-
 /*
 // changed this to textfield
  
@@ -36,7 +34,6 @@
 */
 
 @property (weak, nonatomic) IBOutlet UIButton *bookButton;
-
 - (IBAction)bookTutor:(id)sender;
 
 

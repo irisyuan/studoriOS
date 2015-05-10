@@ -14,6 +14,4 @@
 
 @property (retain, strong) NSArray *senderInfo;
 
-
-
 @end

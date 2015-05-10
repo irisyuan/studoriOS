@@ -12,12 +12,9 @@
 @interface ForgotPasswordViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *EmailField;
-
 @property (weak, nonatomic) IBOutlet UILabel *EmailErrorLabel;
-
 @property (weak, nonatomic) IBOutlet UIButton *SendEmailButton;
-
 - (IBAction)backButtonPressed:(id)sender;
+- (IBAction)sendReset:(id)sender;
 
--(IBAction)sendReset:(id)sender;
 @end

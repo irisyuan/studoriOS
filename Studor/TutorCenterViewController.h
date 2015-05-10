@@ -13,7 +13,6 @@
 @interface TutorCenterViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
-
 @property (weak, nonatomic) IBOutlet UISwitch *toggleAvailability;
 
 - (IBAction)availableSwitched:(id)sender;

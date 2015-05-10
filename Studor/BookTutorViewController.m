@@ -24,7 +24,6 @@
     
     NSString *firstName = self.tutorProfile[@"firstName"];
     
-    
     PFFile *imageFile = self.tutorProfile[@"image"];
     if (imageFile) {
         _image.file = imageFile;
@@ -55,7 +54,6 @@
     request[@"studentId"] = [Helpers getProfile][@"email"];
     request[@"requestDesc"] = _requestDescField.text;
     request[@"rate"] = self.tutorProfile[@"hourlyRate"];
-    
     
     //Location
     CLLocation *location = [[CLLocation alloc] initWithLatitude:[self.latitude doubleValue] longitude:[self.longtitude doubleValue]];

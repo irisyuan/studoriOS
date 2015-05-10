@@ -31,13 +31,11 @@ BOOL found;
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
    
     NSString *string1 =  self.subject[@"subject"];
     NSString *string2 = @" tutors in your area.";
     
     string1 = [string1 stringByAppendingString:string2];
-
 
     self.resultLabel.text = string1;
     
@@ -55,17 +53,14 @@ BOOL found;
 - (void) updateSearchResults {
     
     UITableView *tableView = (id)[self.view viewWithTag:1];
-
     
     if([self.tutors count]==0){
         tableView.hidden = true;
         self.resultLabel.text = @"There are no tutors in your area.";
     }
-    else{
-        [tableView reloadData];}
-    
-    
-    
+    else {
+        [tableView reloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -108,16 +103,12 @@ BOOL found;
      self.tutors = [query findObjects];
      NSLog([NSString stringWithFormat:@"%lu ", [self.tutors count]]);
      [self updateSearchResults];
-
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
     NSLog([NSString stringWithFormat:@"%lu ", [self.tutors count]]);
-
-    
     return [self.tutors count];
 }
 

@@ -19,6 +19,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *noCurrentResults;
 @property (weak, nonatomic) IBOutlet UILabel *noPastResults;
 
-
-
 @end

@@ -27,7 +27,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 
 - (IBAction)cancelButtonPressed:(id)sender;
-
 - (IBAction)stopButtonPressed:(id)sender;
 
 

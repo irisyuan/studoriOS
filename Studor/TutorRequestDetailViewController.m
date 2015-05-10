@@ -39,19 +39,17 @@ NSNumber *wage;
     [_photo.layer setBorderWidth: 2.0];
     
     _nameLabel.text = [NSString stringWithFormat:@"%@ %@", profile[@"firstName"], profile[@"lastName"]];
-    
     _descriptionLabel.text = self.request[@"requestDesc"];
     
     if([self.type isEqualToString:@"pending"]){
         [self.cancelButton setTitle:@"Cancel Request" forState:UIControlStateNormal];
         self.startButton.hidden = YES;
-        }
+    }
     
     else if([self.type isEqualToString:@"current"]){
         [self.cancelButton setTitle:@"Cancel Session" forState:UIControlStateNormal];
         self.acceptButton.hidden = YES;
     }
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
@@ -68,7 +66,6 @@ NSNumber *wage;
         
         SessionViewController *destViewController = segue.destinationViewController;
         
-        
         destViewController.session = self.request;
         destViewController.wage = wage;
     }
@@ -81,17 +78,9 @@ NSNumber *wage;
         PFGeoPoint *tutorpoint = self.request[@"location"];
         CLLocation *requestLocation = [[CLLocation alloc ] initWithLatitude:tutorpoint.latitude longitude:tutorpoint.longitude];
         
-        
         destViewController.currentLocation = requestLocation;
-        
     }
-    
-
 }
-
-
-
-
 
 - (IBAction)startButtonPressed:(id)sender {
     
@@ -121,7 +110,6 @@ NSNumber *wage;
 
 
 - (IBAction)acceptButtonPressed:(id)sender {
-    
     PFObject *session = [PFObject objectWithClassName:@"Session"];
     session[@"isCanceled"] = @NO;
     session[@"isCompleted"] = @NO;
@@ -144,9 +132,8 @@ NSNumber *wage;
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex {
     if (buttonIndex == 1) {
-       // don't delete yet because you still need the rate information
-
-      //  [self.request delete];
+        // don't delete yet because you still need the rate information
+        //  [self.request delete];
         // change this to a 'canceledSegue' later but for now they do the same thing
         [self performSegueWithIdentifier:@"acceptedRequestSegue" sender:self];
     }

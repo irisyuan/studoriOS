@@ -13,29 +13,20 @@
 
 @implementation PendingTableViewController
 
-
 NSArray *pending;
 NSArray *current;
 NSArray *past;
 NSString *selectedType;
 PFObject *selectedRequest;
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
-
     [self getRequests];
-    
     NSLog(self.senderInfo[1]);
-    
 }
 
 - (void) getRequests {
-    
-    
     PFQuery *requestQuery = [PFQuery queryWithClassName:@"Request"];
     PFQuery *sessionQuery = [PFQuery queryWithClassName:@"Session"];
 
@@ -49,7 +40,7 @@ PFObject *selectedRequest;
         [sessionQuery whereKey:@"isCompleted" equalTo:@YES];
         past = [sessionQuery findObjects];
         
-        }
+    }
     
     if([self.senderInfo[0] isEqualToString:@"tutor"]){
         
@@ -60,7 +51,7 @@ PFObject *selectedRequest;
         [sessionQuery whereKey:@"isCompleted" equalTo:@NO];
         current = [sessionQuery findObjects];
     
-        }
+    }
     
     [self.tableView reloadData];
     
@@ -89,13 +80,10 @@ PFObject *selectedRequest;
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 
-    
     PFObject *thisRequest;
     PFQuery *profileQuery = [PFQuery queryWithClassName:@"Profile"];
     PFQuery *sessionQuery = [PFQuery queryWithClassName:@"Session"];
 
-
-    
     if(indexPath.section == 0){
         thisRequest = pending[indexPath.row];
     }
@@ -107,7 +95,6 @@ PFObject *selectedRequest;
     }
     
     PFObject *object;
-    
     
     if(indexPath.section == 0){
     if([self.senderInfo[0] isEqualToString:@"student"]){
@@ -129,8 +116,6 @@ PFObject *selectedRequest;
     
     }
     
-
-    
     static NSString *simpleTableIdentifier = @"TutorCell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -142,7 +127,6 @@ PFObject *selectedRequest;
     
     // Configure the cell
     PFFile *thumbnail = [object objectForKey:@"image"];
-    
     
     PFImageView *thumbnailImageView ;
     
@@ -156,7 +140,6 @@ PFObject *selectedRequest;
     name = (UILabel*) [cell viewWithTag:106];
     subjectsLabel = (UILabel*)[cell viewWithTag:110];
     hourlyRateLabel = (UILabel*) [cell viewWithTag:112];
-
     
     thumbnailImageView.image = [UIImage imageNamed:@"default-pic.jpg"];
     thumbnailImageView.file = thumbnail;
@@ -174,16 +157,12 @@ PFObject *selectedRequest;
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
-    
     if ([[segue identifier] isEqualToString:@"studentSegue"])
     {   NSLog(@"Peforming Student Segue");
 
         StudentRequestDetailViewController *destViewController = segue.destinationViewController;
         destViewController.type = selectedType;
         destViewController.request = selectedRequest;
-        
-        
     }
     
     if ([[segue identifier] isEqualToString:@"tutorSegue"])
@@ -192,11 +171,7 @@ PFObject *selectedRequest;
         TutorRequestDetailViewController *destViewController = segue.destinationViewController;
         destViewController.type = selectedType;
         destViewController.request = selectedRequest;
-
-        
-        
     }
-
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -220,21 +195,18 @@ PFObject *selectedRequest;
         
         selectedRequest = current[indexPath.row];
         selectedType = @"current";
-
-        
     }
     if(indexPath.section == 2){
         
         selectedRequest = past[indexPath.row];
         selectedType = @"past";
-        
     }
     
     if([self.senderInfo[0] isEqualToString:@"student"]){
         
         [self performSegueWithIdentifier:@"studentSegue" sender:self];
         
-    }else{
+    } else {
         
         [self performSegueWithIdentifier:@"tutorSegue" sender:self];
 
@@ -255,7 +227,6 @@ PFObject *selectedRequest;
     }
     return @"Pending Sessions";
 }
-
 
 
 @end

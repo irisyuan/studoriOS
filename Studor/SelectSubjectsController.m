@@ -25,8 +25,6 @@
 PFObject *profile;
 
 - (void)viewDidLoad {
-    
-    
     [super viewDidLoad];
     
     profile = [Helpers getProfile];
@@ -50,25 +48,16 @@ PFObject *profile;
 }
 
 
-- (BOOL) userTeachesSubject: (NSInteger)row{
-    
-    
+- (BOOL) userTeachesSubject: (NSInteger)row {
     NSArray *userSubjects = profile[@"subjects"];
-    
     if([userSubjects containsObject:[self.subjects[row] objectId]]){
         return true;
     }
-    
     return false;
-
-    
-    
 }
 
 - (IBAction)backButtonPressed:(id)sender {
-    
     [self dismissMe];
-    
 }
 
 
@@ -132,7 +121,7 @@ PFObject *profile;
         cell.accessoryType = UITableViewCellAccessoryNone;
         
     }
-    else{
+    else {
         NSLog([self.subjects[indexPath.row] objectId]);
         [profile addUniqueObject:[self.subjects[indexPath.row] objectId] forKey: @"subjects"];
         [profile save];

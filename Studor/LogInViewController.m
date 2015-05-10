@@ -46,8 +46,8 @@
     
     [PFUser logInWithUsernameInBackground:_usernameTextField.text password:_passwordTextField.text
                                     block:^(PFUser *user, NSError *error) {
-                                        if (user) { //login successful
-                                            /*
+        if (user) { //login successful
+            /*
                                             UIStoryboard *HomeStoryboard = [UIStoryboard storyboardWithName:@"Home" bundle:nil];
                                             UIViewController *HomeViewController = [HomeStoryboard instantiateInitialViewController];
                                           
@@ -55,13 +55,12 @@
                                             [self.navigationController pushViewController:HomeViewController animated:YES];*/
                                             
                                             
-                                            [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
+         [self performSegueWithIdentifier:@"loginSuccessful" sender:nil];
 
-                                        } else { //login failed
-                                            _ErrorLabel.text = @"Invalid Username or Password";
-                                        }
-                                    }];
-
+         } else { //login failed
+         _ErrorLabel.text = @"Invalid Username or Password";
+         }
+   }];
 }
 
 //making the keyboard disapear when clicking an empty space

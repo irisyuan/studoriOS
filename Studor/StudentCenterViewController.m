@@ -14,7 +14,6 @@
 
 @interface StudentCenterViewController()
     @property (retain, nonatomic) NSMutableArray *requests;
-
 @end
 
 @implementation StudentCenterViewController

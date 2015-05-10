@@ -11,8 +11,6 @@
 #import <Parse/Parse.h>
 #import "Helpers.h"
 
-
-
 @interface SidebarViewController ()
 
 @property (nonatomic, strong) NSArray *menuItems;
@@ -36,12 +34,11 @@
 {
     [super viewDidLoad];
     [[self navigationController] setNavigationBarHidden:YES animated:YES];
-
     
     if([[Helpers getProfile][@"isTutor"] isEqual: @YES]){
         NSLog(@"User is tutor");
         menuItems = @[@"search", @"profile", @"messages", @"student", @"tutor", @"logout"];}
-    else{
+    else {
         NSLog(@"User is not tutor");
 
        menuItems = @[@"search", @"profile", @"messages", @"student", @"becometutor", @"logout"];

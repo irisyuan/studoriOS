@@ -17,17 +17,6 @@
 
 @implementation SignUpViewController
 
-/*
-//hiding the navigation controller
-- (void)viewWillAppear:(BOOL)animated
-{
-    self.navigationController.navigationBar.hidden = YES;
-}
-
- */
-
-
-
 - (void)viewDidLoad {
     _MainErrorLabel.text = @"";
     _FirstNameErrorLabel.text = @"";
@@ -35,10 +24,6 @@
     _PasswordErrorLabel.text = @"";
     _confirmPasswordLabel.text = @"";
     _EmailErrorLabel.text = @"";
-
-    
-    
-    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

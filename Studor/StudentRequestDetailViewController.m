@@ -70,9 +70,7 @@
         PFGeoPoint *tutorpoint = self.request[@"location"];
         CLLocation *requestLocation = [[CLLocation alloc ] initWithLatitude:tutorpoint.latitude longitude:tutorpoint.longitude];
         
-        
         destViewController.currentLocation = requestLocation;
-        
     }
     
 }
@@ -84,9 +82,7 @@
 }
 
 - (IBAction)backButtonPressed:(id)sender {
-    
     [self dismissMe];
-    
 }
 
 -(void) dismissMe {

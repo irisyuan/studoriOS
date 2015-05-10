@@ -33,7 +33,6 @@ bool paused;
 NSTimeInterval finalTime;
 NSNumber *price;
 
-
 }
 
 
@@ -41,8 +40,7 @@ NSNumber *price;
 {
     [super viewDidLoad];
     
-    NSLog(@"Enterring viewDidLoat in session view controller");
-
+    NSLog(@"Entering viewDidLoad in session view controller");
     
     // Sets the text of our Label to a default time of 0.
     self.timeLabel.text = @"0:00";
@@ -54,13 +52,9 @@ NSNumber *price;
 }
 
 -(void)update {
-    
-    
     // If start is false then we shouldn't be updateing the time se we return out of the method.
     if (start == false) {
-        
         return;
-        
     }
     
     // We get the current time and then use that to calculate the elapsed time.
@@ -131,9 +125,6 @@ NSNumber *price;
     finalTime = currentTime - time;
 
     paused = YES;
-    
-    
-    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -143,7 +134,6 @@ NSNumber *price;
         NSTimeInterval currentTime = [NSDate timeIntervalSinceReferenceDate];
         NSTimeInterval elapsedTime = currentTime - time;
         ShowPriceViewController *destViewController = segue.destinationViewController;
-        
         
         destViewController.price = price;
         
@@ -216,54 +206,3 @@ NSNumber *price;
 }
 
 @end
-
-
-/*
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    _timeLabel.text = @"0:00.0";
-    running = false;
-}
-
--(IBAction)startSession:(id)sender {
-    if (running == false) {
-    startTime = [NSDate timeIntervalSinceReferenceDate];
-    [sender setTitle:@"STOP" forState:UIControlStateNormal];
-    [self updateTime];
-    } else {
-        [sender setTitle:@"STOP" forState:UIControlStateNormal];
-        running = false;
-    }
-}
-
-
-
--(IBAction)confirmSessionEnded:(id)sender {
-    UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"Confirm" message:@"Please confirm session has ended!" delegate:nil cancelButtonTitle:@"Yes" otherButtonTitles:nil, nil];
-    [alert show];
-    
-    
-    // call save session at end
-}
-
--(void)saveSession {
-    
-    
-}
-
-
-
--(void)viewWillAppear:(BOOL)animated {
-    
-}
-
-
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-*/

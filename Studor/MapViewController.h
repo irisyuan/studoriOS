@@ -12,15 +12,12 @@
 #import "MapViewContainerViewController.h"
 
 
-
 @interface MapViewController : UIViewController <GMSMapViewDelegate>
-
 
 @property (nonatomic, assign) BOOL editable;
 @property (strong, nonatomic) MapViewContainerViewController *parentVC;
 
 @property (strong, nonatomic) CLLocation *currentLocation;
-
 
 
 @end

@@ -14,20 +14,18 @@
 
 @property (retain, strong) NSString *type;
 @property (retain, strong) PFObject *request;
-
 @property (weak, nonatomic) IBOutlet PFImageView *photo;
+
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
-- (IBAction)cancelButtonPressed:(id)sender;
-
 @property (weak, nonatomic) IBOutlet UIButton *startButton;
-
 @property (weak, nonatomic) IBOutlet UIButton *acceptButton;
+
 - (IBAction)startButtonPressed:(id)sender;
 - (IBAction)backButtonPressed:(id)sender;
-
-
+- (IBAction)cancelButtonPressed:(id)sender;
 - (IBAction)acceptButtonPressed:(id)sender;
 
 @end

@@ -52,12 +52,9 @@
 
 
 - (IBAction)backButtonPressed:(id)sender {
-    
     self.parentVC.longtitude = self.longtitude;
     self.parentVC.latitude = self.latitude;
-    
     [self dismissMe];
-    
 }
 
 -(void) dismissMe {
