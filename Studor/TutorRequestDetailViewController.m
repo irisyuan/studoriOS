@@ -27,6 +27,7 @@ NSNumber *wage;
     PFObject *profile = [profileQuery getFirstObject];
 
     PFFile *imageFile = profile[@"image"];
+    wage = profile[@"hourlyRate"];
     if (imageFile) {
         _photo.file = imageFile;
         [_photo loadInBackground];
